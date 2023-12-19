@@ -1,0 +1,30 @@
+configuration {
+	font: "JetBrainsMonoNL Nerd Font 20";
+	show-icons: false;
+}
+
+window {
+    width: 13%;
+}
+
+mainbox {
+    children: [listview];
+}
+
+element {
+    padding: 20 40;
+}
+
+element.selected {
+    background-color: @bg-alt;
+    border-radius: 6;
+}
+
+element-text {
+    background-color: inherit;
+}
+
+listview {
+    padding: 5 5;
+    lines: 3;
+}
