@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Terminate already running bar instances
-pkill polybar
+pkill -f "polybar top"
 
 # Launch
 polybar top &
