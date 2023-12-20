@@ -43,9 +43,6 @@ case $theme in
         ;;
 esac
 
-# Wallpaper
-feh --bg-fill ~/Pictures/Wallpapers/$wallpaper
-
 # Alacritty
 sed -i "s/colors: \*.*/colors: \*$theme/" ~/.config/alacritty/alacritty.yml
 
@@ -58,3 +55,6 @@ sed -i "0,/background = .*/s/background = .*/background = $background/; 0,/backg
 
 # VSCode
 sed -i "s/\"workbench\.colorTheme\": \".*\",/\"workbench.colorTheme\": \"$vscode_theme\",/" ~/.config/Code/User/settings.json
+
+# Wallpaper
+feh --bg-fill ~/Pictures/Wallpapers/$wallpaper
