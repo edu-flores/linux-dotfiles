@@ -11,28 +11,28 @@ esac
 # For testing purposes
 if [ -n "$1" ]; then
     case $1 in
-        1) theme="gruvbox" ;;
-        2) theme="everforest" ;;
+        1) theme="everforest" ;;
+        2) theme="gruvbox" ;;
         3) theme="dracula" ;;
-        *) echo "Invalid theme selection. Choose 1 for Gruvbox, 2 for Everforest, or 3 for Dracula." && exit 1 ;;
+        *) echo "Invalid theme selection. Choose 1 for Everforest, 2 for Gruvbox, or 3 for Dracula." && exit 1 ;;
     esac
 fi
 
 # Set variables
 case $theme in
-    gruvbox)
-        wallpaper="City.jpg"
-        background="#3c3836"
-        background_alt="#1d2021"
-        foreground="#ebdbb2"
-        vscode_theme="Gruvbox Material Dark"
-        ;;
     everforest)
         wallpaper="Forest.jpg"
         background="#1e2326"
         background_alt="#4f5b58"
         foreground="#d3c6aa"
         vscode_theme="Everforest Dark"
+        ;;
+    gruvbox)
+        wallpaper="City.jpg"
+        background="#3c3836"
+        background_alt="#1d2021"
+        foreground="#ebdbb2"
+        vscode_theme="Gruvbox Material Dark"
         ;;
     dracula)
         wallpaper="ElvishJungle.jpg"
