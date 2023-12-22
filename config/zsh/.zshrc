@@ -19,6 +19,12 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Autosuggestions
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+setopt appendhistory
+
 # Aliases
 alias ll="ls -la"
 alias ls="ls --color=auto"

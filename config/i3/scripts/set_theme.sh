@@ -3,8 +3,8 @@
 # Pick a theme
 current_hour=$(date +%H)
 case $current_hour in
-    07|08|09|10|11|12|13) theme="gruvbox" ;;
-    14|15|16|17|18) theme="everforest" ;;
+    07|08|09|10|11|12|13) theme="everforest" ;;
+    14|15|16|17|18) theme="gruvbox" ;;
     19|20|21|22|23|00|01|02|03|04|05|06) theme="dracula" ;;
 esac
 
@@ -57,4 +57,4 @@ sed -i "0,/background = .*/s/background = .*/background = $background/; 0,/backg
 sed -i "s/\"workbench\.colorTheme\": \".*\",/\"workbench.colorTheme\": \"$vscode_theme\",/" ~/.config/Code/User/settings.json
 
 # Wallpaper
-feh --bg-fill ~/Pictures/Wallpapers/$wallpaper
+sleep 0.5 && feh --bg-fill ~/Pictures/Wallpapers/$wallpaper
