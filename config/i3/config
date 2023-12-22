@@ -233,3 +233,6 @@ title_align center
 # Misc
 default_border pixel 0
 gaps inner 10px
+
+# Floating windows
+for_window [class="xpad"] floating enable  # Sticky notes
