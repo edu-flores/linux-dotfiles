@@ -29,8 +29,8 @@ case $theme in
         ;;
     gruvbox)
         wallpaper="City.jpg"
-        background="#3c3836"
-        background_alt="#1d2021"
+        background="#1d2021"
+        background_alt="#3c3836"
         foreground="#ebdbb2"
         vscode_theme="Gruvbox Material Dark"
         ;;
