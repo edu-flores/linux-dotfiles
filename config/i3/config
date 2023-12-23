@@ -229,10 +229,9 @@ client.unfocused #111111 #111111 #888888 #292d2e #222222
 for_window [all] title_window_icon on
 for_window [all] title_window_icon padding 5px
 title_align center
-
-# Misc
 default_border pixel 0
 gaps inner 10px
 
 # Floating windows
-for_window [class="xpad"] floating enable  # Sticky notes
+for_window [class="xpad"] floating enable  # Sticky Notes
+for_window [class="org.gnome.Nautilus"] floating enable  # File Manager
