@@ -234,4 +234,6 @@ gaps inner 10px
 
 # Floating windows
 for_window [class="xpad"] floating enable  # Sticky Notes
+for_window [class="feh"] floating enable  # Image Viewer
+for_window [class="feh"] resize set 640 480
 for_window [class="org.gnome.Nautilus"] floating enable  # File Manager
