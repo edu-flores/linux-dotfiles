@@ -55,7 +55,7 @@ sed -i "0,/background = .*/s/background = .*/background = $background/; 0,/backg
 
 # Dunst
 pkill dunst
-sed -i "s/background = \".*\"/background = \"$background\"/" ~/.config/dunst/dunstrc
+sed -i "s/background = \".*\"/background = \"$background_alt\"/" ~/.config/dunst/dunstrc
 
 # VSCode
 sed -i "s/\"workbench\.colorTheme\": \".*\",/\"workbench.colorTheme\": \"$vscode_theme\",/" ~/.config/Code/User/settings.json
