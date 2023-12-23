@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # Remove symlinks
 remove() {
 	rm -rf ~/.config/alacritty
@@ -7,18 +8,21 @@ remove() {
 	rm -rf ~/.config/picom
 	rm -rf ~/.config/polybar
 	rm -rf ~/.config/rofi
+	rm -rf ~/.config/dunst
 	rm ~/.zshrc
 }
 
 # Set up symlinks
 symlink() {
-	ln -s $HOME/Documents/GitHub/linux-dotfiles/config/alacritty ~/.config/alacritty
-	ln -s $HOME/Documents/GitHub/linux-dotfiles/config/i3 ~/.config/i3
-	ln -s $HOME/Documents/GitHub/linux-dotfiles/config/picom ~/.config/picom
-	ln -s $HOME/Documents/GitHub/linux-dotfiles/config/polybar ~/.config/polybar
-	ln -s $HOME/Documents/GitHub/linux-dotfiles/config/rofi ~/.config/rofi
-	ln -s $HOME/Documents/GitHub/linux-dotfiles/config/zsh/.zshrc ~/.zshrc
+	ln -s $PWD/config/alacritty ~/.config/alacritty
+	ln -s $PWD/config/i3 ~/.config/i3
+	ln -s $PWD/config/picom ~/.config/picom
+	ln -s $PWD/config/polybar ~/.config/polybar
+	ln -s $PWD/config/rofi ~/.config/rofi
+	ln -s $PWD/config/dunst ~/.config/dunst
+	ln -s $PWD/config/zsh/.zshrc ~/.zshrc
 }
 
+### IMPORTANT: THIS SCRIPT SHOULD BE RUN FROM THE REPO ROOT ###
 remove
 symlink
