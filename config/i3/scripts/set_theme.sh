@@ -53,6 +53,10 @@ sed -i "s/@theme \"~\/.config\/rofi\/themes\/.*\.rasi\"/@theme \"~\/.config\/rof
 sed -i "0,/background = .*/s/background = .*/background = $background/; 0,/background-alt = .*/s/background-alt = .*/background-alt = $background_alt/; 0,/foreground = .*/s/foreground = .*/foreground = $foreground/" ~/.config/polybar/config.ini
 ~/.config/polybar/scripts/launch_polybar.sh  # Launch polybar
 
+# Dunst
+pkill dunst
+sed -i "s/background = \".*\"/background = \"$background\"/" ~/.config/dunst/dunstrc
+
 # VSCode
 sed -i "s/\"workbench\.colorTheme\": \".*\",/\"workbench.colorTheme\": \"$vscode_theme\",/" ~/.config/Code/User/settings.json
 
