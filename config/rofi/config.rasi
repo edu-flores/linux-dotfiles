@@ -147,7 +147,7 @@ configuration {
 }
 
 /* @theme "/dev/null" */
-@theme "~/.config/rofi/themes/dracula.rasi"
+@theme "~/.config/rofi/themes/everforest.rasi"
 
 * {
     border: 0;
