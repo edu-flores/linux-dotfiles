@@ -163,7 +163,7 @@ window {
 inputbar {
     background-color: @bg;
     children: [prompt, entry];
-    padding: 5 10;
+    padding: 5 10 15 5;
 }
 
 prompt {
@@ -180,14 +180,14 @@ entry {
     border-radius: 5;
     text-color: @fg;
     padding: 10;
-    placeholder: "Search...";
+    placeholder: "...";
     cursor: text;
 }
 
 element {
     background-color: inherit;
-    padding: 10 20;
-    spacing: 20;
+    padding: 8;
+    spacing: 10;
     cursor: pointer;
 }
 
