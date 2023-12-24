@@ -42,6 +42,8 @@ XDG_RUNTIME_DIR=/run/user/1000
 
 You can read about the packages I use on the [wiki](https://github.com/edu-flores/linux-dotfiles/wiki). To easily set up the dotfiles you can run `link_files.sh` to make the necessary symlinks.
 
+For the Polybar weather module to work, you should create a `~/.env` file, containing your location id and api key. For more information, consult [here](https://openweathermap.org/).
+
 ## ⌨️ Bindings
 
 Show application launcher

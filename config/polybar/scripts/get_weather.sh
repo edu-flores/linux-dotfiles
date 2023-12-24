@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Load environment variables
-source ~/.config/polybar/scripts/.env
+source ~/.env
 
 # OpenWeatherMap API URL
 url="https://api.openweathermap.org/data/2.5/weather?id=${LOCATION_ID}&appid=${API_KEY}&units=metric"
@@ -42,5 +42,5 @@ if ping -q -c 1 -W 1 google.com &> /dev/null; then
     echo "$weather_icon $temp_rounded°C"
 else
     # No internet connection
-    echo "N/A"
+    echo " "
 fi
