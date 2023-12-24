@@ -157,7 +157,7 @@ configuration {
 }
 
 window {
-    width: 600;
+    width: 800;
 }
 
 inputbar {
@@ -180,14 +180,14 @@ entry {
     border-radius: 5;
     text-color: @fg;
     padding: 10;
-    placeholder: "...";
+    placeholder: "Search";
     cursor: text;
 }
 
 element {
     background-color: inherit;
-    padding: 8;
-    spacing: 10;
+    padding: 10 15;
+    spacing: 15;
     cursor: pointer;
 }
 
@@ -210,7 +210,7 @@ element-text {
 
 element.selected {
     background-color: @bg-alt;
-    border-radius: 10;
+    border-radius: 25;
 }
 
 element-text.selected {
@@ -221,5 +221,6 @@ listview {
     background-color: @bg;
     padding: 5 10;
     lines: 8;
+    columns: 2;
     cursor: pointer;
 }
