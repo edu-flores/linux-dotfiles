@@ -255,7 +255,7 @@ schemes:
       cyan:    '#a4ffff'
       white:   '#ffffff'
 
-colors: *gruvbox
+colors: *dracula
   # Default colors
   #primary:
   #  background: '#1d1f21'

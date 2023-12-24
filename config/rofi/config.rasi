@@ -147,7 +147,7 @@ configuration {
 }
 
 /* @theme "/dev/null" */
-@theme "~/.config/rofi/themes/gruvbox.rasi"
+@theme "~/.config/rofi/themes/dracula.rasi"
 
 * {
     border: 0;
@@ -157,58 +157,64 @@ configuration {
 }
 
 window {
-    width: 30%;
-}
-
-@media ( max-width: 1200 ) {
-    window {
-        width: 50%;
-    }
+    width: 600;
 }
 
 inputbar {
-    background-color: @bg-alt;
+    background-color: @bg;
     children: [prompt, entry];
     padding: 5 10;
 }
 
 prompt {
-    background-color: @bg-alt;
-    text-color: @fg;
-    padding: 5 0 5 5;
+    background-color: inherit;
+    text-color: @fg-alt;
+    padding: 10;
     vertical-align: 0.5;
 }
 
 entry {
-    background-color: @bg-alt;
+    background-color: inherit;
+    border: 0 0 2 0;
+    border-color: @bg-alt;
+    border-radius: 5;
     text-color: @fg;
-    padding: 5 10;
+    padding: 10;
     placeholder: "Search...";
     cursor: text;
 }
 
 element {
-    background-color: @bg;
+    background-color: inherit;
     padding: 10 20;
-    spacing: 15;
+    spacing: 20;
     cursor: pointer;
 }
 
 element-icon {
-    background-color: @bg;
+    background-color: inherit;
     size: 25;
     cursor: pointer;
 }
 
+element-icon.selected {
+    background-color: inherit;
+}
+
 element-text {
-    background-color: @bg;
-    text-color: @fg-alt;
+    background-color: inherit;
+    text-color: @fg;
     vertical-align: 0.5;
     cursor: pointer;
 }
 
+element.selected {
+    background-color: @bg-alt;
+    border-radius: 10;
+}
+
 element-text.selected {
-   text-color: @fg;
+    text-color: @bg;
 }
 
 listview {
