@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # Remove symlinks
 remove() {
 	rm -rf ~/.config/alacritty
@@ -9,6 +8,7 @@ remove() {
 	rm -rf ~/.config/polybar
 	rm -rf ~/.config/rofi
 	rm -rf ~/.config/dunst
+	rm -rf ~/.config/mimeapps.list
 	rm ~/.zshrc
 }
 
@@ -20,6 +20,7 @@ symlink() {
 	ln -s $PWD/config/polybar ~/.config/polybar
 	ln -s $PWD/config/rofi ~/.config/rofi
 	ln -s $PWD/config/dunst ~/.config/dunst
+	ln -s $PWD/config/mimeapps.list ~/.config/mimeapps.list
 	ln -s $PWD/config/zsh/.zshrc ~/.zshrc
 }
 
