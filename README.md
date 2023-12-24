@@ -1,4 +1,3 @@
-<br>
 <div align="center">
     <h1>Linux Dotfiles</h1>
     <h3>My Desktop Configuration</h3>

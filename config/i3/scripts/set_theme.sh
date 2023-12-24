@@ -21,21 +21,21 @@ fi
 # Set variables
 case $theme in
     everforest)
-        wallpaper="Forest.jpg"
+        wallpaper="street-cars.png"
         background="#1e2326"
         background_alt="#4f5b58"
         foreground="#d3c6aa"
         vscode_theme="Everforest Dark"
         ;;
     gruvbox)
-        wallpaper="City.jpg"
+        wallpaper="retro-machine.png"
         background="#1d2021"
         background_alt="#3c3836"
         foreground="#ebdbb2"
         vscode_theme="Gruvbox Material Dark"
         ;;
     dracula)
-        wallpaper="ElvishJungle.jpg"
+        wallpaper="space-employees.png"
         background="#282a36"
         background_alt="#44475a"
         foreground="#f8f8f2"
