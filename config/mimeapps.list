@@ -1,8 +1,0 @@
-[Default Applications]
-x-scheme-handler/https=chromium.desktop
-x-scheme-handler/http=chromium.desktop
-inode/directory=org.gnome.Nautilus.desktop
-image/jpeg=feh.desktop
-
-[Added Associations]
-image/jpeg=feh.desktop;
