@@ -30,6 +30,7 @@ Alternatively, you can automate theme changes based on the time of day using a c
 # Set up a cronjob to change the theme every day at 7:00, 14:00, and 19:00.
 
 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+DISPLAY=:0
 XDG_RUNTIME_DIR=/run/user/1000
 
 0 7,14,19 * * * $HOME/path/to/script/set_theme.sh
