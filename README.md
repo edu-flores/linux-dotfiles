@@ -19,8 +19,9 @@ $ ./path/to/script/set_theme.sh [num]
 Where `[num]` corresponds to the theme options:
 
 - `1` 🏙️ Everforest
-- `2` 🌄 Gruvbox
-- `3` 🌆 Dracula
+- `2` 🌃 Nord
+- `3` 🌇 Gruvbox
+- `4` 🌆 Dracula
 
 ### Automated Theme Switching
 
@@ -33,7 +34,7 @@ DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
 DISPLAY=:0
 XDG_RUNTIME_DIR=/run/user/1000
 
-0 7,14,19 * * * $HOME/path/to/script/set_theme.sh
+0 8,12,16,20 * * * $HOME/path/to/script/set_theme.sh
 ```
 
 **Note:** Adjust the paths and environment variables according to your specific setup.

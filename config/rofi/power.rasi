@@ -16,7 +16,6 @@ element {
 }
 
 element.selected {
-    background-color: @bg-alt;
     border-radius: 0;
 }
 
