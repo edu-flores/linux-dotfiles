@@ -3,18 +3,20 @@
 # Pick a theme
 current_hour=$(date +%H)
 case $current_hour in
-    07|08|09|10|11|12|13) theme="everforest" ;;
-    14|15|16|17|18) theme="gruvbox" ;;
-    19|20|21|22|23|00|01|02|03|04|05|06) theme="dracula" ;;
+    08|09|10|11) theme="everforest" ;;
+    12|13|14|15) theme="nord" ;;
+    16|17|18|19) theme="gruvbox" ;;
+    20|21|22|23|00|01|02|03|04|05|06|07) theme="dracula" ;;
 esac
 
 # For testing purposes
 if [ -n "$1" ]; then
     case $1 in
         1) theme="everforest" ;;
-        2) theme="gruvbox" ;;
-        3) theme="dracula" ;;
-        *) echo "Invalid theme selection. Choose 1 for Everforest, 2 for Gruvbox, or 3 for Dracula." && exit 1 ;;
+        2) theme="nord" ;;
+        3) theme="gruvbox" ;;
+        4) theme="dracula" ;;
+        *) echo "Invalid theme selection. Choose 1 for Everforest, 2 for Nord, 3 for Gruvbox, or 4 for Dracula." && return 1 ;;
     esac
 fi
 
@@ -26,6 +28,13 @@ case $theme in
         background_alt="#4f5b58"
         foreground="#d3c6aa"
         vscode_theme="Everforest Dark"
+        ;;
+    nord)
+        wallpaper="nord-wallpaper.png"
+        background="#2e3440"
+        background_alt="#4c566a"
+        foreground="#d1dbe5"
+        vscode_theme="Nord Deep"
         ;;
     gruvbox)
         wallpaper="gruvbox-wallpaper.png"

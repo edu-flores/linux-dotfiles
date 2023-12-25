@@ -186,29 +186,6 @@ font:
 
 # Colors (Tomorrow Night)
 schemes:
-  gruvbox: &gruvbox
-    primary:
-      background: '#282828'
-      foreground: '#ebdbb2'
-    normal:
-      black:   '#282828'
-      red:     '#cc241d'
-      green:   '#98971a'
-      yellow:  '#d79921'
-      blue:    '#458588'
-      magenta: '#b16286'
-      cyan:    '#689d6a'
-      white:   '#a89984'
-    bright:
-      black:   '#928374'
-      red:     '#fb4934'
-      green:   '#b8bb26'
-      yellow:  '#fabd2f'
-      blue:    '#83a598'
-      magenta: '#d3869b'
-      cyan:    '#8ec07c'
-      white:   '#ebdbb2'
-
   everforest: &everforest
     primary:
       background: '#272e33'
@@ -231,6 +208,52 @@ schemes:
       magenta: '#d699b6'
       cyan:    '#83c092'
       white:   '#d3c6aa'
+
+  nord: &nord
+    primary:
+      background: '#2e3440'
+      foreground: '#d8dee9'
+    normal:
+      black:   '#3b4252'
+      red:     '#bf616a'
+      green:   '#a3be8c'
+      yellow:  '#ebcb8b'
+      blue:    '#81a1c1'
+      magenta: '#b48ead'
+      cyan:    '#88c0d0'
+      white:   '#e5e9f0'
+    bright:
+      black:   '#4c566a'
+      red:     '#bf616a'
+      green:   '#a3be8c'
+      yellow:  '#ebcb8b'
+      blue:    '#81a1c1'
+      magenta: '#b48ead'
+      cyan:    '#8fbcbb'
+      white:   '#eceff4'
+
+  gruvbox: &gruvbox
+    primary:
+      background: '#282828'
+      foreground: '#ebdbb2'
+    normal:
+      black:   '#282828'
+      red:     '#cc241d'
+      green:   '#98971a'
+      yellow:  '#d79921'
+      blue:    '#458588'
+      magenta: '#b16286'
+      cyan:    '#689d6a'
+      white:   '#a89984'
+    bright:
+      black:   '#928374'
+      red:     '#fb4934'
+      green:   '#b8bb26'
+      yellow:  '#fabd2f'
+      blue:    '#83a598'
+      magenta: '#d3869b'
+      cyan:    '#8ec07c'
+      white:   '#ebdbb2'
 
   dracula: &dracula
     primary:

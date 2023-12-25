@@ -168,7 +168,7 @@ inputbar {
 
 prompt {
     background-color: inherit;
-    text-color: @fg-alt;
+    text-color: @fg;
     padding: 10;
     vertical-align: 0.5;
 }
@@ -209,7 +209,7 @@ element-text {
 }
 
 element.selected {
-    background-color: @bg-alt;
+    background-color: @fg;
     border-radius: 25;
 }
 
