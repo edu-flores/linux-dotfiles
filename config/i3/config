@@ -204,9 +204,9 @@ workspace $ws9 output $monitor2
 workspace $ws10 output $monitor2
 
 # Startup
-exec --no-startup-id $HOME/.config/i3/scripts/monitor_setup.sh
-exec --no-startup-id $HOME/.config/i3/scripts/set_theme.sh
-exec_always --no-startup-id picom --experimental-backend --config $HOME/.config/picom/picom.conf
+exec --no-startup-id ~/.config/i3/scripts/monitor_setup.sh
+exec --no-startup-id ~/.config/i3/scripts/set_theme.sh
+exec_always --no-startup-id picom --experimental-backend --config ~/.config/picom/picom.conf
 
 # Keybinds
 bindsym $mod+space exec rofi -show drun
@@ -219,9 +219,9 @@ bindsym $mod+minus scratchpad show
 
 # Media
 bindsym XF86Tools exec spotify
-bindsym XF86AudioPlay exec $HOME/.config/i3/scripts/handle_media.sh play-pause
-bindsym XF86AudioPrev exec $HOME/.config/i3/scripts/handle_media.sh previous
-bindsym XF86AudioNext exec $HOME/.config/i3/scripts/handle_media.sh next
+bindsym XF86AudioPlay exec ~/.config/i3/scripts/handle_media.sh play-pause
+bindsym XF86AudioPrev exec ~/.config/i3/scripts/handle_media.sh previous
+bindsym XF86AudioNext exec ~/.config/i3/scripts/handle_media.sh next
 
 # Styling        Border  Backgr  Text    Indictr Child
 client.focused   #3c3c3c #3c3c3c #ffffff #2e9ef4 #285577

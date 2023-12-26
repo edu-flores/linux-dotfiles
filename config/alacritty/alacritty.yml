@@ -209,29 +209,6 @@ schemes:
       cyan:    '#83c092'
       white:   '#d3c6aa'
 
-  nord: &nord
-    primary:
-      background: '#2e3440'
-      foreground: '#d8dee9'
-    normal:
-      black:   '#3b4252'
-      red:     '#bf616a'
-      green:   '#a3be8c'
-      yellow:  '#ebcb8b'
-      blue:    '#81a1c1'
-      magenta: '#b48ead'
-      cyan:    '#88c0d0'
-      white:   '#e5e9f0'
-    bright:
-      black:   '#4c566a'
-      red:     '#bf616a'
-      green:   '#a3be8c'
-      yellow:  '#ebcb8b'
-      blue:    '#81a1c1'
-      magenta: '#b48ead'
-      cyan:    '#8fbcbb'
-      white:   '#eceff4'
-
   gruvbox: &gruvbox
     primary:
       background: '#282828'
@@ -277,6 +254,29 @@ schemes:
       magenta: '#ff92df'
       cyan:    '#a4ffff'
       white:   '#ffffff'
+
+  nord: &nord
+    primary:
+      background: '#2e3440'
+      foreground: '#d8dee9'
+    normal:
+      black:   '#3b4252'
+      red:     '#bf616a'
+      green:   '#a3be8c'
+      yellow:  '#ebcb8b'
+      blue:    '#81a1c1'
+      magenta: '#b48ead'
+      cyan:    '#88c0d0'
+      white:   '#e5e9f0'
+    bright:
+      black:   '#4c566a'
+      red:     '#bf616a'
+      green:   '#a3be8c'
+      yellow:  '#ebcb8b'
+      blue:    '#81a1c1'
+      magenta: '#b48ead'
+      cyan:    '#8fbcbb'
+      white:   '#eceff4'
 
 colors: *dracula
   # Default colors

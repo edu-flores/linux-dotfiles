@@ -19,22 +19,22 @@ $ ./path/to/script/set_theme.sh [num]
 Where `[num]` corresponds to the theme options:
 
 - `1` 🏙️ Everforest
-- `2` 🌃 Nord
-- `3` 🌇 Gruvbox
-- `4` 🌆 Dracula
+- `2` 🌇 Gruvbox
+- `3` 🌆 Dracula
+- `4` 🌃 Nord
 
 ### Automated Theme Switching
 
 Alternatively, you can automate theme changes based on the time of day using a cronjob with environment variables. Here's an example:
 
 ```bash
-# Set up a cronjob to change the theme every day at 7:00, 14:00, and 19:00.
+# Set up a cronjob to change the theme every day at 8:00, 12:00, 16:00 and 20:00.
 
 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
 DISPLAY=:0
 XDG_RUNTIME_DIR=/run/user/1000
 
-0 8,12,16,20 * * * $HOME/path/to/script/set_theme.sh
+0 8,12,16,20 * * * ~/path/to/script/set_theme.sh
 ```
 
 **Note:** Adjust the paths and environment variables according to your specific setup.
