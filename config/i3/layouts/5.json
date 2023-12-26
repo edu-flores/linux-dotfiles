@@ -1,0 +1,75 @@
+{
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splith",
+    "marks": [],
+    "percent": null,
+    "rect": {
+        "height": 300,
+        "width": 300,
+        "x": 2456,
+        "y": 97
+    },
+    "type": "floating_con",
+    "nodes": [
+        {
+            "border": "none",
+            "current_border_width": 0,
+            "floating": "user_on",
+            "geometry": {
+               "height": 300,
+               "width": 300,
+               "x": 2516,
+               "y": 122
+            },
+            "marks": [],
+            "name": "Xpad",
+            "percent": 1,
+            "swallows": [
+                {
+                    "class": "^xpad$",
+                    "title": "^Professional$"
+                }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splith",
+    "marks": [],
+    "percent": null,
+    "rect": {
+        "height": 282,
+        "width": 277,
+        "x": 2609,
+        "y": 182
+    },
+    "type": "floating_con",
+    "nodes": [
+        {
+            "border": "none",
+            "current_border_width": 0,
+            "floating": "user_on",
+            "geometry": {
+                "height": 269,
+                "width": 265,
+                "x": 2546,
+                "y": 113
+            },
+            "marks": [],
+            "name": "Xpad",
+            "percent": 1,
+            "swallows": [
+                {
+                    "class": "^xpad$",
+                    "title": "^Personal$"
+                }
+            ],
+            "type": "con"
+        }
+    ]
+}

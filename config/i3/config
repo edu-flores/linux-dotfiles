@@ -204,7 +204,8 @@ workspace $ws9 output $monitor2
 workspace $ws10 output $monitor2
 
 # Startup
-exec --no-startup-id ~/.config/i3/scripts/monitor_setup.sh
+exec --no-startup-id ~/.config/i3/scripts/setup_monitors.sh
+exec --no-startup-id ~/.config/i3/scripts/open_layouts.sh
 exec --no-startup-id ~/.config/i3/scripts/set_theme.sh
 exec_always --no-startup-id picom --experimental-backend --config ~/.config/picom/picom.conf
 
