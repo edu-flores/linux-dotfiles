@@ -25,3 +25,6 @@ alacritty --title "Free" &
 
 # Workspace 5
 xpad &
+
+# Scratchpad
+alacritty --title "Scratchpad" &

@@ -217,6 +217,7 @@ bindsym Print exec flameshot gui
 # Scratchpad
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
+for_window [title="^Scratchpad$"] move scratchpad
 
 # Media
 bindsym XF86Tools exec spotify
