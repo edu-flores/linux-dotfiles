@@ -21,7 +21,10 @@ alacritty --title "Audio Visualizer" -e sh -c "cava" &
 # Workspace 4
 alacritty --title "System Monitor" -e sh -c "btop" &
 alacritty --title "System Information" -e sh -c "neofetch; zsh" &
-alacritty --title "Free" &
+alacritty --title "Clock" -e sh -c "tty-clock -t -c -B -C 7" &
+alacritty --title "Bonsai" -e sh -c "cbonsai -l -i -t 0.2" &
+alacritty --title "Pipes" -e sh -c "pipes -f 20" &
+alacritty --title "Matrix" -e sh -c "cmatrix -u 9" &
 
 # Workspace 5
 xpad &
