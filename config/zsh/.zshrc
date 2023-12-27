@@ -6,8 +6,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Bindings
-bindkey '^[[1;5C' forward-word
-bindkey '^[[1;5D' backward-word
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+bindkey "^H" backward-kill-word
 
 # Theme
 source ~/powerlevel10k/powerlevel10k.zsh-theme
