@@ -15,10 +15,6 @@ element {
     padding: 20 40;
 }
 
-element.selected {
-    border-radius: 0;
-}
-
 listview {
     padding: 5 5;
     lines: 3;

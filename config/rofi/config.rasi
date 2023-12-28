@@ -18,7 +18,7 @@ configuration {
 /*	drun-match-fields: "name,generic,exec,categories,keywords";*/
 /*	drun-categories: ;*/
 /*	drun-show-actions: false;*/
-/*	drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";*/
+	drun-display-format: "{name}";
 /*	drun-url-launcher: "xdg-open";*/
 /*	disable-history: false;*/
 /*	ignored-prefixes: "";*/
@@ -54,14 +54,14 @@ configuration {
 /*	steal-focus: false;*/
 /*	application-fallback-icon: ;*/
 /*	pid: "/run/user/1000/rofi.pid";*/
-	display-window: " ";
+	display-window: "  Windows";
 /*	display-windowcd: ;*/
 /*	display-run: ;*/
 /*	display-ssh: ;*/
-	display-drun: " ";
+	display-drun: "  Apps";
 /*	display-combi: ;*/
 /*	display-keys: ;*/
-	display-filebrowser: " ";
+/*	display-filebrowser: " ";*/
 /*	kb-primary-paste: "Control+V,Shift+Insert";*/
 /*	kb-secondary-paste: "Control+v,Insert";*/
 /*	kb-clear-line: "Control+w";*/
@@ -154,45 +154,60 @@ configuration {
     margin: 0;
     padding: 0;
     spacing: 0;
+
+    background-color: @bg;
+    text-color: @fg;
 }
 
 window {
-    width: 800;
+    width: 650;
 }
 
 inputbar {
-    background-color: @bg;
     children: [prompt, entry];
-    padding: 5 10 15 5;
+    padding: 15;
 }
 
 prompt {
-    background-color: inherit;
+    background-color: @bg-alt;
     text-color: @fg;
-    padding: 10;
+    border-radius: 5;
+    padding: 10 15;
+    margin: 0 15 0 0;
     vertical-align: 0.5;
 }
 
 entry {
-    background-color: inherit;
     border: 0 0 2 0;
     border-color: @bg-alt;
     border-radius: 5;
-    text-color: @fg;
     padding: 10;
-    placeholder: "Search";
+    placeholder: "";
     cursor: text;
 }
 
+listview {
+    padding: 15;
+    lines: 6;
+    columns: 2;
+    cursor: pointer;
+}
+
 element {
-    background-color: inherit;
-    padding: 10 15;
-    spacing: 15;
+    padding: 10;
+    spacing: 10;
+    cursor: pointer;
+}
+
+element.selected {
+    background-color: @fg;
+    border-radius: 5;
+    padding: 10;
+    spacing: 10;
     cursor: pointer;
 }
 
 element-icon {
-    background-color: inherit;
     size: 25;
     cursor: pointer;
 }
@@ -202,25 +217,12 @@ element-icon.selected {
 }
 
 element-text {
-    background-color: inherit;
     text-color: @fg;
     vertical-align: 0.5;
     cursor: pointer;
 }
 
-element.selected {
-    background-color: @fg;
-    border-radius: 25;
-}
-
 element-text.selected {
+    background-color: inherit;
     text-color: @bg;
-}
-
-listview {
-    background-color: @bg;
-    padding: 5 10;
-    lines: 8;
-    columns: 2;
-    cursor: pointer;
 }
