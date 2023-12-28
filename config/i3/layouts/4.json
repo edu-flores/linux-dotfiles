@@ -16,31 +16,10 @@
             "nodes": [
                 {
                     "border": "pixel",
-                    "current_border_width": 0,
                     "floating": "auto_off",
-                    "geometry": {
-                        "height": 600,
-                        "width": 800,
-                        "x": 0,
-                        "y": 0
-                    },
+                    "layout": "splitv",
                     "marks": [],
-                    "name": "System Information",
-                    "percent": 0.49,
-                    "swallows": [
-                        {
-                            "class": "^Alacritty$",
-                            "title": "^System Information$"
-                        }
-                    ],
-                    "type": "con"
-                },
-                {
-                    "border": "pixel",
-                    "floating": "auto_off",
-                    "layout": "splith",
-                    "marks": [],
-                    "percent": 0.51,
+                    "percent": 1,
                     "type": "con",
                     "nodes": [
                         {
@@ -54,36 +33,149 @@
                                 "y": 0
                             },
                             "marks": [],
-                            "name": "Clock",
-                            "percent": 0.5,
+                            "name": "File Manager",
+                            "percent": 0.57,
                             "swallows": [
                                 {
                                     "class": "^Alacritty$",
-                                    "title": "^Clock$"
+                                    "title": "File Manager"
                                 }
                             ],
                             "type": "con"
                         },
                         {
                             "border": "pixel",
-                            "current_border_width": 0,
                             "floating": "auto_off",
-                            "geometry": {
-                                "height": 600,
-                                "width": 800,
-                                "x": 0,
-                                "y": 0
-                            },
+                            "layout": "splitv",
                             "marks": [],
-                            "name": "Bonsai",
-                            "percent": 0.5,
-                            "swallows": [
+                            "percent": 0.43,
+                            "type": "con",
+                            "nodes": [
                                 {
-                                    "class": "^Alacritty$",
-                                    "title": "^Bonsai$"
+                                    "border": "pixel",
+                                    "floating": "auto_off",
+                                    "layout": "splith",
+                                    "marks": [],
+                                    "percent": 1,
+                                    "type": "con",
+                                    "nodes": [
+                                        {
+                                            "border": "pixel",
+                                            "floating": "auto_off",
+                                            "layout": "splitv",
+                                            "marks": [],
+                                            "percent": 0.37,
+                                            "type": "con",
+                                            "nodes": [
+                                                {
+                                                    "border": "pixel",
+                                                    "floating": "auto_off",
+                                                    "layout": "splitv",
+                                                    "marks": [],
+                                                    "percent": 1,
+                                                    "type": "con",
+                                                    "nodes": [
+                                                        {
+                                                            "border": "pixel",
+                                                            "current_border_width": 0,
+                                                            "floating": "auto_off",
+                                                            "geometry": {
+                                                                "height": 600,
+                                                                "width": 800,
+                                                                "x": 0,
+                                                                "y": 0
+                                                            },
+                                                            "marks": [],
+                                                            "name": "Clock",
+                                                            "percent": 0.59,
+                                                            "swallows": [
+                                                                {
+                                                                    "class": "^Alacritty$",
+                                                                    "title": "Clock"
+                                                                }
+                                                            ],
+                                                            "type": "con"
+                                                        },
+                                                        {
+                                                            "border": "pixel",
+                                                            "floating": "auto_off",
+                                                            "layout": "splith",
+                                                            "marks": [],
+                                                            "percent": 0.41,
+                                                            "type": "con",
+                                                            "nodes": [
+                                                                {
+                                                                    "border": "pixel",
+                                                                    "current_border_width": 0,
+                                                                    "floating": "auto_off",
+                                                                    "geometry": {
+                                                                        "height": 600,
+                                                                        "width": 800,
+                                                                        "x": 0,
+                                                                        "y": 0
+                                                                    },
+                                                                    "marks": [],
+                                                                    "name": "Matrix",
+                                                                    "percent": 0.5,
+                                                                    "swallows": [
+                                                                        {
+                                                                            "class": "^Alacritty$",
+                                                                            "title": "Matrix"
+                                                                        }
+                                                                    ],
+                                                                    "type": "con"
+                                                                },
+                                                                {
+                                                                    "border": "pixel",
+                                                                    "current_border_width": 0,
+                                                                    "floating": "auto_off",
+                                                                    "geometry": {
+                                                                        "height": 600,
+                                                                        "width": 800,
+                                                                        "x": 0,
+                                                                        "y": 0
+                                                                    },
+                                                                    "marks": [],
+                                                                    "name": "Pipes",
+                                                                    "percent": 0.5,
+                                                                    "swallows": [
+                                                                        {
+                                                                            "class": "^Alacritty$",
+                                                                            "title": "Pipes"
+                                                                        }
+                                                                    ],
+                                                                    "type": "con"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "border": "pixel",
+                                            "current_border_width": 0,
+                                            "floating": "auto_off",
+                                            "geometry": {
+                                                "height": 600,
+                                                "width": 800,
+                                                "x": 0,
+                                                "y": 0
+                                            },
+                                            "marks": [],
+                                            "name": "System Information",
+                                            "percent": 0.63,
+                                            "swallows": [
+                                                {
+                                                    "class": "^Alacritty$",
+                                                    "title": "System Information"
+                                                }
+                                            ],
+                                            "type": "con"
+                                        }
+                                    ]
                                 }
-                            ],
-                            "type": "con"
+                            ]
                         }
                     ]
                 }
@@ -99,66 +191,34 @@
             "nodes": [
                 {
                     "border": "pixel",
-                    "current_border_width": 0,
                     "floating": "auto_off",
-                    "geometry": {
-                        "height": 600,
-                        "width": 800,
-                        "x": 0,
-                        "y": 0
-                    },
+                    "layout": "splitv",
                     "marks": [],
-                    "name": "Pipes",
-                    "percent": 0.143333333333333,
-                    "swallows": [
+                    "percent": 1,
+                    "type": "con",
+                    "nodes": [
                         {
-                            "class": "^Alacritty$",
-                            "title": "^Pipes$"
+                            "border": "pixel",
+                            "current_border_width": 0,
+                            "floating": "auto_off",
+                            "geometry": {
+                                "height": 600,
+                                "width": 800,
+                                "x": 0,
+                                "y": 0
+                            },
+                            "marks": [],
+                            "name": "System Monitor",
+                            "percent": 1,
+                            "swallows": [
+                                {
+                                    "class": "^Alacritty$",
+                                    "title": "System Monitor"
+                                }
+                            ],
+                            "type": "con"
                         }
-                    ],
-                    "type": "con"
-                },
-                {
-                    "border": "pixel",
-                    "current_border_width": 0,
-                    "floating": "auto_off",
-                    "geometry": {
-                        "height": 600,
-                        "width": 800,
-                        "x": 0,
-                        "y": 0
-                    },
-                    "marks": [],
-                    "name": "System Monitor",
-                    "percent": 0.713333333333334,
-                    "swallows": [
-                        {
-                            "class": "^Alacritty$",
-                            "title": "^System Monitor$"
-                        }
-                    ],
-                    "type": "con"
-                },
-                {
-                    "border": "pixel",
-                    "current_border_width": 0,
-                    "floating": "auto_off",
-                    "geometry": {
-                        "height": 600,
-                        "width": 800,
-                        "x": 0,
-                        "y": 0
-                    },
-                    "marks": [],
-                    "name": "Matrix",
-                    "percent": 0.143333333333333,
-                    "swallows": [
-                        {
-                            "class": "^Alacritty$",
-                            "title": "^Matrix$"
-                        }
-                    ],
-                    "type": "con"
+                    ]
                 }
             ]
         }

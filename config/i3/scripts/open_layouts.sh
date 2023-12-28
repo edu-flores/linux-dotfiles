@@ -20,9 +20,9 @@ alacritty --title "Audio Visualizer" -e sh -c "cava" &
 
 # Workspace 4
 alacritty --title "System Monitor" -e sh -c "btop" &
-alacritty --title "System Information" -e sh -c "neofetch; zsh" &
-alacritty --title "Clock" -e sh -c "tty-clock -t -c -B -C 7" &
-alacritty --title "Bonsai" -e sh -c "cbonsai -l -i -t 0.2" &
+alacritty --title "File Manager" -e sh -c "ranger" &
+alacritty --title "System Information" -e sh -c "{ echo ''; neofetch; } | head -n -3; zsh" &
+alacritty --title "Clock" -e sh -c "tty-clock -c -t -B -C 7 -f '%A, %d %B %Y'" &
 alacritty --title "Pipes" -e sh -c "pipes -f 20" &
 alacritty --title "Matrix" -e sh -c "cmatrix -u 9" &
 
