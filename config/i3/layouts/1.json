@@ -9,11 +9,11 @@
         "y": 286
     },
     "marks": [],
-    "name": "Chromium",
+    "name": "Google-chrome",
     "percent": 1,
     "swallows": [
         {
-            "class": "^Chromium$"
+            "class": "^Google-chrome$"
         }
     ],
     "type": "con"
