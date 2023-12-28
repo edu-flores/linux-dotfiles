@@ -39,7 +39,7 @@ if ping -q -c 1 -W 1 google.com &> /dev/null; then
     esac
 
     # Display the result
-    echo "$weather_icon $temp_rounded°C"
+    echo "$temp_rounded°C $weather_icon"
 else
     # No internet connection
     echo " "
