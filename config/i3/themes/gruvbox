@@ -1,0 +1,7 @@
+# Gruvbox               Border  Backgr  Text    Indictr Child
+client.focused          #3c3836 #3c3836 #ebdbb2 #3c3836 #3c3836
+client.unfocused        #1d2021 #1d2021 #ebdbb2 #1d2021 #1d2021
+client.focused_inactive #2d2c2c #2d2c2c #ebdbb2 #2d2c2c #2d2c2c
+client.placeholder      #1d2021 #1d2021 #ebdbb2 #1d2021 #1d2021
+client.urgent           #ff5555 #ff5555 #ebdbb2 #ff5555 #ff5555
+client.background       #ffffff

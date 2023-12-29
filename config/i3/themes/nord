@@ -1,0 +1,7 @@
+# Nord                  Border  Backgr  Text    Indictr Child
+client.focused          #4c566a #4c566a #d1dbe5 #4c566a #4c566a
+client.unfocused        #2e3440 #2e3440 #d1dbe5 #2e3440 #2e3440
+client.focused_inactive #3d4555 #3d4555 #d1dbe5 #3d4555 #3d4555
+client.placeholder      #2e3440 #2e3440 #d1dbe5 #2e3440 #2e3440
+client.urgent           #ff5555 #ff5555 #d1dbe5 #ff5555 #ff5555
+client.background       #ffffff

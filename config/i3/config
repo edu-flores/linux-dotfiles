@@ -225,13 +225,15 @@ bindsym XF86AudioPlay exec ~/.config/i3/scripts/handle_media.sh play-pause
 bindsym XF86AudioPrev exec ~/.config/i3/scripts/handle_media.sh previous
 bindsym XF86AudioNext exec ~/.config/i3/scripts/handle_media.sh next
 
-# Styling        Border  Backgr  Text    Indictr Child
-client.focused   #3c3c3c #3c3c3c #ffffff #2e9ef4 #285577
-client.unfocused #111111 #111111 #888888 #292d2e #222222
+# Styling - Theme
+include ~/.config/i3/themes/dracula
+
+# Styling - Misc
 for_window [all] title_window_icon on
 for_window [all] title_window_icon padding 5px
-title_align center
+for_window [class="^.*"] border pixel 0
 default_border pixel 0
+title_align center
 gaps inner 10px
 
 # Floating windows
