@@ -231,13 +231,7 @@ include ~/.config/i3/themes/dracula
 # Styling - Misc
 for_window [all] title_window_icon on
 for_window [all] title_window_icon padding 5px
-for_window [class="^.*"] border pixel 0
+for_window [class=".*"] border pixel 0
 default_border pixel 0
 title_align center
 gaps inner 10px
-
-# Floating windows
-for_window [class="xpad"] floating enable  # Sticky Notes
-for_window [class="feh"] floating enable  # Image Viewer
-for_window [class="feh"] resize set 640 480
-for_window [class="org.gnome.Nautilus"] floating enable  # File Manager
