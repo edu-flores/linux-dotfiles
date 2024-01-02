@@ -52,6 +52,11 @@ Show application launcher
 bindsym $mod+space exec rofi -show drun
 ```
 
+Show clipboard history
+```bash
+bindsym $mod+c exec CM_LAUNCHER=rofi clipmenu -p "󰅇 Clipboard"
+```
+
 Show opened windows
 ```bash
 bindsym Mod1+Tab exec rofi -show window

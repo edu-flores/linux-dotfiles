@@ -197,8 +197,8 @@ workspace $ws2 output $monitor1
 workspace $ws3 output $monitor1
 workspace $ws4 output $monitor1
 workspace $ws5 output $monitor1
-workspace $ws6 output $monitor2
-workspace $ws7 output $monitor2
+workspace $ws6 output $monitor1
+workspace $ws7 output $monitor1
 workspace $ws8 output $monitor2
 workspace $ws9 output $monitor2
 workspace $ws10 output $monitor2
@@ -208,8 +208,10 @@ exec --no-startup-id ~/.config/i3/scripts/setup_monitors.sh
 exec --no-startup-id ~/.config/i3/scripts/open_layouts.sh
 exec --no-startup-id ~/.config/i3/scripts/set_theme.sh
 exec_always --no-startup-id picom
+exec_always --no-startup-id clipmenud
 
 # Keybinds
+bindsym $mod+c exec CM_LAUNCHER=rofi clipmenu -p "󰅇 Clipboard"
 bindsym $mod+space exec rofi -show drun
 bindsym Mod1+Tab exec rofi -show window
 bindsym Print exec flameshot gui
