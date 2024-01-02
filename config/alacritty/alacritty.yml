@@ -829,10 +829,7 @@ live_config_reload: true
 #
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
-key_bindings:
-  - { key: 51, mods: Control, chars: '<' }
-  - { key: 52, mods: Control, chars: '>' }
-  - { key: 43, mods: Control, chars: '\' }
+#key_bindings:
   #- { key: Paste,                                       action: Paste          }
   #- { key: Copy,                                        action: Copy           }
   #- { key: L,         mods: Control,                    action: ClearLogNotice }

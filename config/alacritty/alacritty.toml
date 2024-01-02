@@ -1,0 +1,26 @@
+import = [ "~/.config/alacritty/themes/dracula.toml" ]
+
+live_config_reload = true
+
+[font]
+size = 10
+
+[font.bold]
+family = "JetBrainsMonoNL Nerd Font"
+style = "ExtraBold"
+
+[font.bold_italic]
+family = "JetBrainsMonoNL Nerd Font"
+style = "ExtraBold Italic"
+
+[font.italic]
+family = "JetBrainsMonoNL Nerd Font"
+style = "SemiBold Italic"
+
+[font.normal]
+family = "JetBrainsMonoNL Nerd Font"
+style = "SemiBold"
+
+[window.padding]
+x = 20
+y = 10

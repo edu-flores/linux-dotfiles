@@ -18,7 +18,7 @@ configuration {
 /*	drun-match-fields: "name,generic,exec,categories,keywords";*/
 /*	drun-categories: ;*/
 /*	drun-show-actions: false;*/
-	drun-display-format: "{name}";
+/*	drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]"; */
 /*	drun-url-launcher: "xdg-open";*/
 /*	disable-history: false;*/
 /*	ignored-prefixes: "";*/
@@ -189,7 +189,7 @@ entry {
 listview {
     padding: 15;
     lines: 6;
-    columns: 2;
+    columns: 1;
     cursor: pointer;
 }
 

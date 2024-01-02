@@ -57,7 +57,7 @@ sed -i "0,/background = .*/s/background = .*/background = $background/; 0,/backg
 ~/.config/polybar/scripts/launch_polybar.sh  # Launch polybar
 
 # i3
-sed -i "s/include ~\/.config\/i3\/themes\/.*/include ~\/.config\/i3\/themes\/$theme/" ~/.config/i3/config
+sed -i "s/themes\/.*/themes\/$theme/" ~/.config/i3/config
 i3 reload
 
 # Dunst
@@ -65,10 +65,10 @@ pkill dunst
 sed -i "s/background = \".*\"/background = \"$background_alt\"/" ~/.config/dunst/dunstrc
 
 # Alacritty
-sed -i "s/colors: \*.*/colors: \*$theme/" ~/.config/alacritty/alacritty.yml
+sed -i "s/themes\/.*\.toml/themes\/$theme\.toml/" ~/.config/alacritty/alacritty.toml
 
 # Rofi
-sed -i "s/@theme \"~\/.config\/rofi\/themes\/.*\.rasi\"/@theme \"~\/.config\/rofi\/themes\/$theme.rasi\"/" ~/.config/rofi/config.rasi
+sed -i "s/themes\/.*\.rasi/themes\/$theme\.rasi/" ~/.config/rofi/config.rasi
 
 # VSCode
 sed -i "s/\"workbench\.colorTheme\": \".*\",/\"workbench.colorTheme\": \"$vscode_theme\",/" ~/.config/Code/User/settings.json

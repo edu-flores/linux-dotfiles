@@ -11,7 +11,7 @@ bindkey "^[[1;5D" backward-word
 bindkey "^H" backward-kill-word
 
 # Theme
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+source ~/.zsh/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -21,7 +21,7 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Autosuggestions
-HISTFILE=~/.histfile
+HISTFILE=~/.zsh/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory

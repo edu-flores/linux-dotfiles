@@ -21,9 +21,9 @@ alacritty --title "Audio Visualizer" -e sh -c "cava" &
 # Workspace 4
 alacritty --title "System Monitor" -e sh -c "btop" &
 alacritty --title "File Manager" -e sh -c "ranger" &
-alacritty --title "System Information" -e sh -c "neofetch | head -n -2; zsh" &
+alacritty --title "System Information" -e sh -c "neofetch | head -n -1; zsh" &
 alacritty --title "Clock" -e sh -c "tty-clock -c -t -B -C 7 -f '%A, %d %B %Y'" &
-alacritty --title "Pipes" -e sh -c "pipes -f 20" &
+alacritty --title "Pipes" -e sh -c "pipes.sh -f 20" &
 alacritty --title "Matrix" -e sh -c "cmatrix -u 9" &
 
 # Workspace 5
