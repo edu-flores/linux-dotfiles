@@ -27,8 +27,7 @@
             "percent": 1,
             "swallows": [
                 {
-                    "class": "^xpad$",
-                    "title": "^Professional$"
+                    "class": "^xpad$"
                 }
             ],
             "type": "con"
@@ -65,8 +64,7 @@
             "percent": 1,
             "swallows": [
                 {
-                    "class": "^xpad$",
-                    "title": "^Personal$"
+                    "class": "^xpad$"
                 }
             ],
             "type": "con"
