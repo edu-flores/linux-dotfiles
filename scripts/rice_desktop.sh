@@ -55,11 +55,8 @@ rm -rf ~/AUR 2> /dev/null
 mkdir -p ~/AUR
 git clone https://aur.archlinux.org/yay.git ~/AUR/yay
 
-# Check if yay installation is successful
-if ! ~/AUR/yay/makepkg -si; then
-    echo "Error: Yay installation failed. Skipping AUR packages..."
-else
-    # Install packages from the AUR repositories
+# Install packages from the AUR repositories
+if (cd ~/AUR/yay && makepkg -si ); then
     echo "The following packages will be installed from the AUR: ${aur_packages[*]}"
     echo "Press Enter to continue..."
     read -r
@@ -70,6 +67,8 @@ else
             echo "$package is already installed. Skipping..."
         fi
     done
+else
+    echo "Error: Yay installation failed. Skipping AUR packages..."
 fi
 
 # Shell - zsh
@@ -103,7 +102,7 @@ EOF
 
 # Profile configurations
 sudo head -n -5 /etc/X11/xinit/xinitrc > /etc/X11/xinit/xinitrc
-echo "exec i3" | sudo tee -a /etc/X11/xinit/xinitrc
+echo "exec i3" | sudo tee -a /etc/X11/xinit/xinitrc > /dev/null
 
 read -p "Start up the X server automatically when logging in? [Y/n]: " answer
 if [ "$answer" == "Y" ]; then
@@ -136,7 +135,7 @@ cp $PWD/wallpapers/* $wallpaper_dir
 
 # System bell
 echo -e "\nDisabling system bell..."
-echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/nobeep.conf
+echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/nobeep.conf > /dev/null
 
 # Symlink config files
 echo -e "\nLinking config files..."
