@@ -18,4 +18,5 @@ element {
 listview {
     padding: 5 5;
     lines: 3;
+    scrollbar: false;
 }

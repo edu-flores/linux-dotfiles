@@ -191,6 +191,12 @@ listview {
     lines: 6;
     columns: 1;
     cursor: pointer;
+    scrollbar: true;
+}
+
+scrollbar {
+    handle-color: @bg-alt;
+    padding: 0 0 0 10;
 }
 
 element {
