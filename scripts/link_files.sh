@@ -8,7 +8,7 @@ remove() {
 	rm -rf ~/.config/polybar
 	rm -rf ~/.config/rofi
 	rm -rf ~/.config/dunst
-	rm ~/.zshrc
+	rm -f ~/.zshrc
 }
 
 # Set up symlinks
