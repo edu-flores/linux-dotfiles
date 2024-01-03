@@ -109,8 +109,7 @@ cat << "EOF"
 
 EOF
 
-# Profile configurations
-echo "exec i3" | sudo tee -a /etc/X11/xinit/xinitrc > /dev/null
+# X configurations
 read -p "Start up the X server automatically when logging in? [Y/n]: " answer
 if [[ "$answer" =~ ^[Yy]$ ]]; then
     echo 'if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
@@ -118,10 +117,11 @@ if [[ "$answer" =~ ^[Yy]$ ]]; then
 fi' > ~/.zprofile
 fi
 read -p "Which keyboard layout would you like to use? (e.g. latam, us, etc): " layout
-echo "setxkbmap $layout" > ~/.xprofile
+echo "setxkbmap $layout" > ~/.xinitrc
+echo "exec i3" >> ~/.xinitrc
 
 # Weather module
-rm -f ~/.env
+echo -n > ~/.env
 read -p "Would you like to set up the weather module? [Y/n]: " answer
 if [[ "$answer" =~ ^[Yy]$ ]]; then
     read -p "Enter your OpenWeatherMap API key: " api_key
