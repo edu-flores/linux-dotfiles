@@ -24,7 +24,7 @@ EOF
 
 # Ask for confirmation
 read -p "Begin the installation? [Y/n]: " answer
-if [[ ! "$answer" =~ ^[Yy]$ ]]; then
+if [[ ! "$answer" =~ ^[Yy]$|^$ ]]; then
     echo "Exiting..."
     exit 0
 fi
@@ -48,8 +48,7 @@ aur_packages=("google-chrome" "visual-studio-code-bin" "spotify" "cmatrix-git" "
 
 # Install packages from the official repositories
 echo -e "\nThe following packages will be installed from the official repositories: ${official_packages[*]}"
-echo "Press Enter to continue..."
-read -r
+read -p "Press Enter to continue..."
 for package in "${official_packages[@]}"; do
     if ! pacman -Qi "$package" &> /dev/null; then
         sudo pacman -S --noconfirm "$package"
@@ -65,10 +64,9 @@ mkdir -p ~/AUR
 git clone https://aur.archlinux.org/yay.git ~/AUR/yay
 
 # Install packages from the AUR repositories
-if (cd ~/AUR/yay && makepkg -si ); then
+if (cd ~/AUR/yay && makepkg -si --noconfirm); then
     echo "The following packages will be installed from the AUR: ${aur_packages[*]}"
-    echo "Press Enter to continue..."
-    read -r
+    read -p "Press Enter to continue..."
     for package in "${aur_packages[@]}"; do
         if ! yay -Qi "$package" &> /dev/null; then
             yay -S --noconfirm "$package"
@@ -89,9 +87,9 @@ cat << "EOF"
 
 EOF
 
-echo -e "\nZsh will be installed and configured with powerlevel10k, syntax highlighting and autosuggestions."
-echo "Press Enter to continue..."
-read -r
+echo -e "\nZ shell will be installed and configured with powerlevel10k, syntax highlighting and autosuggestions."
+read -p "Press Enter to continue..."
+
 rm -rf ~/.zsh
 mkdir -p ~/.zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
@@ -109,25 +107,26 @@ cat << "EOF"
 
 EOF
 
-# X configurations
+# Empty .env file
+echo -e "\nCreating an empty .env file..."
+touch ~/.env
+
+# Automatic startup
 read -p "Start up the X server automatically when logging in? [Y/n]: " answer
-if [[ "$answer" =~ ^[Yy]$ ]]; then
+if [[ "$answer" =~ ^[Yy]$|^$ ]]; then
     echo 'if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
     startx
 fi' > ~/.zprofile
 fi
-read -p "Which keyboard layout would you like to use? (e.g. latam, us, etc): " layout
-echo "setxkbmap $layout" > ~/.xinitrc
-echo "exec i3" >> ~/.xinitrc
 
-# Weather module
-echo -n > ~/.env
-read -p "Would you like to set up the weather module? [Y/n]: " answer
-if [[ "$answer" =~ ^[Yy]$ ]]; then
-    read -p "Enter your OpenWeatherMap API key: " api_key
-    read -p "Enter your location ID: " location_id
-    echo "export API_KEY=$api_key" >> ~/.env
-    echo "export LOCATION_ID=$location_id" >> ~/.env
+# Xinitrc
+head -n -5 /etc/X11/xinit/xinitrc > ~/.xinitrc
+echo "exec i3" >> ~/.xinitrc
+read -p "Which keyboard layout would you like to use? [US/latam]: " answer
+if [[ "$answer" =~ ^(US|us|latam)$|^$ ]]; then
+    echo "setxkbmap $answer" >> ~/.xinitrc
+else
+    echo "Layout not recognized. Skipping..."
 fi
 
 # Fonts and Wallpapers
@@ -162,14 +161,14 @@ ln -s $PWD/config/dunst ~/.config/dunst
 ln -s $PWD/config/zsh/.zshrc ~/.zshrc
 
 # Notify user for remaining changes
-echo -e "\nInstallation completed. You will need to manually: "
+echo -e "\nInstallation completed. You'll need to manually: "
 echo " - Set up specific app configurations via their respective GUIs"
-echo " - Set up the powerlevel10k theme as you wish"
+echo " - Set up the powerlevel10k theme"
 echo " - Install necessary GPU drivers (AMD or Nvidia)"
 
 # Prompt for reboot
 read -p "Do you want to reboot now? [Y/n]: " answer
-if [[ "$answer" =~ ^[Yy]$ ]]; then
+if [[ "$answer" =~ ^[Yy]$|^$ ]]; then
     sudo reboot
 else
     echo "You can manually reboot later to apply the remaining changes."
