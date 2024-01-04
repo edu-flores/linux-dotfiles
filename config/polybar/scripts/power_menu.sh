@@ -9,7 +9,7 @@ selected_option=$(echo -e "$options" | rofi -dmenu -i -p "Power Menu" -theme-str
 # Perform actions based on the selected option
 case "$selected_option" in
     "  POWER")
-        systemctl poweroff
+        shutdown -h now
         ;;
     "  REBOOT")
         systemctl reboot
