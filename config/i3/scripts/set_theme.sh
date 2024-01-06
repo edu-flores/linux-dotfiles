@@ -53,8 +53,8 @@ case $theme in
 esac
 
 # Polybar
-sed -i "0,/background = .*/s/background = .*/background = $background/; 0,/background-alt = .*/s/background-alt = .*/background-alt = $background_alt/; 0,/foreground = .*/s/foreground = .*/foreground = $foreground/" ~/.config/polybar/config.ini
-~/.config/polybar/scripts/launch_polybar.sh  # Launch polybar
+sed -i "s/themes\/.*\.ini/themes\/$theme\.ini/" ~/.config/polybar/config.ini
+~/.config/polybar/scripts/launch_polybar.sh  # Reload status bar
 
 # i3
 sed -i "s/themes\/.*/themes\/$theme/" ~/.config/i3/config
