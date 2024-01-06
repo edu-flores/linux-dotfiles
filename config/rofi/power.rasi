@@ -1,10 +1,12 @@
 configuration {
 	font: "JetBrainsMonoNL Nerd Font 20";
 	show-icons: false;
+    sidebar-mode: false;
 }
 
 window {
     width: 235;
+    padding: 5;
 }
 
 mainbox {
@@ -16,7 +18,7 @@ element {
 }
 
 listview {
-    padding: 5 5;
+    margin: 0;
     lines: 3;
     scrollbar: false;
 }

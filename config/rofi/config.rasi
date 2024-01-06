@@ -15,17 +15,18 @@
 /* Settings */
 configuration {
 	modi: "window,drun";
-	font: "JetBrainsMonoNL Nerd Font 12";
+	font: "JetBrainsMonoNL Nerd Font 11.5";
 	show-icons: true;
 	terminal: "/usr/bin/alacritty";
 	window-thumbnail: true;
 	display-window: "  Windows";
-	display-drun: "  Apps";
+	display-drun: "󰕮  Apps";
+    sidebar-mode: true;
 }
 
 
 /* Current desktop theme */
-@theme "~/.config/rofi/themes/dracula.rasi"
+@theme "~/.config/rofi/themes/gruvbox.rasi"
 
 
 /* General & Colors */
@@ -43,18 +44,12 @@ configuration {
 /* Styling */
 window {
     width: 650;
-}
-
-inputbar {
-    children: [prompt, entry];
     padding: 15;
 }
 
-prompt {
-    background-color: @bg-alt;
-    border-radius: 5;
-    padding: 10 15;
-    margin: 0 15 0 0;
+inputbar {
+    children: [entry];
+    margin: 0 0 15 0;
 }
 
 entry {
@@ -62,21 +57,22 @@ entry {
     border-color: @bg-alt;
     border-radius: 5;
     padding: 10;
-    placeholder: "";
+    placeholder: "  Search...";
     cursor: text;
 }
 
 listview {
-    padding: 15;
     lines: 6;
     columns: 1;
     cursor: pointer;
     scrollbar: true;
+    margin: 0 0 15 0;
 }
 
 scrollbar {
-    handle-color: @bg-alt;
-    padding: 0 0 0 10;
+    handle-color: @fg;
+    background-color: @bg-alt;
+    margin: 0 0 0 10;
 }
 
 element {
@@ -111,4 +107,14 @@ element-text {
 element-text.selected {
     background-color: inherit;
     text-color: @bg;
+}
+
+button {
+    padding: 10;
+    border-radius: 5;
+    cursor: pointer;
+}
+
+button.selected {
+    background-color: @bg-alt;
 }
