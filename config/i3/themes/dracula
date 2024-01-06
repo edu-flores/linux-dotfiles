@@ -3,5 +3,5 @@ client.focused          #44475a #44475a #f8f8f2 #44475a #44475a
 client.unfocused        #282a36 #282a36 #f8f8f2 #282a36 #282a36
 client.focused_inactive #363948 #363948 #f8f8f2 #363948 #363948
 client.placeholder      #282a36 #282a36 #f8f8f2 #282a36 #282a36
-client.urgent           #f95668 #f95668 #f8f8f2 #f95668 #f95668
+client.urgent           #ff5555 #ff5555 #f8f8f2 #ff5555 #ff5555
 client.background       #ffffff
