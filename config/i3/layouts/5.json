@@ -5,29 +5,30 @@
     "marks": [],
     "percent": null,
     "rect": {
-        "height": 300,
-        "width": 300,
-        "x": 2456,
-        "y": 97
+        "height": 282,
+        "width": 277,
+        "x": 2540,
+        "y": 84
     },
     "type": "floating_con",
     "nodes": [
         {
-            "border": "none",
+            "border": "pixel",
             "current_border_width": 0,
             "floating": "user_on",
             "geometry": {
-               "height": 300,
-               "width": 300,
-               "x": 2516,
-               "y": 122
+                "height": 269,
+                "width": 265,
+                "x": 2546,
+                "y": 113
             },
             "marks": [],
-            "name": "Xpad",
+            "name": "Professional",
             "percent": 1,
             "swallows": [
                 {
-                    "class": "^xpad$"
+                    "class": "^xpad$",
+                    "title": "^Professional$"
                 }
             ],
             "type": "con"
@@ -42,29 +43,30 @@
     "marks": [],
     "percent": null,
     "rect": {
-        "height": 282,
-        "width": 277,
-        "x": 2609,
-        "y": 182
+       "height": 282,
+       "width": 277,
+       "x": 2607,
+       "y": 135
     },
     "type": "floating_con",
     "nodes": [
         {
-            "border": "none",
+            "border": "pixel",
             "current_border_width": 0,
             "floating": "user_on",
             "geometry": {
-                "height": 269,
-                "width": 265,
-                "x": 2546,
-                "y": 113
+                "height": 300,
+                "width": 300,
+                "x": 2516,
+                "y": 122
             },
             "marks": [],
-            "name": "Xpad",
+            "name": "Personal",
             "percent": 1,
             "swallows": [
                 {
-                    "class": "^xpad$"
+                    "class": "^xpad$",
+                    "title": "^Personal$"
                 }
             ],
             "type": "con"

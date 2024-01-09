@@ -3,10 +3,8 @@
 # Pick a theme
 current_hour=$(date +%H)
 case $current_hour in
-    08|09|10|11) theme="everforest" ;;
-    12|13|14|15) theme="gruvbox" ;;
-    16|17|18|19) theme="dracula" ;;
-    20|21|22|23|00|01|02|03|04|05|06|07) theme="nord" ;;
+    07|08|09|10|11|12|13|14|15|16|17|18) theme="gruvbox" ;;
+    19|20|21|22|23|00|01|02|03|04|05|06) theme="tokyo" ;;
 esac
 
 # For testing purposes
@@ -14,9 +12,9 @@ if [ -n "$1" ]; then
     case $1 in
         1) theme="everforest" ;;
         2) theme="gruvbox" ;;
-        3) theme="dracula" ;;
+        3) theme="tokyo" ;;
         4) theme="nord" ;;
-        *) echo "Invalid theme selection. Choose 1 for Everforest, 2 for Gruvbox, 3 for Dracula, or 4 for Nord." && return 1 ;;
+        *) echo "Invalid theme selection. Choose 1 for Everforest, 2 for Gruvbox, 3 for Tokyo Night, or 4 for Nord." && return 1 ;;
     esac
 fi
 
@@ -24,7 +22,7 @@ fi
 case $theme in
     everforest)
         wallpaper="everforest-wallpaper.png"
-        background="#1e2326"
+        background="#1d2021"
         background_alt="#4f5b58"
         foreground="#d3c6aa"
         vscode_theme="Everforest Dark"
@@ -32,16 +30,16 @@ case $theme in
     gruvbox)
         wallpaper="gruvbox-wallpaper.png"
         background="#1d2021"
-        background_alt="#3c3836"
+        background_alt="#32302f"
         foreground="#ebdbb2"
-        vscode_theme="Gruvbox Material Dark"
+        vscode_theme="Gruvbox Dark Hard"
         ;;
-    dracula)
-        wallpaper="dracula-wallpaper.png"
-        background="#282a36"
-        background_alt="#44475a"
-        foreground="#f8f8f2"
-        vscode_theme="Dracula"
+    tokyo)
+        wallpaper="tokyo-wallpaper.png"
+        background="#1a1b26"
+        background_alt="#323b5e"
+        foreground="#a9b1d6"
+        vscode_theme="Tokyo Night Frameless"
         ;;
     nord)
         wallpaper="nord-wallpaper.png"
@@ -75,4 +73,4 @@ sed -i "s/themes\/.*\.rasi/themes\/$theme\.rasi/" ~/.config/rofi/config.rasi
 sed -i "s/\"workbench\.colorTheme\": \".*\",/\"workbench.colorTheme\": \"$vscode_theme\",/" ~/.config/Code/User/settings.json
 
 # Wallpaper
-sleep 0.5 && feh --bg-fill ~/Pictures/Wallpapers/$wallpaper
+feh --bg-fill ~/Pictures/Wallpapers/$wallpaper

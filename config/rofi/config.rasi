@@ -26,7 +26,7 @@ configuration {
 
 
 /* Current desktop theme */
-@theme "~/.config/rofi/themes/dracula.rasi"
+@theme "~/.config/rofi/themes/gruvbox.rasi"
 
 
 /* General & Colors */

@@ -12,7 +12,7 @@
 # +==========================================================================+
 
 # Current desktop theme
-import = [ "~/.config/alacritty/themes/dracula.toml" ]
+import = [ "~/.config/alacritty/themes/gruvbox.toml" ]
 
 # Settings
 live_config_reload = true

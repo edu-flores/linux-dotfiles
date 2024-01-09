@@ -1,51 +1,93 @@
 {
     "border": "pixel",
     "floating": "auto_off",
-    "layout": "splitv",
+    "layout": "splith",
     "marks": [],
     "percent": 1,
     "type": "con",
     "nodes": [
         {
             "border": "pixel",
-            "current_border_width": 0,
             "floating": "auto_off",
-            "geometry": {
-                "height": 885,
-                "width": 1900,
-                "x": 1034,
-                "y": 67
-            },
+            "layout": "splith",
             "marks": [],
-            "name": "Spotify Premium",
-            "percent": 0.87,
-            "swallows": [
+            "percent": 1,
+            "type": "con",
+            "nodes": [
                 {
-                    "class": "^Spotify$"
-                }
-            ],
-            "type": "con"
-        },
-        {
-            "border": "pixel",
-            "current_border_width": 0,
-            "floating": "auto_off",
-            "geometry": {
-                "height": 600,
-                "width": 800,
-                "x": 0,
-                "y": 0
-            },
-            "marks": [],
-            "name": "cava",
-            "percent": 0.13,
-            "swallows": [
+                    "border": "pixel",
+                    "floating": "auto_off",
+                    "layout": "splitv",
+                    "marks": [],
+                    "percent": 0.67,
+                    "type": "con",
+                    "nodes": [
+                        {
+                            "border": "pixel",
+                            "current_border_width": 0,
+                            "floating": "auto_off",
+                            "geometry": {
+                                "height": 600,
+                                "width": 800,
+                                "x": 0,
+                                "y": 0
+                            },
+                            "marks": [],
+                            "name": "ncspot",
+                            "percent": 0.88,
+                            "swallows": [
+                                {
+                                    "class": "^Alacritty$",
+                                    "title": "^Media Player$"
+                                }
+                            ],
+                            "type": "con"
+                        },
+                        {
+                            "border": "pixel",
+                            "current_border_width": 0,
+                            "floating": "auto_off",
+                            "geometry": {
+                                "height": 600,
+                                "width": 800,
+                                "x": 0,
+                                "y": 0
+                            },
+                            "marks": [],
+                            "name": "cava",
+                            "percent": 0.12,
+                            "swallows": [
+                                {
+                                    "class": "^Alacritty$",
+                                    "title": "^Audio Visualizer$"
+                                }
+                            ],
+                            "type": "con"
+                        }
+                    ]
+                },
                 {
-                    "class": "^Alacritty$",
-                    "title": "Audio Visualizer"
+                    "border": "pixel",
+                    "current_border_width": 0,
+                    "floating": "auto_off",
+                    "geometry": {
+                        "height": 600,
+                        "width": 800,
+                        "x": 0,
+                        "y": 0
+                    },
+                    "marks": [],
+                    "name": "sptlrx",
+                    "percent": 0.33,
+                    "swallows": [
+                        {
+                            "class": "^Alacritty$",
+                            "title": "^Lyrics$"
+                        }
+                    ],
+                    "type": "con"
                 }
-            ],
-            "type": "con"
+            ]
         }
     ]
 }

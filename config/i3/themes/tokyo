@@ -1,0 +1,7 @@
+# Tokyo                 Border  Backgr  Text    Indictr Child
+client.focused          #323b5e #323b5e #a9b1d6 #323b5e #323b5e
+client.unfocused        #1a1b26 #1a1b26 #a9b1d6 #1a1b26 #1a1b26
+client.focused_inactive #262B42 #262B42 #a9b1d6 #262B42 #262B42
+client.placeholder      #1a1b26 #1a1b26 #a9b1d6 #1a1b26 #1a1b26
+client.urgent           #f7768e #f7768e #a9b1d6 #f7768e #f7768e
+client.background       #ffffff

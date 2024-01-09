@@ -47,8 +47,8 @@ echo -e "\nUpdating the system..."
 sudo pacman -Syu --noconfirm
 
 # Set desired packages from the official and AUR repositories
-official_packages=("xorg-server" "xorg-xinit" "xorg-xrandr" "i3-wm" "alacritty" "dunst" "picom" "polybar" "rofi" "zsh" "xpad" "feh" "clipmenu" "ranger" "btop" "neofetch" "alsa-utils" "pulseaudio" "playerctl" "flameshot")
-aur_packages=("google-chrome" "visual-studio-code-bin" "spotify" "cmatrix-git" "pipes.sh" "tty-clock")
+official_packages=("xorg-server" "xorg-xinit" "xorg-xrandr" "i3-wm" "alacritty" "dunst" "picom" "polybar" "rofi" "zsh" "ncspot" "xpad" "feh" "clipmenu" "ranger" "btm" "neofetch" "alsa-utils" "pulseaudio" "playerctl" "flameshot")
+aur_packages=("google-chrome" "visual-studio-code-bin" "cava" "sptlrx-bin" "cmatrix-git" "pipes.sh" "tty-clock")
 
 # Install packages from the official repositories
 echo -e "\nThe following packages will be installed from the official repositories: ${official_packages[*]}"

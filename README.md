@@ -20,7 +20,7 @@ Where `[num]` corresponds to the theme options:
 
 - `1` 🏙️ Everforest
 - `2` 🌇 Gruvbox
-- `3` 🌆 Dracula
+- `3` 🌆 Tokyo Night
 - `4` 🌃 Nord
 
 ### Automated Theme Switching
