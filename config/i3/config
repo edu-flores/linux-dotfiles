@@ -174,7 +174,8 @@ exec --no-startup-id picom
 exec --no-startup-id dunst
 
 # Keybinds
-bindsym $mod+c exec CM_LAUNCHER=rofi clipmenu -p "󰅇 Clipboard"
+bindsym $mod+v exec CM_LAUNCHER=rofi clipmenu -p "󰅇 Clipboard"
+bindsym $mod+Shift+v exec clipdel -d ".*"
 bindsym $mod+space exec rofi -show drun
 bindsym Mod1+Tab exec rofi -show window
 bindsym Print exec flameshot gui

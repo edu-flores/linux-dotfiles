@@ -54,7 +54,12 @@ bindsym $mod+space exec rofi -show drun
 
 Show clipboard history
 ```bash
-bindsym $mod+c exec CM_LAUNCHER=rofi clipmenu -p "󰅇 Clipboard"
+bindsym $mod+v exec CM_LAUNCHER=rofi clipmenu -p "󰅇 Clipboard"
+```
+
+Delete clipboard history
+```bash
+bindsym $mod+Shift+v exec clipdel -d ".*"
 ```
 
 Show opened windows
