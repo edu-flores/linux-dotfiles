@@ -62,9 +62,9 @@ Delete clipboard history
 bindsym $mod+Shift+v exec clipdel -d ".*"
 ```
 
-Show opened windows
+Switch back and forth workspaces
 ```bash
-bindsym Mod1+Tab exec rofi -show window
+bindsym $mod+Tab workspace back_and_forth
 ```
 
 Launch snipping tool
