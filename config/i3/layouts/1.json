@@ -1,20 +1,30 @@
 {
     "border": "pixel",
-    "current_border_width": 0,
     "floating": "auto_off",
-    "geometry": {
-        "height": 625,
-        "width": 1004,
-        "x": 1447,
-        "y": 286
-    },
+    "layout": "stacked",
     "marks": [],
-    "name": "Google Chrome",
     "percent": 1,
-    "swallows": [
+    "type": "con",
+    "nodes": [
         {
-            "class": "^Google-chrome$"
+            "border": "pixel",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+                "height": 1003,
+                "width": 1463,
+                "x": 1034,
+                "y": 67
+            },
+            "marks": [],
+            "name": "Google Chrome",
+            "percent": 1,
+            "swallows": [
+                {
+                    "class": "^Google-chrome$"
+                }
+            ],
+            "type": "con"
         }
-    ],
-    "type": "con"
+    ]
 }
