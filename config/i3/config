@@ -164,6 +164,7 @@ workspace $ws7 output $monitor1
 workspace $ws8 output $monitor2
 workspace $ws9 output $monitor2
 workspace $ws10 output $monitor2
+for_window [workspace=$ws5] floating enable
 
 # Startup
 exec --no-startup-id ~/.config/i3/scripts/setup_monitors.sh
