@@ -28,6 +28,7 @@
     font = JetBrainsMonoNL Nerd Font 10
     alignment = right
     hide_duplicate_count = true
+    show_age_threshold = -1
 
     ### Icons ###
     max_icon_size = 64
