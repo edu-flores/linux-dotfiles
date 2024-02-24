@@ -4,7 +4,7 @@
 source ~/.env
 
 # OpenWeatherMap API URL
-url="https://api.openweathermap.org/data/2.5/weather?id=${LOCATION_ID}&appid=${API_KEY}&units=metric"
+url="https://api.openweathermap.org/data/2.5/weather?id=${WEATHER_LOCATION_ID}&appid=${WEATHER_API_KEY}&units=metric"
 
 # Get the weather data from the API
 if ping -q -c 1 -W 1 google.com &> /dev/null; then
