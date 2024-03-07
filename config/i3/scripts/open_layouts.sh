@@ -16,6 +16,7 @@ code &
 alacritty --title "Media Player" -e sh -c "ncspot" &
 alacritty --title "Audio Visualizer" -e sh -c "cava" &
 alacritty --title "Lyrics" -e sh -c "sptlrx" &
+alacritty --title "Mixer" -e sh -c "pulsemixer" &
 
 # Workspace 4
 alacritty --title "Clock" -e sh -c "tty-clock -c -t -s -C 6 -B -f '%A, %d %B %Y'" &
