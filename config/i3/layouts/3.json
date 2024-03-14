@@ -33,8 +33,29 @@
                                 "y": 0
                             },
                             "marks": [],
-                            "name": "ncspot",
-                            "percent": 0.88,
+                            "name": "Mixer",
+                            "percent": 0.168333333333333,
+                            "swallows": [
+                                {
+                                    "class": "^Alacritty$",
+                                    "title": "^Mixer$"
+                                }
+                            ],
+                            "type": "con"
+                        },
+                        {
+                            "border": "pixel",
+                            "current_border_width": 0,
+                            "floating": "auto_off",
+                            "geometry": {
+                                "height": 600,
+                                "width": 800,
+                                "x": 0,
+                                "y": 0
+                            },
+                            "marks": [],
+                            "name": "Media Player",
+                            "percent": 0.661666666666667,
                             "swallows": [
                                 {
                                     "class": "^Alacritty$",
@@ -54,8 +75,8 @@
                                 "y": 0
                             },
                             "marks": [],
-                            "name": "cava",
-                            "percent": 0.12,
+                            "name": "Audio Visualizer",
+                            "percent": 0.17,
                             "swallows": [
                                 {
                                     "class": "^Alacritty$",
@@ -85,33 +106,12 @@
                                 "y": 0
                             },
                             "marks": [],
-                            "name": "sptlrx",
-                            "percent": 0.5,
+                            "name": "Lyrics",
+                            "percent": 1,
                             "swallows": [
                                 {
                                     "class": "^Alacritty$",
                                     "title": "^Lyrics$"
-                                }
-                            ],
-                            "type": "con"
-                        },
-                        {
-                            "border": "pixel",
-                            "current_border_width": 0,
-                            "floating": "auto_off",
-                            "geometry": {
-                               "height": 600,
-                               "width": 800,
-                               "x": 0,
-                               "y": 0
-                            },
-                            "marks": [],
-                            "name": "pulsemixer",
-                            "percent": 0.5,
-                            "swallows": [
-                                {
-                                    "class": "^Alacritty$",
-                                    "title": "^Mixer$"
                                 }
                             ],
                             "type": "con"
