@@ -47,7 +47,7 @@ echo -e "\nUpdating the system..."
 sudo pacman -Syu --noconfirm
 
 # Set desired packages from the official and AUR repositories
-official_packages=("xorg-server" "xorg-xinit" "xorg-xrandr" "i3-wm" "alacritty" "dunst" "picom" "polybar" "rofi" "zsh" "ncspot" "xpad" "feh" "clipmenu" "ranger" "btm" "neofetch" "alsa-utils" "pulseaudio" "playerctl" "pulsemixer" "flameshot")
+official_packages=("xorg-server" "xorg-xinit" "xorg-xrandr" "i3-wm" "alacritty" "dunst" "picom" "polybar" "rofi" "zsh" "ncspot" "xpad" "feh" "clipmenu" "ranger" "btm" "neofetch" "alsa-utils" "pulseaudio" "playerctl" "pulsemixer" "flameshot" "ly")
 aur_packages=("google-chrome" "visual-studio-code-bin" "cava" "sptlrx-bin" "tty-clock")
 
 # Install packages from the official repositories
@@ -163,6 +163,10 @@ ln -s $PWD/config/polybar ~/.config/polybar
 ln -s $PWD/config/rofi ~/.config/rofi
 ln -s $PWD/config/dunst ~/.config/dunst
 ln -s $PWD/config/zsh/.zshrc ~/.zshrc
+
+# Enable the display manager service
+echo -e "\nEnabling the display manager service..."
+sudo systemctl enable ly.service
 
 # Notify user for remaining changes
 echo -e "\nInstallation completed. You'll need to manually: "
