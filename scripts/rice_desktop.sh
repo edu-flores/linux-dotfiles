@@ -116,22 +116,17 @@ echo -e "\nCreating an empty .env file..."
 touch ~/.env
 
 # Automatic startup
-read -p "Start up the X server automatically when logging in? [Y/n]: " answer
-if [[ "$answer" =~ ^[Yy]$|^$ ]]; then
-    echo 'if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
-    startx
-fi' > ~/.zprofile
-fi
+# read -p "Start up the X server automatically when logging in? [Y/n]: " answer
+# if [[ "$answer" =~ ^[Yy]$|^$ ]]; then
+#     echo 'if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
+#     startx
+# fi' > ~/.zprofile
+# fi
 
 # Xinitrc
 head -n -5 /etc/X11/xinit/xinitrc > ~/.xinitrc
+echo "setxkbmap -option compose:ralt" >> ~/.xinitrc
 echo "exec i3" >> ~/.xinitrc
-read -p "Which keyboard layout would you like to use? [US/latam]: " answer
-if [[ "$answer" =~ ^(US|us|latam)$|^$ ]]; then
-    echo "setxkbmap $answer" >> ~/.xinitrc
-else
-    echo "Layout not recognized. Skipping..."
-fi
 
 # Fonts and Wallpapers
 font_dir="/usr/local/share/fonts/"

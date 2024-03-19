@@ -180,8 +180,8 @@ bindsym $mod+Shift+v exec clipdel -d ".*"
 bindsym $mod+space exec rofi -show drun
 bindsym $mod+Tab workspace back_and_forth
 bindsym Print exec ~/.config/i3/scripts/take_screenshot.sh
-bindsym $mod+dead_acute exec ~/.config/i3/scripts/set_theme.sh 2
-bindsym $mod+plus exec ~/.config/i3/scripts/set_theme.sh 3
+bindsym $mod+bracketleft exec ~/.config/i3/scripts/set_theme.sh 2
+bindsym $mod+bracketright exec ~/.config/i3/scripts/set_theme.sh 3
 
 # Scratchpad
 bindsym $mod+Shift+minus move scratchpad
