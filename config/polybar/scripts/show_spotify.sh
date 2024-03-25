@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Shorten the result string in case it's too long
 get_truncated_string() {
     local input=$1
     local max_length=$2
@@ -10,10 +11,20 @@ get_truncated_string() {
     echo "$result"
 }
 
+# Song title
 title=$(playerctl --player=ncspot metadata --format "{{ title }}")
 truncated_title=$(get_truncated_string "$title" 20)
 
+# Artist
 artist=$(playerctl --player=ncspot metadata --format "{{ artist }}")
 truncated_artist=$(get_truncated_string "$artist" 20)
 
-echo "$truncated_title - $truncated_artist"
+# File where the condition is stored
+tmp_file="/tmp/spotify_status"
+
+# Display the result depending on the spotify status
+if ! [ -f "$tmp_file" ] || [ "$(cat $tmp_file 2> /dev/null)" = "exposed" ]; then
+    echo "$truncated_title - $truncated_artist"
+else
+    echo "Placeholder"
+fi

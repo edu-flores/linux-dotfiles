@@ -167,6 +167,7 @@ workspace $ws10 output $monitor2
 for_window [workspace=$ws5] floating enable
 
 # Startup
+exec --no-startup-id setxkbmap -option compose:ralt
 exec --no-startup-id ~/.config/i3/scripts/setup_monitors.sh
 exec --no-startup-id ~/.config/i3/scripts/open_layouts.sh
 exec --no-startup-id ~/.config/i3/scripts/set_theme.sh
