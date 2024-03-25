@@ -33,6 +33,10 @@ if [[ ! "$answer" =~ ^[Yy]$|^$ ]]; then
     exit 0
 fi
 
+# Enter username full name
+read -p "Enter your full name: " name
+sudo chfn -f "$name" "$USER"
+
 # Update the system & install packages
 cat << "EOF"
    ___           __

@@ -26,5 +26,10 @@ tmp_file="/tmp/spotify_status"
 if ! [ -f "$tmp_file" ] || [ "$(cat $tmp_file 2> /dev/null)" = "exposed" ]; then
     echo "$truncated_title - $truncated_artist"
 else
-    echo "Placeholder"
+    full_name=$(getent passwd $USER | cut -d ':' -f 5)
+    if [ -z "$full_name" ]; then
+        echo "Please configure your full name"
+    else
+        echo "$full_name"
+    fi
 fi
