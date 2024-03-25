@@ -42,3 +42,4 @@ setopt appendhistory
 # Aliases
 alias ll="ls -la"
 alias ls="ls --color=auto"
+alias Windows="sudo grub-reboot 1 && sudo shutdown -r now"
