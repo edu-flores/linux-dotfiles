@@ -124,9 +124,9 @@ touch ~/.env
 # fi
 
 # Xinitrc
-head -n -5 /etc/X11/xinit/xinitrc > ~/.xinitrc
-echo "setxkbmap -option compose:ralt" >> ~/.xinitrc
-echo "exec i3" >> ~/.xinitrc
+# head -n -5 /etc/X11/xinit/xinitrc > ~/.xinitrc
+# echo "setxkbmap -option compose:ralt" >> ~/.xinitrc
+# echo "exec i3" >> ~/.xinitrc
 
 # Fonts and Wallpapers
 font_dir="/usr/local/share/fonts/"
