@@ -13,11 +13,11 @@ get_truncated_string() {
 
 # Song title
 title=$(playerctl --player=ncspot metadata --format "{{ title }}")
-truncated_title=$(get_truncated_string "$title" 20)
+truncated_title=$(get_truncated_string "$title" 15)
 
 # Artist
 artist=$(playerctl --player=ncspot metadata --format "{{ artist }}")
-truncated_artist=$(get_truncated_string "$artist" 20)
+truncated_artist=$(get_truncated_string "$artist" 15)
 
 # File where the condition is stored
 tmp_file="/tmp/spotify_status"
