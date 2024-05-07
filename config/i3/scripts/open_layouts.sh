@@ -13,15 +13,14 @@ google-chrome-stable &
 code &
 
 # Workspace 3
-alacritty --title "Media Player" -e sh -c "spotify" &
-alacritty --title "Audio Visualizer" -e sh -c "cava" &
-alacritty --title "Lyrics" -e sh -c "sptlrx" &
-alacritty --title "Mixer" -e sh -c "pulsemixer" &
+spotify &
 
 # Workspace 4
 alacritty --title "Clock" -e sh -c "tty-clock -c -t -s -C 6 -B -f '%A, %d %B %Y'" &
 alacritty --title "File Manager" -e sh -c "ranger" &
 alacritty --title "System Monitor" -e sh -c "btm" &
+alacritty --title "Mixer" -e sh -c "pulsemixer" &
+alacritty --title "Audio Visualizer" -e sh -c "cava" &
 
 # Workspace 5
 xpad &
