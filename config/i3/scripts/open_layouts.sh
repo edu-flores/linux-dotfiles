@@ -13,7 +13,7 @@ google-chrome-stable &
 code &
 
 # Workspace 3
-alacritty --title "Media Player" -e sh -c "ncspot" &
+alacritty --title "Media Player" -e sh -c "spotify" &
 alacritty --title "Audio Visualizer" -e sh -c "cava" &
 alacritty --title "Lyrics" -e sh -c "sptlrx" &
 alacritty --title "Mixer" -e sh -c "pulsemixer" &
