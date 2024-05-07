@@ -10,10 +10,10 @@ done
 google-chrome-stable &
 
 # Workspace 2
-code &
+spotify &
 
 # Workspace 3
-spotify &
+code &
 
 # Workspace 4
 alacritty --title "Clock" -e sh -c "tty-clock -c -t -s -C 6 -B -f '%A, %d %B %Y'" &

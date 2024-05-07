@@ -1,20 +1,30 @@
 {
     "border": "pixel",
-    "current_border_width": 0,
-    "floating": "user_off",
-    "geometry": {
-        "height": 1012,
-        "width": 1896,
-        "x": 1036,
-        "y": 56
-    },
+    "floating": "auto_off",
+    "layout": "stacked",
     "marks": [],
-    "name": "Spotify",
     "percent": 1,
-    "swallows": [
+    "type": "con",
+    "nodes": [
         {
-            "class": "^Spotify$"
+            "border": "pixel",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+                "height": 1003,
+                "width": 1463,
+                "x": 1034,
+                "y": 67
+            },
+            "marks": [],
+            "name": "Visual Studio Code",
+            "percent": 1,
+            "swallows": [
+                {
+                    "class": "^Code$"
+                }
+            ],
+            "type": "con"
         }
-    ],
-    "type": "con"
+    ]
 }
