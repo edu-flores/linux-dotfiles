@@ -170,7 +170,7 @@ sudo systemctl enable ly.service
 # Notify user for remaining changes
 echo -e "\nInstallation completed. You'll need to manually: "
 echo " - Set up specific app configurations via their respective GUIs"
-echo " - Set up WEATHER_API_KEY and WEATHER_LOCATION_ID in .env"
+echo " - Set up environment variables (for polybar modules) in .env"
 echo " - Set up the powerlevel10k theme"
 echo " - Install necessary GPU drivers (AMD or Nvidia)"
 
