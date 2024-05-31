@@ -24,7 +24,7 @@ if [ $month_diff -eq 0 ]; then
     today=$(date "+%e")
     calendar=$(cal | sed "1n; 0,/$today/{s/$today/<u><b>&<\/b><\/u>/}")  # Highlight today
 else
-    calendar=$(cal $(date -d "$month_diff months" "+%m %Y"))
+    calendar=$(cal $(date -d "$(date +%Y-%m-01) $month_diff months" "+%m %Y"))
 fi
 
 # Show notification
