@@ -5,7 +5,7 @@ get_truncated_string() {
     local input=$1
     local max_length=$2
     local result=$(echo "$input" | cut -c 1-$max_length)
-    if [ ${#input} -gt $max_length ]; then
+    if [ ${#input} -ge $max_length ]; then
         result+="..."
     fi
     echo "$result"
@@ -13,11 +13,11 @@ get_truncated_string() {
 
 # Song title
 title=$(playerctl --player=spotify metadata --format "{{ title }}")
-truncated_title=$(get_truncated_string "$title" 15)
+truncated_title=$(get_truncated_string "$title" 20)
 
 # Artist
 artist=$(playerctl --player=spotify metadata --format "{{ artist }}")
-truncated_artist=$(get_truncated_string "$artist" 15)
+truncated_artist=$(get_truncated_string "$artist" 20)
 
 # File where the condition is stored
 tmp_file="/tmp/spotify_status"
