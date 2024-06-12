@@ -7,7 +7,7 @@ source ~/.env
 url="https://api.openweathermap.org/data/2.5/weather?id=${WEATHER_LOCATION_ID}&appid=${WEATHER_API_KEY}&units=metric"
 
 # Get the weather data from the API
-if ping -q -c 1 -W 1 google.com &> /dev/null; then
+if ping -q -c 1 -W 1 cloudflare.com &> /dev/null; then
     weather_data=$(curl -s $url)
 
     # Extract temperature and icon from the JSON response
