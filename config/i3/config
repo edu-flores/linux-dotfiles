@@ -165,6 +165,7 @@ workspace $ws8 output $monitor2
 workspace $ws9 output $monitor2
 workspace $ws10 output $monitor2
 for_window [workspace=$ws5] floating enable
+assign [class="^Code$"] $ws3
 
 # Startup
 exec --no-startup-id setxkbmap -option compose:ralt
