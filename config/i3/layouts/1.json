@@ -1,7 +1,7 @@
 {
     "border": "pixel",
     "floating": "auto_off",
-    "layout": "stacked",
+    "layout": "tabbed",
     "marks": [],
     "percent": 1,
     "type": "con",
