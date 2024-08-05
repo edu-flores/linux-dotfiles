@@ -22,6 +22,8 @@ fi
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 bindkey "^H" backward-kill-word
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
 
 # Theme
 source ~/.zsh/powerlevel10k/powerlevel10k.zsh-theme
@@ -40,6 +42,6 @@ SAVEHIST=1000
 setopt appendhistory
 
 # Aliases
-alias ll="ls -la"
 alias ls="ls --color=auto"
+alias ll="ls -la"
 alias Windows="sudo grub-reboot 1 && sudo shutdown -r now"
