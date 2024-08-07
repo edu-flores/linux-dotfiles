@@ -47,5 +47,6 @@ alias ll="eza --long --all --icons --hyperlink --group-directories-first --bytes
 alias ld="ls --only-dirs"
 alias lf="ls --only-files"
 alias lt="ls --tree --git-ignore"
-alias cat="bat"
+alias cat="bat --paging=never"
+alias less="bat --paging=always"
 alias Windows="sudo grub-reboot 1 && sudo shutdown -r now"
