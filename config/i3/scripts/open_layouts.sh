@@ -27,3 +27,11 @@ xpad &
 
 # Scratchpad
 alacritty --title "Scratchpad" -e sh -c "neofetch; zsh" &
+
+# Give some time for applications to start
+sleep 5
+
+# Remove urgency hint from all windows in a loop
+while i3-msg "[urgent=latest] focus"; do
+    :
+done
