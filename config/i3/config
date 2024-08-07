@@ -58,10 +58,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # Split in horizontal orientation
-bindsym $mod+z split h
+bindsym $mod+x split h
 
 # Split in vertical orientation
-bindsym $mod+x split v
+bindsym $mod+z split v
 
 # Enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -171,6 +171,7 @@ assign [class="^Code$"] $ws3
 exec --no-startup-id setxkbmap -option compose:ralt
 exec --no-startup-id ~/.config/i3/scripts/setup_monitors.sh
 exec --no-startup-id ~/.config/i3/scripts/open_layouts.sh
+exec --no-startup-id ~/.config/i3/scripts/set_theme.sh
 exec --no-startup-id clipmenud
 exec --no-startup-id picom
 exec --no-startup-id dunst
@@ -199,8 +200,7 @@ bindsym XF86AudioNext exec ~/.config/i3/scripts/handle_media.sh next
 # Styling
 for_window [all] title_window_icon on
 for_window [all] title_window_icon padding 5px
-for_window [class=".*"] border pixel 0
-default_border pixel 0
+default_border none
 title_align center
 gaps inner 12px
 
