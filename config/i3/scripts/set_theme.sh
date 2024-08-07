@@ -1,24 +1,23 @@
 #!/bin/bash
 
-# Pick a theme
-current_hour=$(date +%H)
-case $current_hour in
-    07|08|09|10|11|12|13|14|15|16|17|18) theme="gruvbox" ;;
-    19|20|21|22|23|00|01|02|03|04|05|06) theme="tokyo" ;;
-esac
+# List of available themes
+themes=("everforest" "gruvbox" "tokyo" "nord")
 
-# For testing purposes
-if [ -n "$1" ]; then
+# Pick a random theme if $1 is not passed
+if [ -z "$1" ]; then
+    theme=${themes[$RANDOM % ${#themes[@]}]}
+else
+    # Select a theme based on the user's choice
     case $1 in
         1) theme="everforest" ;;
         2) theme="gruvbox" ;;
         3) theme="tokyo" ;;
         4) theme="nord" ;;
-        *) echo "Invalid theme selection. Choose 1 for Everforest, 2 for Gruvbox, 3 for Tokyo Night, or 4 for Nord." && return 1 ;;
+        *) echo "Invalid theme selection. Choose 1 for Everforest, 2 for Gruvbox, 3 for Tokyo Night, or 4 for Nord." && exit 1 ;;
     esac
 fi
 
-# Set variables
+# Set variables based on the selected theme
 case $theme in
     everforest)
         wallpaper="everforest-wallpaper.png"
