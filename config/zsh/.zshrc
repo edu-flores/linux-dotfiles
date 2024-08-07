@@ -42,6 +42,10 @@ SAVEHIST=1000
 setopt appendhistory
 
 # Aliases
-alias ls="ls --color=auto"
-alias ll="ls -la"
+alias ls="eza --across --icons --hyperlink --group-directories-first"
+alias ll="eza --long --all --icons --hyperlink --group-directories-first --bytes --git --time-style='+%d %B %Y, %I:%M %p'"
+alias ld="ls --only-dirs"
+alias lf="ls --only-files"
+alias lt="ls --tree --git-ignore"
+alias cat="bat"
 alias Windows="sudo grub-reboot 1 && sudo shutdown -r now"
