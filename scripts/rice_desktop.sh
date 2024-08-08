@@ -51,7 +51,14 @@ echo -e "\nUpdating the system..."
 sudo pacman -Syu --noconfirm
 
 # Set desired packages from the official and AUR repositories
-official_packages=("xorg-server" "xorg-xinit" "xorg-xrandr" "i3-wm" "noto-fonts" "noto-fonts-cjk" "noto-fonts-emoji" "noto-fonts-extras" "alacritty" "dunst" "picom" "polybar" "rofi" "zsh" "xpad" "feh" "clipmenu" "ranger" "btm" "neofetch" "alsa-utils" "pulseaudio" "playerctl" "pulsemixer" "flameshot" "ly" "bat" "eza")
+official_packages=(
+    "xorg-server" "xorg-xinit" "xorg-xrandr"
+    "i3-wm" "alacritty" "zsh" "dunst" "picom" "polybar" "rofi" "feh" "clipmenu" "ly"
+    "xpad" "ranger" "btm" "neofetch" "flameshot"
+    "noto-fonts" "noto-fonts-cjk" "noto-fonts-emoji" "noto-fonts-extras"
+    "alsa-utils" "pulseaudio" "playerctl" "pulsemixer"
+    "eza" "bat" "ripgrep" "zoxide"
+)
 aur_packages=("google-chrome" "visual-studio-code-bin" "spotify" "cava" "tty-clock")
 
 # Install packages from the official repositories

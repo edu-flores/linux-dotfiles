@@ -24,6 +24,8 @@ bindkey "^[[1;5D" backward-word
 bindkey "^H" backward-kill-word
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
+bindkey "^p" history-search-backward
+bindkey "^n" history-search-forward
 
 # Theme
 source ~/.zsh/powerlevel10k/powerlevel10k.zsh-theme
@@ -38,8 +40,22 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Autosuggestions
 HISTFILE=~/.zsh/.histfile
 HISTSIZE=1000
-SAVEHIST=1000
-setopt appendhistory
+HISTDUP=erase
+SAVEHIST=$HISTSIZE
+setopt appendhistory          # Append to history file instead of overwriting
+setopt sharehistory           # Share history across all sessions
+setopt hist_ignore_space      # Ignore commands prefixed with a space
+setopt hist_ignore_all_dups   # Remove all duplicate entries from history
+setopt hist_save_no_dups      # Don't save duplicate commands in history
+setopt hist_ignore_dups       # Ignore consecutive duplicate commands
+setopt hist_find_no_dups      # Skip duplicates during history search
+setopt interactive_comments   # Allow comments in interactive shell
+
+# Styling
+autoload -Uz compinit && compinit
+export LS_COLORS="di=34:ln=36:so=32:pi=35:ex=31:bd=44;37:cd=44;37:su=41;30:sg=46;30:tw=42;30:ow=43;30"
+zstyle ":completion:*" matcher-list "m:{a-z}={A-Za-z}"
+zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"
 
 # Aliases
 alias ls="eza --icons --hyperlink --group-directories-first"
