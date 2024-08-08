@@ -42,11 +42,16 @@ SAVEHIST=1000
 setopt appendhistory
 
 # Aliases
-alias ls="eza --across --icons --hyperlink --group-directories-first"
+alias ls="eza --icons --hyperlink --group-directories-first"
 alias ll="eza --long --all --icons --hyperlink --group-directories-first --bytes --git --time-style='+%d %B %Y, %I:%M %p'"
 alias ld="ls --only-dirs"
 alias lf="ls --only-files"
 alias lt="ls --tree --git-ignore"
 alias cat="bat --paging=never"
 alias less="bat --paging=always"
+alias grep="rg"
+alias cd="z"
 alias Windows="sudo grub-reboot 1 && sudo shutdown -r now"
+
+# Initialize zoxide
+eval "$(zoxide init zsh)"
