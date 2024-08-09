@@ -190,7 +190,7 @@ bindsym $mod+apostrophe exec ~/.config/i3/scripts/set_theme.sh 4
 # Scratchpad
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
-for_window [title="^Scratchpad$"] move scratchpad
+for_window [title="^Scratchpad$"] move scratchpad, resize set width 950 px height 600 px
 
 # Media
 bindsym XF86AudioPlay exec ~/.config/i3/scripts/handle_media.sh play-pause
