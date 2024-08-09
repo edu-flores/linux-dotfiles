@@ -68,11 +68,10 @@ alias lt="ls --tree --git-ignore"
 alias cat="bat --paging=never"
 alias less="bat --paging=always"
 alias grep="rg"
-alias cd="z"
 alias Windows="sudo grub-reboot 1 && sudo shutdown -r now"
 
 # Initialize zoxide
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
