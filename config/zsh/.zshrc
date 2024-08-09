@@ -73,3 +73,6 @@ alias Windows="sudo grub-reboot 1 && sudo shutdown -r now"
 
 # Initialize zoxide
 eval "$(zoxide init zsh)"
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
