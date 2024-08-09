@@ -1,19 +1,73 @@
 {
-    "border": "pixel",
+    "border": "none",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "marks": [],
+    "percent": 0.6890625,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "none",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+                "height": 600,
+                "width": 800,
+                "x": 0,
+                "y": 0
+            },
+            "marks": [],
+            "name": "Spotify",
+            "percent": 0.91,
+            "swallows": [
+                {
+                    "class": "^Alacritty$",
+                    "title": "^Spotify$"
+                }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "none",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+                "height": 600,
+                "width": 800,
+                "x": 0,
+                "y": 0
+            },
+            "marks": [],
+            "name": "Audio Visualizer",
+            "percent": 0.0899999999999997,
+            "swallows": [
+                {
+                    "class": "^Alacritty$",
+                    "title": "^Audio Visualizer$"
+                }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    "border": "none",
     "current_border_width": 0,
-    "floating": "user_off",
+    "floating": "auto_off",
     "geometry": {
-        "height": 1012,
-        "width": 1896,
-        "x": 1036,
-        "y": 56
+        "height": 600,
+        "width": 800,
+        "x": 0,
+        "y": 0
     },
     "marks": [],
-    "name": "Spotify",
-    "percent": 1,
+    "name": "Lyrics",
+    "percent": 0.3109375,
     "swallows": [
         {
-            "class": "^Spotify$"
+            "class": "^Alacritty$",
+            "title": "^Lyrics$"
         }
     ],
     "type": "con"

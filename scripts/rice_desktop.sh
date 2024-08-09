@@ -54,12 +54,12 @@ sudo pacman -Syu --noconfirm
 official_packages=(
     "xorg-server" "xorg-xinit" "xorg-xrandr"
     "i3-wm" "alacritty" "zsh" "dunst" "picom" "polybar" "rofi" "feh" "clipmenu" "ly"
-    "xpad" "ranger" "btm" "neofetch" "flameshot"
+    "ncspot" "xpad" "ranger" "btm" "neofetch" "flameshot"
     "noto-fonts" "noto-fonts-cjk" "noto-fonts-emoji" "noto-fonts-extras"
     "alsa-utils" "pulseaudio" "playerctl" "pulsemixer"
-    "eza" "bat" "ripgrep" "zoxide"
+    "eza" "bat" "ripgrep" "zoxide" "fzf"
 )
-aur_packages=("google-chrome" "visual-studio-code-bin" "spotify" "cava" "tty-clock")
+aur_packages=("google-chrome" "visual-studio-code-bin" "sptlrx-bin" "cava" "tty-clock")
 
 # Install packages from the official repositories
 echo -e "\nThe following packages will be installed from the official repositories: ${official_packages[*]}"
@@ -177,7 +177,7 @@ sudo systemctl enable ly.service
 # Notify user for remaining changes
 echo -e "\nInstallation completed. You'll need to manually: "
 echo " - Set up specific app configurations via their respective GUIs"
-echo " - Set up environment variables (for polybar modules) in .env"
+echo " - Set up environment variables (for polybar modules) in ~/.env"
 echo " - Set up the powerlevel10k theme"
 echo " - Install necessary GPU drivers (AMD or Nvidia)"
 

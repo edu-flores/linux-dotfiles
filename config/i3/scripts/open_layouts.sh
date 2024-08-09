@@ -10,7 +10,9 @@ done
 google-chrome-stable &
 
 # Workspace 2
-spotify &
+alacritty --title "Spotify" -e sh -c "ncspot" &
+alacritty --title "Lyrics" -e sh -c "sptlrx" &
+alacritty --title "Audio Visualizer" -e sh -c "cava" &
 
 # Workspace 3
 code &
@@ -20,7 +22,6 @@ alacritty --title "Clock" -e sh -c "tty-clock -c -t -s -C 6 -B -f '%A, %d %B %Y'
 alacritty --title "File Manager" -e sh -c "ranger" &
 alacritty --title "System Monitor" -e sh -c "btm" &
 alacritty --title "Mixer" -e sh -c "pulsemixer" &
-alacritty --title "Audio Visualizer" -e sh -c "cava" &
 
 # Workspace 5
 xpad &
@@ -35,3 +36,6 @@ sleep 5
 while i3-msg "[urgent=latest] focus"; do
     :
 done
+
+# Move workspace programatically
+i3-msg workspace 5
