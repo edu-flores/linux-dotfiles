@@ -154,20 +154,7 @@ echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/nobeep.conf > /dev/null
 
 # Symlink config files
 echo -e "\nLinking config files..."
-rm -rf ~/.config/alacritty
-rm -rf ~/.config/i3
-rm -rf ~/.config/picom
-rm -rf ~/.config/polybar
-rm -rf ~/.config/rofi
-rm -rf ~/.config/dunst
-rm -f ~/.zshrc
-ln -s $PWD/config/alacritty ~/.config/alacritty
-ln -s $PWD/config/i3 ~/.config/i3
-ln -s $PWD/config/picom ~/.config/picom
-ln -s $PWD/config/polybar ~/.config/polybar
-ln -s $PWD/config/rofi ~/.config/rofi
-ln -s $PWD/config/dunst ~/.config/dunst
-ln -s $PWD/config/zsh/.zshrc ~/.zshrc
+./symlink_config_files.sh
 
 # Enable the display manager service
 echo -e "\nEnabling the display manager service..."
