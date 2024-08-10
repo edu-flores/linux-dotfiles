@@ -28,7 +28,6 @@ xpad &
 
 # Scratchpad
 alacritty --title "Scratchpad" -e sh -c "neofetch; zsh" &
-xdotool search --name "Scratchpad" set_window --name ""
 
 # Give some time for applications to start
 sleep 5
@@ -37,6 +36,9 @@ sleep 5
 while i3-msg "[urgent=latest] focus"; do
     :
 done
+
+# Remove scratchpad title to avoid bugs
+xdotool search --name "Scratchpad" set_window --name ""
 
 # Move workspace programatically
 i3-msg workspace 5
