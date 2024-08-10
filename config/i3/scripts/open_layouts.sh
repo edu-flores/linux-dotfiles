@@ -28,6 +28,7 @@ xpad &
 
 # Scratchpad
 alacritty --title "Scratchpad" -e sh -c "neofetch; zsh" &
+xdotool search --name "Scratchpad" set_window --name ""
 
 # Give some time for applications to start
 sleep 5
