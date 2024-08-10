@@ -107,8 +107,8 @@ read -p "Press Enter to continue..."
 rm -rf ~/.zsh
 mkdir -p ~/.zsh
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zsh/powerlevel10k
+git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.zsh/zsh-syntax-highlighting
+git clone --depth=1 https://github.com/romkatv/powerlevel10k ~/.zsh/powerlevel10k
 chsh -s $(which zsh)
 
 # Misc config
