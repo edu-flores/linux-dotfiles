@@ -20,7 +20,6 @@ cat << "EOF"
 #
 #
 # ===============================================
-                                 - Eduardo Flores
 
 This script will set up your Linux environment.
 ** IMPORTANT **: It should be run from the root directory of the cloned repo.

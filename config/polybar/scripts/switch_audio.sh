@@ -10,13 +10,13 @@ current_sink_name=$(pactl info | grep "Default Sink:" | cut -d: -f2 | xargs)
 current_index=-1
 for i in "${!sinks[@]}"; do
     sink_name=$(pactl list sinks | grep -e "Sink #"${sinks[$i]} -e "Name:" | grep -A1 "Sink #${sinks[$i]}" | grep "Name:" | cut -d: -f2 | xargs)
-    if [[ "$sink_name" == "$current_sink_name" ]]; then
+    if [ "$sink_name" = "$current_sink_name" ]; then
         current_index=$i
         break
     fi
 done
 
-if [[ $current_index -eq -1 ]]; then
+if [ $current_index -eq -1 ]; then
     echo "Current default sink not found."
     exit 1
 fi
