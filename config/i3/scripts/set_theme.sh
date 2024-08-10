@@ -69,7 +69,7 @@ sed -i "s/themes\/.*\.toml/themes\/$theme\.toml/" ~/.config/alacritty/alacritty.
 sed -i "s/themes\/.*\.rasi/themes\/$theme\.rasi/" ~/.config/rofi/config.rasi
 
 # VSCode
-sed -i "s/\"workbench\.colorTheme\": \".*\",/\"workbench.colorTheme\": \"$vscode_theme\",/" ~/.config/Code/User/settings.json
+sed -i "s/\"workbench\.colorTheme\": \".*\"\s*/\"workbench.colorTheme\": \"$vscode_theme\"/" ~/.config/Code/User/settings.json
 
 # Wallpaper
 feh --bg-fill ~/Pictures/Wallpapers/$wallpaper
