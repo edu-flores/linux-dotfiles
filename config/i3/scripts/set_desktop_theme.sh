@@ -51,7 +51,7 @@ esac
 
 # Polybar
 sed -i "s/themes\/.*\.ini/themes\/$theme\.ini/" ~/.config/polybar/config.ini
-~/.config/polybar/scripts/launch_polybar.sh  # Reload status bar
+~/.config/polybar/scripts/launch_polybar_program.sh
 
 # i3
 sed -i "s/themes\/.*/themes\/$theme/" ~/.config/i3/config

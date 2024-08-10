@@ -41,7 +41,7 @@ XDG_RUNTIME_DIR=/run/user/1000
 
 ## 🖇️ Dependencies
 
-You can read about the packages I use on the [wiki](https://github.com/edu-flores/linux-dotfiles/wiki). To easily set up the dotfiles you can run `link_files.sh` from the repo root to make the necessary symlinks. Similarly on a fresh Arch install, you can run `rice_desktop.sh` from the repo root to set your desktop just like mine.
+You can read about the packages I use on the [wiki](https://github.com/edu-flores/linux-dotfiles/wiki). To easily set up the dotfiles you can run `symling_config_files.sh` from the repo root to make the necessary symlinks. Similarly on a fresh Arch install, you can run `rice_fresh_install.sh` from the repo root to set your desktop just like mine.
 
 For the Polybar weather module to work, you should create a `~/.env` file, containing your location id and api key. For more information, consult [here](https://openweathermap.org/).
 

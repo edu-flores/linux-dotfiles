@@ -168,9 +168,9 @@ assign [class="^Code$"] $ws3
 
 # Startup
 exec --no-startup-id setxkbmap -option compose:ralt
-exec --no-startup-id ~/.config/i3/scripts/setup_monitors.sh
-exec --no-startup-id ~/.config/i3/scripts/open_layouts.sh
-exec --no-startup-id ~/.config/i3/scripts/set_theme.sh
+exec --no-startup-id ~/.config/i3/scripts/configure_display_settings.sh
+exec --no-startup-id ~/.config/i3/scripts/append_workspace_layouts.sh
+exec --no-startup-id ~/.config/i3/scripts/set_desktop_theme.sh
 exec --no-startup-id clipmenud
 exec --no-startup-id picom
 exec --no-startup-id dunst
@@ -180,11 +180,11 @@ bindsym $mod+v exec CM_LAUNCHER=rofi clipmenu -p "󰅇 Clipboard"
 bindsym $mod+Shift+v exec clipdel -d ".*"
 bindsym $mod+space exec rofi -show drun
 bindsym $mod+Tab workspace back_and_forth
-bindsym Print exec ~/.config/i3/scripts/take_screenshot.sh
-bindsym $mod+semicolon exec ~/.config/i3/scripts/set_theme.sh 1
-bindsym $mod+bracketleft exec ~/.config/i3/scripts/set_theme.sh 2
-bindsym $mod+bracketright exec ~/.config/i3/scripts/set_theme.sh 3
-bindsym $mod+apostrophe exec ~/.config/i3/scripts/set_theme.sh 4
+bindsym Print exec ~/.config/i3/scripts/take_flameshot_screenshot.sh
+bindsym $mod+semicolon exec ~/.config/i3/scripts/set_desktop_theme.sh 1
+bindsym $mod+bracketleft exec ~/.config/i3/scripts/set_desktop_theme.sh 2
+bindsym $mod+bracketright exec ~/.config/i3/scripts/set_desktop_theme.sh 3
+bindsym $mod+apostrophe exec ~/.config/i3/scripts/set_desktop_theme.sh 4
 
 # Scratchpad
 bindsym $mod+Shift+minus move scratchpad
@@ -192,9 +192,9 @@ bindsym $mod+minus scratchpad show
 for_window [title="^Scratchpad$"] move scratchpad, resize set width 950 px height 600 px
 
 # Media
-bindsym XF86AudioPlay exec ~/.config/i3/scripts/handle_media.sh play-pause
-bindsym XF86AudioPrev exec ~/.config/i3/scripts/handle_media.sh previous
-bindsym XF86AudioNext exec ~/.config/i3/scripts/handle_media.sh next
+bindsym XF86AudioPlay exec ~/.config/i3/scripts/handle_media_keys.sh play-pause
+bindsym XF86AudioPrev exec ~/.config/i3/scripts/handle_media_keys.sh previous
+bindsym XF86AudioNext exec ~/.config/i3/scripts/handle_media_keys.sh next
 
 # Styling
 for_window [all] title_window_icon on
