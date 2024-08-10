@@ -156,6 +156,16 @@ echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/nobeep.conf > /dev/null
 echo -e "\nLinking config files..."
 ./symlink_config_files.sh
 
+# Configure ncspot
+echo -e "\nConfiguring ncspot..."
+mkdir -p ~/.config/ncspot
+echo -e "notify = true\nuse_nerdfont = true\nflip_status_indicators = true" > ~/.config/ncspot/config.toml
+
+# Configure flameshot
+echo -e "\nConfiguring flameshot..."
+mkdir -p ~/.config/flameshot
+echo -e "[General]\nuiColor=#222222\ncontrastUiColor=#dddddd" > ~/.config/flameshot/flameshot.ini
+
 # Enable the display manager service
 echo -e "\nEnabling the display manager service..."
 sudo systemctl enable ly.service
