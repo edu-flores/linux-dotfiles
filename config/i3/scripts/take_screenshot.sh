@@ -7,7 +7,4 @@ focused_window=$(xdotool getactivewindow)
 flameshot gui > /dev/null
 
 # Restore window
-if [ "$focused_window" == "$(xdotool getactivewindow)" ]
-then
-	xdotool windowfocus $focused_window
-fi
+[ "$focused_window" == "$(xdotool getactivewindow)" ] && xdotool windowfocus $focused_window
