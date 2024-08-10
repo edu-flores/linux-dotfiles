@@ -16,7 +16,7 @@
     width = (0, 400)
     height = 300
     origin = top-right
-    offset = 20x64
+    offset = 106x49
     notification_limit = 1
     indicate_hidden = no
     padding = 15
