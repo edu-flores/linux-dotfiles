@@ -37,8 +37,8 @@ while i3-msg "[urgent=latest] focus"; do
     :
 done
 
-# Remove scratchpad title to avoid bugs
-xdotool search --name "Scratchpad" set_window --name ""
+# Modify scratchpad title to avoid bugs
+xdotool search --name "Scratchpad" set_window --name "Multiplexer"
 
 # Move workspace programatically
 i3-msg workspace 5
