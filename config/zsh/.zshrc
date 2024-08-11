@@ -68,6 +68,7 @@ alias lt="ls --tree --git-ignore"
 alias cat="bat --paging=never"
 alias less="bat --paging=always"
 alias grep="rg"
+alias df="duf --only=local"
 alias Windows="sudo grub-reboot 1 && sudo shutdown -r now"
 
 # Initialize zoxide

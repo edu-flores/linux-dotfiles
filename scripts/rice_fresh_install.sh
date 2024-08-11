@@ -56,7 +56,7 @@ official_packages=(
     "ncspot" "xpad" "ranger" "btm" "neofetch" "flameshot"
     "noto-fonts" "noto-fonts-cjk" "noto-fonts-emoji" "noto-fonts-extras"
     "alsa-utils" "pulseaudio" "playerctl" "pulsemixer"
-    "eza" "bat" "ripgrep" "zoxide" "fzf"
+    "eza" "bat" "ripgrep" "zoxide" "fzf" "duf"
 )
 aur_packages=("google-chrome" "visual-studio-code-bin" "sptlrx-bin" "cava" "tty-clock")
 
