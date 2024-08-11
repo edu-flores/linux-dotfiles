@@ -73,3 +73,7 @@ sed -i "s/\"workbench\.colorTheme\": \".*\"\s*/\"workbench.colorTheme\": \"$vsco
 
 # Wallpaper
 feh --bg-fill ~/Pictures/Wallpapers/$wallpaper
+
+# Flameshot
+sed -i "s/uiColor=#.*$/uiColor=$background_alt/" ~/.config/flameshot/flameshot.ini
+sed -i "s/contrastUiColor=#.*$/contrastUiColor=$background/" ~/.config/flameshot/flameshot.ini
