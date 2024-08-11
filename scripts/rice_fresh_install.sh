@@ -164,7 +164,7 @@ echo -e "notify = true\nuse_nerdfont = true\nflip_status_indicators = true" > ~/
 # Configure flameshot
 echo -e "\nConfiguring flameshot..."
 mkdir -p ~/.config/flameshot
-echo -e "[General]\nuiColor=#222222\ncontrastUiColor=#dddddd" > ~/.config/flameshot/flameshot.ini
+echo -e "[General]\nuiColor=#740096\ncontrastUiColor=#270032" > ~/.config/flameshot/flameshot.ini
 
 # Enable the display manager service
 echo -e "\nEnabling the display manager service..."
