@@ -52,11 +52,11 @@ sudo pacman -Syu --noconfirm
 # Set desired packages from the official and AUR repositories
 official_packages=(
     "xorg-server" "xorg-xinit" "xorg-xrandr"
-    "i3-wm" "alacritty" "zsh" "dunst" "picom" "polybar" "rofi" "feh" "clipmenu" "ly"
+    "i3-wm" "tmux" "alacritty" "zsh" "dunst" "picom" "polybar" "rofi" "feh" "clipmenu" "ly"
     "ncspot" "xpad" "ranger" "btm" "neofetch" "flameshot"
     "noto-fonts" "noto-fonts-cjk" "noto-fonts-emoji" "noto-fonts-extras"
     "alsa-utils" "pulseaudio" "playerctl" "pulsemixer"
-    "eza" "bat" "ripgrep" "zoxide" "fzf" "duf"
+    "eza" "bat" "ripgrep" "zoxide" "fzf" "duf" "fd"
 )
 aur_packages=("google-chrome" "visual-studio-code-bin" "sptlrx-bin" "cava" "tty-clock")
 
@@ -173,8 +173,8 @@ sudo systemctl enable ly.service
 # Notify user for remaining changes
 echo -e "\nInstallation completed. You'll need to manually: "
 echo " - Set up specific app configurations via their respective GUIs"
-echo " - Set up environment variables (for polybar modules) in ~/.env"
-echo " - Set up the powerlevel10k theme"
+echo " - Set up environment variables (for some status bar modules) in ~/.env"
+echo " - Set up the powerlevel10k theme via its wizard (p10k configure)"
 echo " - Install necessary GPU drivers (AMD or Nvidia)"
 
 # Prompt for reboot

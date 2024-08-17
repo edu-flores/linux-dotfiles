@@ -29,8 +29,8 @@ bindkey "^[[3;5~" kill-word
 bindkey "^[[3~" delete-char
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
-bindkey "^p" history-search-backward
-bindkey "^n" history-search-forward
+bindkey "^[[A" history-search-backward
+bindkey "^[[B" history-search-forward
 
 # Theme
 source ~/.zsh/powerlevel10k/powerlevel10k.zsh-theme
@@ -72,6 +72,8 @@ alias cat="bat --paging=never"
 alias less="bat --paging=always"
 alias grep="rg"
 alias df="duf --only=local"
+alias find="fd"
+alias editpick='file=$(fd --type f --hidden | fzf --preview="bat --color=always {}") && [ -n "$file" ] && nano "$file"'
 alias Windows="sudo grub-reboot 1 && sudo shutdown -r now"
 
 # Initialize zoxide
