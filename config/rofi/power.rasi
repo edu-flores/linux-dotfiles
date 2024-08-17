@@ -1,12 +1,13 @@
 configuration {
 	font: "JetBrainsMonoNL Nerd Font 20";
 	show-icons: false;
-    sidebar-mode: false;
 }
 
 window {
-    width: 235;
+    width: 120;
     padding: 5;
+    location: east;
+    x-offset: -25;
 }
 
 mainbox {
@@ -14,11 +15,19 @@ mainbox {
 }
 
 element {
-    padding: 20 40;
+    padding: 30 5 30 0;
+    background-color: @bg-alt;
+    margin: 5;
+}
+
+element-text {
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    background-color: transparent;
 }
 
 listview {
     margin: 0;
-    lines: 3;
+    lines: 4;
     scrollbar: false;
 }

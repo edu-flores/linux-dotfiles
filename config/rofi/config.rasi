@@ -76,6 +76,7 @@ scrollbar {
 }
 
 element {
+    border-radius: 5;
     padding: 10;
     spacing: 10;
     cursor: pointer;
@@ -83,7 +84,6 @@ element {
 
 element.selected {
     background-color: @fg;
-    border-radius: 5;
     padding: 10;
     spacing: 10;
     cursor: pointer;
