@@ -36,16 +36,16 @@
     icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
 [urgency_low]
-    background = "#32302f"
+    background = "#3c3836"
     foreground = "#ebdbb2"
     timeout = 5
 
 [urgency_normal]
-    background = "#32302f"
+    background = "#3c3836"
     foreground = "#ebdbb2"
     timeout = 5
 
 [urgency_critical]
-    background = "#32302f"
+    background = "#3c3836"
     foreground = "#ebdbb2"
     timeout = 0

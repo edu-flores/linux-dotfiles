@@ -28,10 +28,10 @@ case $theme in
         ;;
     gruvbox)
         wallpaper="gruvbox-wallpaper.png"
-        background="#1d2021"
-        background_alt="#32302f"
+        background="#282828"
+        background_alt="#3c3836"
         foreground="#ebdbb2"
-        vscode_theme="Gruvbox Dark Hard"
+        vscode_theme="Gruvbox Dark Medium"
         ;;
     tokyo)
         wallpaper="tokyo-wallpaper.png"
