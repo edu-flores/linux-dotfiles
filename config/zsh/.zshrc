@@ -68,7 +68,7 @@ alias ll="eza --long --all --icons --hyperlink --group-directories-first --bytes
 alias ld="ls --only-dirs"
 alias lf="ls --only-files"
 alias lt="ls --tree --git-ignore"
-alias cat="bat --paging=never"
+alias cat="bat --paging=never --style=plain"
 alias less="bat --paging=always"
 alias grep="rg"
 alias df="duf --only=local"
