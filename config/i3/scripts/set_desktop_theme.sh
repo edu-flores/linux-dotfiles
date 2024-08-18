@@ -22,29 +22,29 @@ case $theme in
     everforest)
         wallpaper="everforest-wallpaper.png"
         background="#1d2021"
-        background_alt="#4f5b58"
+        background_alt="#414b50"
         foreground="#d3c6aa"
         vscode_theme="Everforest Dark"
         ;;
     gruvbox)
         wallpaper="gruvbox-wallpaper.png"
         background="#282828"
-        background_alt="#3c3836"
+        background_alt="#504945"
         foreground="#ebdbb2"
         vscode_theme="Gruvbox Dark Medium"
         ;;
     tokyo)
         wallpaper="tokyo-wallpaper.png"
         background="#1a1b26"
-        background_alt="#323b5e"
-        foreground="#a9b1d6"
+        background_alt="#3b4261"
+        foreground="#c0caf5"
         vscode_theme="Tokyo Night Frameless"
         ;;
     nord)
         wallpaper="nord-wallpaper.png"
         background="#2e3440"
-        background_alt="#4c566a"
-        foreground="#d1dbe5"
+        background_alt="#434c5e"
+        foreground="#d8dee9"
         vscode_theme="Nord Deep"
         ;;
 esac
