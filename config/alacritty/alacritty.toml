@@ -17,6 +17,7 @@ import = [ "~/.config/alacritty/themes/gruvbox.toml" ]
 # Settings
 live_config_reload = true
 
+# Font
 [font]
 size = 11.5
 
@@ -36,6 +37,7 @@ style = "SemiBold Italic"
 family = "JetBrainsMonoNL Nerd Font"
 style = "SemiBold"
 
+# Styling
 [window.padding]
 x = 20
 y = 10

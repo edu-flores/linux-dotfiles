@@ -16,15 +16,13 @@ for i in "${!sinks[@]}"; do
     fi
 done
 
+# Did not find the index of the current sink
 if [ $current_index -eq -1 ]; then
-    echo "Current default sink not found."
+    echo "Current default sink not found." >&2
     exit 1
 fi
 
-# Calculate the next sink index
+# Calculate the next sink index and set it as default
 next_index=$(( (current_index + 1) % ${#sinks[@]} ))
-
-# Set the next sink as the default
 pactl set-default-sink "${sinks[$next_index]}"
-
 echo "Switched default sink to ${sinks[$next_index]}"

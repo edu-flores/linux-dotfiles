@@ -15,6 +15,4 @@ case $current_sink_name in
     *)
         audio_icon="Unknown ";;
 esac
-
-# Echo icon
 echo $audio_icon
