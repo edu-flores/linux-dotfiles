@@ -21,3 +21,7 @@ blue = "#81a1c1"
 magenta = "#b48ead"
 cyan = "#8fbcbb"
 white = "#eceff4"
+
+[colors.selection]
+text = "#eceff4"
+background = "#4c566a"
