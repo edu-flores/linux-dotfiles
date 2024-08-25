@@ -12,7 +12,7 @@
 # +================================================+
 
 [global]
-    ### Geometry ###
+    ##### Geometry #####
     width = (0, 400)
     height = 300
     origin = top-right
@@ -24,13 +24,13 @@
     text_icon_padding = 15
     frame_width = 0
 
-    ### Text ###
+    ##### Text #####
     font = JetBrainsMonoNL Nerd Font 10
     alignment = right
     hide_duplicate_count = true
     show_age_threshold = -1
 
-    ### Icons ###
+    ##### Icons #####
     max_icon_size = 64
     enable_recursive_icon_lookup = true
     icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
