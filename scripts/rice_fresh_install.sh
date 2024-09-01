@@ -161,16 +161,6 @@ echo -e "\nConfiguring ncspot..."
 mkdir -p ~/.config/ncspot
 echo -e "notify = true\nuse_nerdfont = true\nflip_status_indicators = true" > ~/.config/ncspot/config.toml
 
-# Configure flameshot
-echo -e "\nConfiguring flameshot..."
-mkdir -p ~/.config/flameshot
-echo -e "[General]\nuiColor=#740096\ncontrastUiColor=#270032" > ~/.config/flameshot/flameshot.ini
-
-# Configure obsidian
-echo -e "\nConfiguring obsidian..."
-mkdir -p ~/Documents/Obsidian/.obsidian
-cp -r $PWD/config/obsidian/* ~/Documents/Obsidian/.obsidian/
-
 # Enable the display manager service
 echo -e "\nEnabling the display manager service..."
 sudo systemctl enable ly.service

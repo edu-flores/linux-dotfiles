@@ -72,8 +72,7 @@ sed -i "s/themes\/.*\.rasi/themes\/$theme\.rasi/" ~/.config/rofi/config.rasi
 sed -i "s/\"workbench\.colorTheme\": \".*\"\s*/\"workbench.colorTheme\": \"$vscode_theme\"/" ~/.config/Code/User/settings.json
 
 # Flameshot
-sed -i "s/uiColor=#.*$/uiColor=$background_alt/" ~/.config/flameshot/flameshot.ini
-sed -i "s/contrastUiColor=#.*$/contrastUiColor=$background/" ~/.config/flameshot/flameshot.ini
+printf "[General]\nuiColor=%s\ncontrastUiColor=%s\n" "$background_alt" "$background" > ~/.config/flameshot/flameshot.ini
 
 # Obsidian
 cat ~/Documents/Obsidian/.obsidian/snippets/$theme.css > ~/Documents/Obsidian/.obsidian/snippets/current.css

@@ -2,6 +2,7 @@
 
 # Remove symlinks
 remove() {
+    rm -rf ~/Documents/Obsidian/.obsidian
     rm -rf ~/.config/alacritty
     rm -rf ~/.config/dunst
     rm -rf ~/.config/i3
@@ -14,6 +15,8 @@ remove() {
 
 # Set up symlinks
 symlink() {
+    mkdir -p ~/Documents/Obsidian/.obsidian
+    ln -s $PWD/config/obsidian/* ~/Documents/Obsidian/.obsidian
     ln -s $PWD/config/alacritty ~/.config/alacritty
     ln -s $PWD/config/dunst ~/.config/dunst
     ln -s $PWD/config/i3 ~/.config/i3
@@ -24,6 +27,6 @@ symlink() {
     ln -s $PWD/config/zsh/.zshrc ~/.zshrc
 }
 
-### IMPORTANT: THIS SCRIPT SHOULD BE RUN FROM THE REPO ROOT ###
+##### IMPORTANT: THIS SCRIPT SHOULD BE RUN FROM THE REPO ROOT #####
 remove
 symlink
