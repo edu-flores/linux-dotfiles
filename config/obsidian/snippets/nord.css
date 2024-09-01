@@ -43,9 +43,9 @@
   --color-pink: #b48ead;
 
   /* Accent HSL */
-  --accent-h: 223;
-  --accent-s: 45%;
-  --accent-l: 44%;
+  --accent-h: 193;
+  --accent-s: 43%;
+  --accent-l: 67%;
 
   /* Headers */
   --h1-color: var(--color-red);
