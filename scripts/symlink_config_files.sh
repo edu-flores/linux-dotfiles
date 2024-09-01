@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Repo directory location
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+
 # Remove symlinks
 remove() {
     rm -rf ~/Documents/Obsidian/.obsidian
@@ -16,17 +20,16 @@ remove() {
 # Set up symlinks
 symlink() {
     mkdir -p ~/Documents/Obsidian/.obsidian
-    ln -s $PWD/config/obsidian/* ~/Documents/Obsidian/.obsidian
-    ln -s $PWD/config/alacritty ~/.config/alacritty
-    ln -s $PWD/config/dunst ~/.config/dunst
-    ln -s $PWD/config/i3 ~/.config/i3
-    ln -s $PWD/config/picom ~/.config/picom
-    ln -s $PWD/config/polybar ~/.config/polybar
-    ln -s $PWD/config/rofi ~/.config/rofi
-    ln -s $PWD/config/tmux ~/.config/tmux
-    ln -s $PWD/config/zsh/.zshrc ~/.zshrc
+    ln -s "$REPO_ROOT/config/obsidian/"* ~/Documents/Obsidian/.obsidian
+    ln -s "$REPO_ROOT/config/alacritty" ~/.config/alacritty
+    ln -s "$REPO_ROOT/config/dunst" ~/.config/dunst
+    ln -s "$REPO_ROOT/config/i3" ~/.config/i3
+    ln -s "$REPO_ROOT/config/picom" ~/.config/picom
+    ln -s "$REPO_ROOT/config/polybar" ~/.config/polybar
+    ln -s "$REPO_ROOT/config/rofi" ~/.config/rofi
+    ln -s "$REPO_ROOT/config/tmux" ~/.config/tmux
+    ln -s "$REPO_ROOT/config/zsh/.zshrc" ~/.zshrc
 }
 
-##### IMPORTANT: THIS SCRIPT SHOULD BE RUN FROM THE REPO ROOT #####
 remove
 symlink

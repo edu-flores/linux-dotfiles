@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Repo directory location
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+
 # Intro
 cat << "EOF"
 # ===============================================
@@ -22,7 +26,6 @@ cat << "EOF"
 # ===============================================
 
 This script will set up your Linux environment.
-** IMPORTANT **: It should be run from the root directory of the cloned repo.
 EOF
 
 # Ask for confirmation
@@ -144,9 +147,9 @@ wallpaper_dir="~/Pictures/Wallpapers/"
 
 echo -e "\nSetting up fonts and wallpapers..."
 sudo mkdir -p $font_dir
-sudo cp $PWD/fonts/* $font_dir
+sudo cp $REPO_ROOT/fonts/* $font_dir
 mkdir -p $wallpaper_dir
-cp $PWD/wallpapers/* $wallpaper_dir
+cp $REPO_ROOT/wallpapers/* $wallpaper_dir
 
 # System bell
 echo -e "\nDisabling system bell..."
@@ -154,7 +157,7 @@ echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/nobeep.conf > /dev/null
 
 # Symlink config files
 echo -e "\nLinking config files..."
-./symlink_config_files.sh
+"$REPO_ROOT/scripts/symlink_config_files.sh"
 
 # Configure ncspot
 echo -e "\nConfiguring ncspot..."
