@@ -53,7 +53,7 @@ sudo pacman -Syu --noconfirm
 official_packages=(
     "xorg-server" "xorg-xinit" "xorg-xrandr"
     "i3-wm" "tmux" "alacritty" "zsh" "dunst" "picom" "polybar" "rofi" "feh" "clipmenu" "ly"
-    "ncspot" "xpad" "ranger" "btm" "neofetch" "flameshot"
+    "ncspot" "ranger" "btm" "neofetch" "flameshot" "obsidian"
     "noto-fonts" "noto-fonts-cjk" "noto-fonts-emoji" "noto-fonts-extras"
     "alsa-utils" "pulseaudio" "playerctl" "pulsemixer"
     "eza" "bat" "ripgrep" "zoxide" "fzf" "duf" "fd"
@@ -140,7 +140,7 @@ touch ~/.env
 
 # Fonts and Wallpapers
 font_dir="/usr/local/share/fonts/"
-wallpaper_dir="$HOME/Pictures/Wallpapers/"
+wallpaper_dir="~/Pictures/Wallpapers/"
 
 echo -e "\nSetting up fonts and wallpapers..."
 sudo mkdir -p $font_dir
@@ -165,6 +165,11 @@ echo -e "notify = true\nuse_nerdfont = true\nflip_status_indicators = true" > ~/
 echo -e "\nConfiguring flameshot..."
 mkdir -p ~/.config/flameshot
 echo -e "[General]\nuiColor=#740096\ncontrastUiColor=#270032" > ~/.config/flameshot/flameshot.ini
+
+# Configure obsidian
+echo -e "\nConfiguring obsidian..."
+mkdir -p ~/Documents/Obsidian/.obsidian
+cp -r $PWD/config/obsidian/* ~/Documents/Obsidian/.obsidian/
 
 # Enable the display manager service
 echo -e "\nEnabling the display manager service..."

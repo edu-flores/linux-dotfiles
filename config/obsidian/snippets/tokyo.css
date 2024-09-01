@@ -1,0 +1,71 @@
+/* Tokyo Night */
+
+.theme-dark, .theme-light {
+  /* Main */
+  --background-primary: #1a1b26;
+  --background-secondary: #16161f;
+  --background-primary-alt: var(--background-primary);
+  --background-secondary-alt: var(--background-secondary);
+  --text-normal: #a9b1d6;
+
+  /* Forms */
+  --slider-track-background: var(--background-secondary);
+  --interactive-normal: var(--background-secondary);
+
+  /* Borders */
+  --background-modifier-border: transparent;
+  --background-modifier-border-hover: transparent;
+  --prompt-border-color: transparent;
+  --modal-border-color: transparent;
+
+  /* Base Colors */
+  --color-base-00: #1a1b26;
+  --color-base-05: #2d2e39;
+  --color-base-10: #3f404b;
+  --color-base-20: #52535d;
+  --color-base-25: #64656f;
+  --color-base-30: #777881;
+  --color-base-35: #898a93;
+  --color-base-40: #9c9da5;
+  --color-base-50: #aeafb7;
+  --color-base-60: #c1c2c9;
+  --color-base-70: #d3d4db;
+  --color-base-100: #e6e7ed;
+  
+  /* Accent Colors */
+  --color-red: #f7768e;
+  --color-orange: #ff9e64;
+  --color-yellow: #e0af68;
+  --color-green: #73daca;
+  --color-cyan: #7dcfff;
+  --color-blue: #7aa2f7;
+  --color-purple: #bb9af7;
+  --color-pink: #bb9af7;
+
+  /* Accent HSL */
+  --accent-h: 223;
+  --accent-s: 45%;
+  --accent-l: 44%;
+
+  /* Headers */
+  --h1-color: var(--color-red);
+  --h2-color: var(--color-orange);
+  --h3-color: var(--color-yellow);
+  --h4-color: var(--color-green);
+  --h5-color: var(--color-cyan);
+  --h6-color: var(--color-blue);
+
+  /* Text Styles */
+  --bold-color: var(--color-blue);
+  --italic-color: var(--color-blue);
+  --checklist-done-color: inherit;
+
+  /* Tables */
+  --table-border-color: var(--text-normal);
+  --table-add-button-border-color: var(--text-normal);
+  --table-border-width: 1px;
+
+  /* Lines */
+  --hr-color: var(--text-normal);
+  --hr-thickness: 1px;
+}

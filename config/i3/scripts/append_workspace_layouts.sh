@@ -24,10 +24,10 @@ alacritty --title "System Monitor" -e sh -c "btm" &
 alacritty --title "Mixer" -e sh -c "pulsemixer" &
 
 # Workspace 5
-xpad &
+obsidian &
 
 # Scratchpad
-alacritty --title "Scratchpad" -e sh -c "neofetch; zsh" &
+alacritty --title "Scratchpad" -e sh -c "tmux new-session -s scratchpad 'neofetch; zsh'" &
 
 # Give some time for applications to start
 sleep 5
