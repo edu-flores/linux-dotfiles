@@ -19,7 +19,7 @@ live_config_reload = true
 
 # Font
 [font]
-size = 11.5
+size = 10
 
 [font.bold]
 family = "JetBrainsMonoNL Nerd Font"
