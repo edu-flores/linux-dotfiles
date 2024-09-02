@@ -56,7 +56,7 @@ sudo pacman -Syu --noconfirm
 official_packages=(
     "xorg-server" "xorg-xinit" "xorg-xrandr"
     "i3-wm" "tmux" "alacritty" "zsh" "dunst" "picom" "polybar" "rofi" "feh" "clipmenu" "ly"
-    "ncspot" "ranger" "btm" "neofetch" "flameshot" "obsidian"
+    "ncspot" "ueberzug" "ranger" "btm" "neofetch" "flameshot" "obsidian"
     "noto-fonts" "noto-fonts-cjk" "noto-fonts-emoji" "noto-fonts-extras"
     "alsa-utils" "pulseaudio" "playerctl" "pulsemixer"
     "eza" "bat" "ripgrep" "zoxide" "fzf" "duf" "fd"
@@ -160,9 +160,11 @@ echo -e "\nLinking config files..."
 "$REPO_ROOT/scripts/symlink_config_files.sh"
 
 # Configure ncspot
-echo -e "\nConfiguring ncspot..."
+echo -e "\nConfiguring ncspot and lyrics..."
 mkdir -p ~/.config/ncspot
 echo -e "notify = true\nuse_nerdfont = true\nflip_status_indicators = true" > ~/.config/ncspot/config.toml
+sed "s/player: .*/player: mpris/" ~/.config/sptlrx/config.yaml
+sed "s/players: \[.*\]/players: [ncspot]/" ~/.config/sptlrx/config.yaml
 
 # Enable the display manager service
 echo -e "\nEnabling the display manager service..."
