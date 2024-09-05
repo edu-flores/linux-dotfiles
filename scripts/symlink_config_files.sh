@@ -10,6 +10,7 @@ remove() {
     rm -rf ~/.config/alacritty
     rm -rf ~/.config/dunst
     rm -rf ~/.config/i3
+    rm -rf ~/.config/neofetch
     rm -rf ~/.config/picom
     rm -rf ~/.config/polybar
     rm -rf ~/.config/rofi
@@ -24,6 +25,7 @@ symlink() {
     ln -s "$REPO_ROOT/config/alacritty" ~/.config/alacritty
     ln -s "$REPO_ROOT/config/dunst" ~/.config/dunst
     ln -s "$REPO_ROOT/config/i3" ~/.config/i3
+    ln -s "$REPO_ROOT/config/neofetch" ~/.config/neofetch
     ln -s "$REPO_ROOT/config/picom" ~/.config/picom
     ln -s "$REPO_ROOT/config/polybar" ~/.config/polybar
     ln -s "$REPO_ROOT/config/rofi" ~/.config/rofi
