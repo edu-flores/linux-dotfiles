@@ -10,24 +10,24 @@ done
 google-chrome-stable &
 
 # Workspace 2
-alacritty --title "Spotify" -e sh -c "ncspot" &
-alacritty --title "Lyrics" -e sh -c "sptlrx" &
-alacritty --title "Audio Visualizer" -e sh -c "cava" &
+alacritty --title "Spotify" -e zsh -c "ncspot" &
+alacritty --title "Lyrics" -e zsh -c "sptlrx" &
+alacritty --title "Audio Visualizer" -e zsh -c "cava" &
 
 # Workspace 3
 code &
 
 # Workspace 4
-alacritty --title "Clock" -e sh -c "tty-clock -c -t -s -C 6 -B -f '%A, %d %B %Y'" &
-alacritty --title "File Manager" -e sh -c "ranger" &
-alacritty --title "System Monitor" -e sh -c "btm" &
-alacritty --title "Mixer" -e sh -c "pulsemixer" &
+alacritty --title "Clock" -e zsh -c "tty-clock -c -t -s -C 6 -B -f '%A, %d %B %Y'" &
+alacritty --title "File Manager" -e zsh -c "ranger" &
+alacritty --title "System Monitor" -e zsh -c "btm" &
+alacritty --title "Mixer" -e zsh -c "pulsemixer" &
 
 # Workspace 5
 obsidian &
 
 # Scratchpad
-alacritty --title "Scratchpad" -e sh -c "tmux new-session -s scratchpad 'neofetch; zsh'" &
+alacritty --title "Scratchpad" -e zsh -c "tmux new-session -s scratchpad 'neofetch; zsh'" &
 
 # Give some time for applications to start
 sleep 5
