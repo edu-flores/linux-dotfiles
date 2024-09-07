@@ -61,7 +61,11 @@ official_packages=(
     "alsa-utils" "pulseaudio" "playerctl" "pulsemixer"
     "eza" "bat" "ripgrep" "zoxide" "fzf" "duf" "fd"
 )
-aur_packages=("google-chrome" "visual-studio-code-bin" "sptlrx-bin" "cava" "tty-clock")
+aur_packages=(
+    "apple_cursor"
+    "google-chrome" "visual-studio-code-bin"
+    "sptlrx-bin" "cava" "tty-clock"
+)
 
 # Install packages from the official repositories
 echo -e "\nThe following packages will be installed from the official repositories: ${official_packages[*]}"
@@ -150,6 +154,10 @@ sudo mkdir -p $font_dir
 sudo cp $REPO_ROOT/fonts/* $font_dir
 mkdir -p $wallpaper_dir
 cp $REPO_ROOT/wallpapers/* $wallpaper_dir
+
+# System cursor
+echo -e "\nSwitching cursor icons..."
+echo -e "Xcursor.theme: macOS-White\nXcursor.size: 28" > ~/.Xresources
 
 # System bell
 echo -e "\nDisabling system bell..."
