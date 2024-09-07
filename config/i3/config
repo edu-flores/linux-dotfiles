@@ -17,11 +17,6 @@ set $mod Mod4
 # Font for window titles
 font pango: JetBrainsMonoNL Nerd Font 10
 
-# Adjust volume
-bindsym XF86AudioRaiseVolume exec amixer -q -D pulse set Master 5%+
-bindsym XF86AudioLowerVolume exec amixer -q -D pulse set Master 5%-
-bindsym XF86AudioMute exec amixer -q -D pulse set Master toggle
-
 # Drag floating windows
 floating_modifier $mod
 
@@ -124,9 +119,6 @@ bindsym $mod+Shift+c reload
 # Restart i3 inplace
 bindsym $mod+Shift+r restart
 
-# Exit i3
-bindsym $mod+Shift+e exec "i3-nagbar -f 'pango: JetBrainsMonoNL Nerd Font 8' -t warning -m 'Do you really want to exit i3?' -B 'Yes, exit i3' 'i3-msg exit'"
-
 # Resize window
 mode "resize" {
         # Pressing left will shrink the window’s width
@@ -160,8 +152,8 @@ workspace $ws4 output $monitor1
 workspace $ws5 output $monitor1
 workspace $ws6 output $monitor1
 workspace $ws7 output $monitor1
-workspace $ws8 output $monitor2
-workspace $ws9 output $monitor2
+workspace $ws8 output $monitor1
+workspace $ws9 output $monitor1
 workspace $ws10 output $monitor2
 for_window [workspace=$ws5] floating enable
 assign [class="^Code$"] $ws3
@@ -192,6 +184,9 @@ bindsym $mod+minus scratchpad show
 for_window [title="^Scratchpad$"] move scratchpad, resize set width 990 px height 600 px
 
 # Media
+bindsym XF86AudioRaiseVolume exec amixer -q -D pulse set Master 5%+
+bindsym XF86AudioLowerVolume exec amixer -q -D pulse set Master 5%-
+bindsym XF86AudioMute exec amixer -q -D pulse set Master toggle
 bindsym XF86AudioPlay exec ~/.config/i3/scripts/handle_media_keys.sh play-pause
 bindsym XF86AudioPrev exec ~/.config/i3/scripts/handle_media_keys.sh previous
 bindsym XF86AudioNext exec ~/.config/i3/scripts/handle_media_keys.sh next
@@ -199,9 +194,11 @@ bindsym XF86AudioNext exec ~/.config/i3/scripts/handle_media_keys.sh next
 # Styling
 for_window [all] title_window_icon on
 for_window [all] title_window_icon padding 5px
-default_border none
 title_align center
+default_border none
+gaps top 42px
 gaps inner 12px
+workspace $ws10 gaps top 0
 
 # Current desktop theme
 include ~/.config/i3/themes/gruvbox
