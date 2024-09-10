@@ -20,28 +20,24 @@ fi
 # Set variables based on the selected theme
 case $theme in
     everforest)
-        wallpaper="everforest-wallpaper.png"
         background="#1d2021"
         background_alt="#414b50"
         foreground="#d3c6aa"
         vscode_theme="Everforest Dark"
         ;;
     gruvbox)
-        wallpaper="gruvbox-wallpaper.png"
         background="#282828"
         background_alt="#504945"
         foreground="#ebdbb2"
         vscode_theme="Gruvbox Dark Medium"
         ;;
     tokyo)
-        wallpaper="tokyo-wallpaper.png"
         background="#1a1b26"
         background_alt="#3b4261"
         foreground="#c0caf5"
         vscode_theme="Tokyo Night Frameless"
         ;;
     nord)
-        wallpaper="nord-wallpaper.png"
         background="#2e3440"
         background_alt="#434c5e"
         foreground="#d8dee9"
@@ -78,4 +74,4 @@ printf "[General]\nuiColor=%s\ncontrastUiColor=%s\n" "$background_alt" "$backgro
 cat ~/Documents/Vault/.obsidian/snippets/$theme.css > ~/Documents/Vault/.obsidian/snippets/current.css
 
 # Wallpaper
-feh --bg-fill ~/Pictures/Wallpapers/$wallpaper
+feh --bg-fill ~/Pictures/Wallpapers/$theme-wallpaper.png
