@@ -2,21 +2,17 @@
 
 .theme-dark, .theme-light {
   /* Main */
+  --text-normal: #d3c6aa;
   --background-primary: #272e33;
   --background-secondary: #1e2326;
   --background-primary-alt: var(--background-primary);
   --background-secondary-alt: var(--background-secondary);
-  --text-normal: #d3c6aa;
-
-  /* Forms */
-  --slider-track-background: var(--background-secondary);
-  --interactive-normal: var(--background-secondary);
 
   /* Borders */
-  --background-modifier-border: transparent;
-  --background-modifier-border-hover: transparent;
   --prompt-border-color: transparent;
   --modal-border-color: transparent;
+  --background-modifier-border: transparent;
+  --background-modifier-border-hover: var(--background-secondary);
 
   /* Base Colors */
   --color-base-00: #272e33;
@@ -58,14 +54,17 @@
   /* Text Styles */
   --bold-color: var(--color-blue);
   --italic-color: var(--color-blue);
-  --checklist-done-color: inherit;
 
   /* Tables */
   --table-border-color: var(--text-normal);
-  --table-add-button-border-color: var(--text-normal);
   --table-border-width: 1px;
 
   /* Lines */
   --hr-color: var(--text-normal);
   --hr-thickness: 1px;
+
+  /* Forms */
+  --checklist-done-color: inherit;
+  --slider-track-background: var(--color-base-05);
+  --interactive-normal: var(--color-base-05);
 }
