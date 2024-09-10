@@ -157,7 +157,7 @@ cp $REPO_ROOT/wallpapers/* $wallpaper_dir
 
 # System cursor
 echo -e "\nSwitching cursor icons..."
-echo -e "Xcursor.theme: macOS-White\nXcursor.size: 28" > ~/.Xresources
+echo -e "Xcursor.theme: macOS-White\nXcursor.size: 22" > ~/.Xresources
 
 # System bell
 echo -e "\nDisabling system bell..."
