@@ -158,8 +158,11 @@ workspace $ws10 output $monitor2
 for_window [workspace=$ws5] floating enable
 assign [class="^Code$"] $ws3
 
-# Startup
+# Keyboard
+exec --no-startup-id setxkbmap -layout us,latam -option grp:rctrl_toggle
 exec --no-startup-id setxkbmap -option compose:ralt
+
+# Startup
 exec --no-startup-id ~/.config/i3/scripts/configure_display_settings.sh
 exec --no-startup-id ~/.config/i3/scripts/append_workspace_layouts.sh
 exec --no-startup-id ~/.config/i3/scripts/set_desktop_theme.sh
@@ -167,7 +170,7 @@ exec --no-startup-id clipmenud
 exec --no-startup-id picom
 exec --no-startup-id dunst
 
-# Keybinds
+# Bindings
 bindsym $mod+v exec CM_LAUNCHER=rofi clipmenu -p "󰅇 Clipboard"
 bindsym $mod+Shift+v exec clipdel -d ".*"
 bindsym $mod+space exec rofi -show drun
