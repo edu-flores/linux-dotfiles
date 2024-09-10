@@ -1,6 +1,7 @@
 {
   "interfaceFontFamily": "JetBrainsMonoNL Nerd Font",
   "enabledCssSnippets": [
+    "base",
     "current"
   ],
   "baseFontSize": 14

@@ -1,70 +1,37 @@
 /* Gruvbox */
 
 .theme-dark, .theme-light {
-  /* Main */
-  --text-normal: #ebdbb2;
-  --background-primary: #282828;
-  --background-secondary:  #1d2021;
-  --background-primary-alt: var(--background-primary);
-  --background-secondary-alt: var(--background-secondary);
+    /* Main */
+    --text-normal: #ebdbb2;
+    --background-primary: #282828;
+    --background-secondary:  #1d2021;
 
-  /* Borders */
-  --prompt-border-color: transparent;
-  --modal-border-color: transparent;
-  --background-modifier-border: transparent;
-  --background-modifier-border-hover: var(--background-secondary);
+    /* Base Colors */
+    --color-base-00: #282828;
+    --color-base-05: #3b3a36;
+    --color-base-10: #4e4d45;
+    --color-base-20: #625f53;
+    --color-base-25: #757162;
+    --color-base-30: #888370;
+    --color-base-35: #9b967f;
+    --color-base-40: #aea88d;
+    --color-base-50: #c1ba9c;
+    --color-base-60: #d5ccaa;
+    --color-base-70: #e8dfb9;
+    --color-base-100: #fbf1c7;
 
-  /* Base Colors */
-  --color-base-00: #282828;
-  --color-base-05: #3b3a36;
-  --color-base-10: #4e4d45;
-  --color-base-20: #625f53;
-  --color-base-25: #757162;
-  --color-base-30: #888370;
-  --color-base-35: #9b967f;
-  --color-base-40: #aea88d;
-  --color-base-50: #c1ba9c;
-  --color-base-60: #d5ccaa;
-  --color-base-70: #e8dfb9;
-  --color-base-100: #fbf1c7;
-  
-  /* Accent Colors */
-  --color-red: #fb4934;
-  --color-orange: #fe8019;
-  --color-yellow: #fabd2f;
-  --color-green: #b8bb26;
-  --color-cyan: #8ec07c;
-  --color-blue: #83a598;
-  --color-purple: #d3869b;
-  --color-pink: #d3869b;
+    /* Accent Colors */
+    --color-red: #fb4934;
+    --color-orange: #fe8019;
+    --color-yellow: #fabd2f;
+    --color-green: #b8bb26;
+    --color-cyan: #8ec07c;
+    --color-blue: #83a598;
+    --color-purple: #d3869b;
+    --color-pink: #d3869b;
 
-  /* Accent HSL */
-  --accent-h: 24;
-  --accent-s: 97%;
-  --accent-l: 58%;
-
-  /* Headers */
-  --h1-color: var(--color-red);
-  --h2-color: var(--color-orange);
-  --h3-color: var(--color-yellow);
-  --h4-color: var(--color-green);
-  --h5-color: var(--color-cyan);
-  --h6-color: var(--color-blue);
-
-  /* Text Styles */
-  --bold-color: var(--color-blue);
-  --italic-color: var(--color-blue);
-
-  /* Tables */
-  --table-border-color: var(--text-normal);
-  --table-border-width: 1px;
-
-  /* Lines */
-  --hr-color: var(--text-normal);
-  --hr-thickness: 1px;
-
-  /* Forms */
-  --checklist-done-color: inherit;
-  --slider-track-background: var(--color-base-05);
-  --interactive-normal: var(--color-base-05);
+    /* Accent HSL */
+    --accent-h: 24;
+    --accent-s: 97%;
+    --accent-l: 58%;
 }

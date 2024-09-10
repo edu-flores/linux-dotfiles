@@ -1,0 +1,38 @@
+/* Gruvbox */
+
+.theme-dark, .theme-light {
+    /* Main */
+    --background-primary-alt: var(--background-primary);
+    --background-secondary-alt: var(--background-secondary);
+
+    /* Borders */
+    --prompt-border-color: transparent;
+    --modal-border-color: transparent;
+    --background-modifier-border: transparent;
+    --background-modifier-border-hover: var(--background-secondary);
+
+    /* Headers */
+    --h1-color: var(--color-red);
+    --h2-color: var(--color-orange);
+    --h3-color: var(--color-yellow);
+    --h4-color: var(--color-green);
+    --h5-color: var(--color-cyan);
+    --h6-color: var(--color-blue);
+
+    /* Text Styles */
+    --bold-color: var(--color-blue);
+    --italic-color: var(--color-blue);
+
+    /* Tables */
+    --table-border-color: var(--text-normal);
+    --table-border-width: 1px;
+
+    /* Lines */
+    --hr-color: var(--text-normal);
+    --hr-thickness: 1px;
+
+    /* Forms */
+    --checklist-done-color: inherit;
+    --slider-track-background: var(--color-base-05);
+    --interactive-normal: var(--color-base-05);
+}

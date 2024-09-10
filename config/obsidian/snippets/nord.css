@@ -1,70 +1,37 @@
 /* Nord */
 
 .theme-dark, .theme-light {
-  /* Main */
-  --text-normal: #d8dee9;
-  --background-primary: #3b4252;
-  --background-secondary: #2e3440;
-  --background-primary-alt: var(--background-primary);
-  --background-secondary-alt: var(--background-secondary);
+    /* Main */
+    --text-normal: #d8dee9;
+    --background-primary: #3b4252;
+    --background-secondary: #2e3440;
 
-  /* Borders */
-  --prompt-border-color: transparent;
-  --modal-border-color: transparent;
-  --background-modifier-border: transparent;
-  --background-modifier-border-hover: var(--background-secondary);
+    /* Base Colors */
+    --color-base-00: #3b4252;
+    --color-base-05: #4b5261;
+    --color-base-10: #5b616f;
+    --color-base-20: #6b717e;
+    --color-base-25: #7b818d;
+    --color-base-30: #8b919c;
+    --color-base-35: #9ca0aa;
+    --color-base-40: #acb0b9;
+    --color-base-50: #bcc0c8;
+    --color-base-60: #ccd0d7;
+    --color-base-70: #dcdfe5;
+    --color-base-100: #eceff4;
+    
+    /* Accent Colors */
+    --color-red: #bf616a;
+    --color-orange: #d08770;
+    --color-yellow: #ebcb8b;
+    --color-green: #a3be8c;
+    --color-cyan: #8fbcbb;
+    --color-blue: #81a1c1;
+    --color-purple: #b48ead;
+    --color-pink: #b48ead;
 
-  /* Base Colors */
-  --color-base-00: #3b4252;
-  --color-base-05: #4b5261;
-  --color-base-10: #5b616f;
-  --color-base-20: #6b717e;
-  --color-base-25: #7b818d;
-  --color-base-30: #8b919c;
-  --color-base-35: #9ca0aa;
-  --color-base-40: #acb0b9;
-  --color-base-50: #bcc0c8;
-  --color-base-60: #ccd0d7;
-  --color-base-70: #dcdfe5;
-  --color-base-100: #eceff4;
-  
-  /* Accent Colors */
-  --color-red: #bf616a;
-  --color-orange: #d08770;
-  --color-yellow: #ebcb8b;
-  --color-green: #a3be8c;
-  --color-cyan: #8fbcbb;
-  --color-blue: #81a1c1;
-  --color-purple: #b48ead;
-  --color-pink: #b48ead;
-
-  /* Accent HSL */
-  --accent-h: 193;
-  --accent-s: 43%;
-  --accent-l: 67%;
-
-  /* Headers */
-  --h1-color: var(--color-red);
-  --h2-color: var(--color-orange);
-  --h3-color: var(--color-yellow);
-  --h4-color: var(--color-green);
-  --h5-color: var(--color-cyan);
-  --h6-color: var(--color-blue);
-
-  /* Text Styles */
-  --bold-color: var(--color-blue);
-  --italic-color: var(--color-blue);
-
-  /* Tables */
-  --table-border-color: var(--text-normal);
-  --table-border-width: 1px;
-
-  /* Lines */
-  --hr-color: var(--text-normal);
-  --hr-thickness: 1px;
-
-  /* Forms */
-  --checklist-done-color: inherit;
-  --slider-track-background: var(--color-base-05);
-  --interactive-normal: var(--color-base-05);
+    /* Accent HSL */
+    --accent-h: 193;
+    --accent-s: 43%;
+    --accent-l: 67%;
 }
