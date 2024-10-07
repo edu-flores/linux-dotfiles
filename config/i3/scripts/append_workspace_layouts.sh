@@ -27,7 +27,7 @@ alacritty --title "Mixer" -e zsh -c "pulsemixer" &
 obsidian &
 
 # Scratchpad
-alacritty --title "Scratchpad" -e zsh -c "tmux new-session -s scratchpad 'neofetch; zsh'" &
+alacritty --title "Scratchpad" -e zsh -c "tmux new-session -A -s scratchpad 'neofetch; zsh'" &
 
 # Give some time for applications to start
 sleep 5
