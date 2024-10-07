@@ -171,6 +171,7 @@ exec --no-startup-id picom
 exec --no-startup-id dunst
 
 # Bindings
+bindsym $mod+c --release exec xcolor -s -S 4
 bindsym $mod+v exec CM_LAUNCHER=rofi clipmenu -p "󰅇 Clipboard"
 bindsym $mod+Shift+v exec clipdel -d ".*"
 bindsym $mod+space exec rofi -show drun

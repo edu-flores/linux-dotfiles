@@ -55,7 +55,7 @@ sudo pacman -Syu --noconfirm
 # Set desired packages from the official and AUR repositories
 official_packages=(
     "xorg-server" "xorg-xinit" "xorg-xrandr"
-    "i3-wm" "tmux" "alacritty" "zsh" "dunst" "picom" "polybar" "rofi" "feh" "clipmenu" "ly"
+    "i3-wm" "tmux" "alacritty" "zsh" "dunst" "picom" "polybar" "rofi" "feh" "xcolor" "clipmenu" "ly"
     "ncspot" "ueberzug" "ranger" "btm" "neofetch" "flameshot" "obsidian"
     "noto-fonts" "noto-fonts-cjk" "noto-fonts-emoji" "noto-fonts-extras"
     "alsa-utils" "pulseaudio" "playerctl" "pulsemixer"
