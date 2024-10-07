@@ -69,7 +69,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # Change focus between tiling / floating windows
-bindsym $mod+t focus mode_toggle
+#bindsym $mod+space focus mode_toggle
 
 # Focus the parent container
 bindsym $mod+a focus parent
@@ -200,8 +200,8 @@ for_window [all] title_window_icon on
 for_window [all] title_window_icon padding 5px
 title_align center
 default_border none
-gaps top 42px
-gaps inner 12px
+gaps top 45px
+gaps inner 20px
 workspace $ws10 gaps top 0
 
 # Current desktop theme
