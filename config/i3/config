@@ -191,9 +191,9 @@ for_window [title="^Scratchpad$"] move scratchpad, resize set width 990 px heigh
 bindsym XF86AudioRaiseVolume exec amixer -q -D pulse set Master 5%+
 bindsym XF86AudioLowerVolume exec amixer -q -D pulse set Master 5%-
 bindsym XF86AudioMute exec amixer -q -D pulse set Master toggle
-bindsym XF86AudioPlay exec ~/.config/i3/scripts/handle_media_keys.sh play-pause
-bindsym XF86AudioPrev exec ~/.config/i3/scripts/handle_media_keys.sh previous
-bindsym XF86AudioNext exec ~/.config/i3/scripts/handle_media_keys.sh next
+bindsym XF86AudioPlay exec playerctl --player=spotify play-pause
+bindsym XF86AudioPrev exec playerctl --player=spotify previous
+bindsym XF86AudioNext exec playerctl --player=spotify next
 
 # Styling
 for_window [all] title_window_icon on
