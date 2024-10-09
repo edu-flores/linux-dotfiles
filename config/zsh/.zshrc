@@ -43,7 +43,7 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Autosuggestions
-HISTFILE=~/.zsh/.histfile
+HISTFILE=~/.zsh_history
 HISTSIZE=1000
 HISTDUP=erase
 SAVEHIST=$HISTSIZE
@@ -56,7 +56,7 @@ setopt hist_ignore_dups       # Ignore consecutive duplicate commands
 setopt hist_find_no_dups      # Skip duplicates during history search
 setopt interactive_comments   # Allow comments in interactive shell
 
-# Styling
+# Completions
 autoload -Uz compinit && compinit
 export LS_COLORS="di=34:ln=36:so=32:pi=35:ex=31:bd=44;37:cd=44;37:su=41;30:sg=46;30:tw=42;30:ow=43;30"
 zstyle ":completion:*" matcher-list "m:{a-z}={A-Za-z}"

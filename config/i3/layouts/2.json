@@ -9,7 +9,7 @@
     "name": "Music",
     "swallows": [
         {
-            "class": "^spotify$"
+            "class": "^Spotify$"
         }
     ]
 }

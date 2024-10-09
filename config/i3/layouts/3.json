@@ -9,7 +9,7 @@
     "name": "Editor",
     "swallows": [
         {
-            "class": "^code$"
+            "class": "^Code$"
         }
     ]
 }
