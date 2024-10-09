@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Open layouts
-for i in {1..5}; do
+for i in {1..4}; do
     i3-msg "workspace $i; append_layout ~/.config/i3/layouts/$i.json"
 done
 
@@ -16,12 +16,6 @@ spotify &
 code &
 
 # Workspace 4
-alacritty --title "Clock" -e zsh -c "tty-clock -c -t -s -C 6 -B -f '%A, %d %B %Y'" &
-alacritty --title "File Manager" -e zsh -c "ranger" &
-alacritty --title "System Monitor" -e zsh -c "btm" &
-alacritty --title "Mixer" -e zsh -c "pulsemixer" &
-
-# Workspace 5
 obsidian &
 
 # Scratchpad
@@ -35,7 +29,7 @@ while i3-msg "[urgent=latest] focus"; do
     :
 done
 
-# Modify scratchpad title to avoid bugs
+# Modify scratchpad title to avoid conflicts with i3's config
 xdotool search --name "Scratchpad" set_window --name "Multiplexer"
 
 # Move workspace programatically
