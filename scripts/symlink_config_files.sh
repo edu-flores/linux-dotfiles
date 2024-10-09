@@ -6,7 +6,6 @@ REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
 # Remove symlinks
 remove() {
-    rm -rf ~/Documents/Vault/.obsidian
     rm -rf ~/.config/alacritty
     rm -rf ~/.config/dunst
     rm -rf ~/.config/i3
@@ -20,8 +19,6 @@ remove() {
 
 # Set up symlinks
 symlink() {
-    mkdir -p ~/Documents/Vault/.obsidian
-    cp -r "$REPO_ROOT/config/obsidian/"* ~/Documents/Vault/.obsidian
     ln -s "$REPO_ROOT/config/alacritty" ~/.config/alacritty
     ln -s "$REPO_ROOT/config/dunst" ~/.config/dunst
     ln -s "$REPO_ROOT/config/i3" ~/.config/i3
