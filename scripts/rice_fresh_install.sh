@@ -55,7 +55,8 @@ sudo pacman -Syu --noconfirm
 # Set desired packages from the official and AUR repositories
 official_packages=(
     "xorg-server" "xorg-xinit" "xorg-xrandr"
-    "i3-wm" "tmux" "alacritty" "zsh" "dunst" "picom" "polybar" "rofi" "feh" "xcolor" "clipmenu" "ly"
+    "alacritty" "tmux" "zsh" "zsh-autosuggestions" "zsh-syntax-highlighting"
+    "i3-wm" "dunst" "picom" "polybar" "rofi" "feh" "xcolor" "clipmenu" "ly"
     "ranger" "btm" "neofetch" "flameshot" "obsidian"
     "noto-fonts" "noto-fonts-cjk" "noto-fonts-emoji" "noto-fonts-extras"
     "alsa-utils" "pulseaudio" "playerctl" "pulsemixer"
@@ -107,13 +108,11 @@ cat << "EOF"
 
 EOF
 
-echo -e "\nZ shell will be installed and configured with powerlevel10k, syntax highlighting and autosuggestions."
+echo -e "\nZ shell will be set up with powerlevel10k."
 read -p "Press Enter to continue..."
 
 rm -rf ~/.zsh
 mkdir -p ~/.zsh
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.zsh/zsh-syntax-highlighting
 git clone --depth=1 https://github.com/romkatv/powerlevel10k ~/.zsh/powerlevel10k
 chsh -s $(which zsh)
 
