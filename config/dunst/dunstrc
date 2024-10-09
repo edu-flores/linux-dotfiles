@@ -37,14 +37,6 @@
     enable_recursive_icon_lookup = true
     icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
 
-##### Ncspot #####
-
-[ncspot]
-    set_stack_tag = "ncspot"
-
-[stack-ncspot]
-    history_ignore = yes
-
 ##### Urgency #####
 
 [urgency_low]

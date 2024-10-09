@@ -10,9 +10,7 @@ done
 google-chrome-stable &
 
 # Workspace 2
-alacritty --title "Spotify" -e zsh -c "ncspot" &
-alacritty --title "Lyrics" -e zsh -c "sptlrx" &
-alacritty --title "Audio Visualizer" -e zsh -c "cava" &
+spotify &
 
 # Workspace 3
 code &
