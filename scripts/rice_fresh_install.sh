@@ -52,6 +52,9 @@ EOF
 echo -e "\nUpdating the system..."
 sudo pacman -Syu --noconfirm
 
+# Enable packet manager colors
+sudo sed -i "s/^#Color/Color/" /etc/pacman.conf
+
 # Set desired packages from the official and AUR repositories
 official_packages=(
     "xorg-server" "xorg-xinit" "xorg-xrandr"
