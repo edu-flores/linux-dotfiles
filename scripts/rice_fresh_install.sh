@@ -126,9 +126,9 @@ cat << "EOF"
 
 EOF
 
-# Empty .env file
-echo -e "\nCreating an empty .env file..."
-touch ~/.env
+# Environment variables file
+echo -e "\nCreating a .env file..."
+cp $REPO_ROOT/.env.example ~/.env.test
 
 # Automatic startup
 # read -p "Start up the X server automatically when logging in? [Y/n]: " answer
