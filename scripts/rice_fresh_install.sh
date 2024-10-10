@@ -62,7 +62,7 @@ official_packages=(
     "i3-wm" "dunst" "picom" "polybar" "rofi" "feh" "xcolor" "clipmenu" "ly"
     "ranger" "btm" "neofetch" "flameshot" "obsidian"
     "ttf-jetbrains-mono-nerd" "noto-fonts" "noto-fonts-cjk" "noto-fonts-emoji" "noto-fonts-extras"
-    "alsa-utils" "pulseaudio" "playerctl" "pulsemixer"
+    "pipewire" "pipewire-alsa" "pipewire-pulse" "pipewire-jack" "playerctl"
     "eza" "bat" "ripgrep" "zoxide" "fzf" "duf" "fd" "less"
 )
 aur_packages=(
@@ -171,13 +171,18 @@ echo -e "Xcursor.theme: macOS-White\nXcursor.size: 22" > ~/.Xresources
 echo -e "\nDisabling system bell..."
 echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/nobeep.conf > /dev/null
 
-# Symlink config files
-echo -e "\nLinking config files..."
-"$REPO_ROOT/scripts/symlink_config_files.sh"
+# Enable audio service
+echo -e "\nEnabling audio service..."
+systemctl --user enable pipewire pipewire-pulse
+systemctl --user start pipewire pipewire-pulse
 
 # Enable the display manager service
 echo -e "\nEnabling the display manager service..."
 sudo systemctl enable ly.service
+
+# Symlink config files
+echo -e "\nLinking config files..."
+"$REPO_ROOT/scripts/symlink_config_files.sh"
 
 # Notify user for remaining changes
 echo -e "\nInstallation completed. You'll need to manually: "
