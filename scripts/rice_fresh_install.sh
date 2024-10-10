@@ -63,7 +63,7 @@ official_packages=(
     "ranger" "btm" "neofetch" "flameshot" "obsidian"
     "noto-fonts" "noto-fonts-cjk" "noto-fonts-emoji" "noto-fonts-extras"
     "alsa-utils" "pulseaudio" "playerctl" "pulsemixer"
-    "eza" "bat" "ripgrep" "zoxide" "fzf" "duf" "fd"
+    "eza" "bat" "ripgrep" "zoxide" "fzf" "duf" "fd" "less"
 )
 aur_packages=(
     "apple_cursor"
