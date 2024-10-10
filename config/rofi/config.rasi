@@ -15,7 +15,7 @@
 /* Settings */
 configuration {
 	modi: "window,drun";
-	font: "JetBrainsMonoNL Nerd Font 11.5";
+	font: "JetBrainsMono Nerd Font Semibold 11.5";
 	show-icons: true;
 	terminal: "/usr/bin/alacritty";
 	window-thumbnail: true;

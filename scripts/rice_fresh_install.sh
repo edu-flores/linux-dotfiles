@@ -61,7 +61,7 @@ official_packages=(
     "alacritty" "tmux" "zsh" "zsh-autosuggestions" "zsh-syntax-highlighting"
     "i3-wm" "dunst" "picom" "polybar" "rofi" "feh" "xcolor" "clipmenu" "ly"
     "ranger" "btm" "neofetch" "flameshot" "obsidian"
-    "noto-fonts" "noto-fonts-cjk" "noto-fonts-emoji" "noto-fonts-extras"
+    "ttf-jetbrains-mono-nerd" "noto-fonts" "noto-fonts-cjk" "noto-fonts-emoji" "noto-fonts-extras"
     "alsa-utils" "pulseaudio" "playerctl" "pulsemixer"
     "eza" "bat" "ripgrep" "zoxide" "fzf" "duf" "fd" "less"
 )
@@ -157,13 +157,9 @@ cp $REPO_ROOT/.env.example ~/.env.test
 # echo "setxkbmap -option compose:ralt" >> ~/.xinitrc
 # echo "exec i3" >> ~/.xinitrc
 
-# Fonts and Wallpapers
-font_dir="/usr/local/share/fonts/"
+# Wallpapers
 wallpaper_dir="~/Pictures/Wallpapers/"
-
-echo -e "\nSetting up fonts and wallpapers..."
-sudo mkdir -p $font_dir
-sudo cp $REPO_ROOT/fonts/* $font_dir
+echo -e "\nSetting up wallpapers..."
 mkdir -p $wallpaper_dir
 cp $REPO_ROOT/wallpapers/* $wallpaper_dir
 

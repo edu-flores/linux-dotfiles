@@ -1,5 +1,5 @@
 configuration {
-	font: "JetBrainsMonoNL Nerd Font 20";
+	font: "JetBrainsMono Nerd Font Semibold 20";
 	show-icons: false;
 }
 

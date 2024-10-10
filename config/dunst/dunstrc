@@ -27,7 +27,7 @@
     frame_width = 0
 
     # Text
-    font = JetBrainsMonoNL Nerd Font 10
+    font = JetBrainsMono Nerd Font Semibold 10
     alignment = right
     hide_duplicate_count = true
     show_age_threshold = -1

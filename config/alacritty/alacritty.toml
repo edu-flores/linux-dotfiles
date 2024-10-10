@@ -22,19 +22,19 @@ live_config_reload = true
 size = 10
 
 [font.bold]
-family = "JetBrainsMonoNL Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "ExtraBold"
 
 [font.bold_italic]
-family = "JetBrainsMonoNL Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "ExtraBold Italic"
 
 [font.italic]
-family = "JetBrainsMonoNL Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "SemiBold Italic"
 
 [font.normal]
-family = "JetBrainsMonoNL Nerd Font"
+family = "JetBrainsMono Nerd Font"
 style = "SemiBold"
 
 # Styling

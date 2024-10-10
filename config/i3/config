@@ -15,7 +15,7 @@
 set $mod Mod4
 
 # Font for window titles
-font pango: JetBrainsMonoNL Nerd Font 10
+font pango: JetBrainsMono Nerd Font Semibold 10
 
 # Drag floating windows
 floating_modifier $mod
