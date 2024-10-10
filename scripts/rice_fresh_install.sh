@@ -78,26 +78,37 @@ for package in "${official_packages[@]}"; do
     fi
 done
 
-# Install the AUR helper - yay
-echo -e "\nInstalling AUR helper Yay..."
-rm -rf ~/AUR
-mkdir -p ~/AUR
-git clone https://aur.archlinux.org/yay.git ~/AUR/yay
+# Install the AUR helper
+echo -e "\nChecking for AUR helper (paru)..."
+if ! command -v paru &> /dev/null; then
+    echo "Paru is not installed. Installing..."
+    rm -rf ~/AUR
+    mkdir -p ~/AUR
+    git clone https://aur.archlinux.org/paru.git ~/AUR/paru
+    if (cd ~/AUR/paru && makepkg -si --noconfirm); then
+        echo "Paru installed successfully."
+    else
+        echo "Error: Paru installation failed. Exiting..."
+        rm -rf ~/AUR
+        exit 1
+    fi
+else
+    echo "Paru is already installed. Skipping installation..."
+fi
 
 # Install packages from the AUR repositories
-if (cd ~/AUR/yay && makepkg -si --noconfirm); then
-    echo "The following packages will be installed from the AUR: ${aur_packages[*]}"
-    read -p "Press Enter to continue..."
-    for package in "${aur_packages[@]}"; do
-        if ! yay -Qi "$package" &> /dev/null; then
-            yay -S --noconfirm "$package"
-        else
-            echo "$package is already installed. Skipping..."
-        fi
-    done
-else
-    echo "Error: Yay installation failed. Skipping AUR packages..."
-fi
+echo "The following packages will be installed from the AUR: ${aur_packages[*]}"
+for package in "${aur_packages[@]}"; do
+    if ! paru -Qi "$package" &> /dev/null; then
+        paru -S --noconfirm "$package"
+    else
+        echo "$package is already installed. Skipping..."
+    fi
+done
+
+# Clean up AUR build directory
+echo "Cleaning up..."
+rm -rf ~/AUR
 
 # Shell - zsh
 cat << "EOF"
