@@ -167,10 +167,6 @@ cp $REPO_ROOT/wallpapers/* $wallpaper_dir
 echo -e "\nSwitching cursor icons..."
 echo -e "Xcursor.theme: macOS-White\nXcursor.size: 22" > ~/.Xresources
 
-# System bell
-echo -e "\nDisabling system bell..."
-echo "blacklist pcspkr" | sudo tee /etc/modprobe.d/nobeep.conf > /dev/null
-
 # Enable audio service
 echo -e "\nEnabling audio service..."
 systemctl --user enable pipewire pipewire-pulse
@@ -183,6 +179,14 @@ sudo systemctl enable ly.service
 # Symlink config files
 echo -e "\nLinking config files..."
 "$REPO_ROOT/scripts/symlink_config_files.sh"
+
+# Send configuration files to their appropriate directory
+echo -e "\nCopying miscellaneous configuration files..."
+for file in "$REPO_ROOT/misc/"*; do
+  location=$(head -n 1 "$file" | sed "s/^# *//")
+  mkdir -p "$location"
+  cp "$file" "$location"
+done
 
 # Notify user for remaining changes
 echo -e "\nInstallation completed. You'll need to manually: "
