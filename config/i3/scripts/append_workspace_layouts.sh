@@ -6,25 +6,16 @@ for i in {1..4}; do
 done
 
 # Execute applications
-# Workspace 1
-google-chrome-stable &
-
-# Workspace 2
-spotify &
-
-# Workspace 3
-code &
-
-# Workspace 4
-obsidian &
-
-# Scratchpad
 alacritty --title "Scratchpad" -e zsh -c "tmux new-session -A -s scratchpad 'neofetch; zsh'" &
+google-chrome-stable &
+spotify &
+code &
+obsidian &
 
 # Give some time for applications to start
 sleep 5
 
-# Remove urgency hint from all windows in a loop
+# Remove urgency hint from all windows
 while i3-msg "[urgent=latest] focus"; do
     :
 done
