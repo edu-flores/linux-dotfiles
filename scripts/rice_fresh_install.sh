@@ -144,19 +144,6 @@ EOF
 echo -e "\nCreating a .env file..."
 cp $REPO_ROOT/.env.example ~/.env.test
 
-# Automatic startup
-# read -p "Start up the X server automatically when logging in? [Y/n]: " answer
-# if [[ "$answer" =~ ^[Yy]$|^$ ]]; then
-#     echo 'if [ -z "$DISPLAY" ] && [ "$(tty)" = "/dev/tty1" ]; then
-#     startx
-# fi' > ~/.zprofile
-# fi
-
-# Xinitrc
-# head -n -5 /etc/X11/xinit/xinitrc > ~/.xinitrc
-# echo "setxkbmap -option compose:ralt" >> ~/.xinitrc
-# echo "exec i3" >> ~/.xinitrc
-
 # Wallpapers
 wallpaper_dir="~/Pictures/Wallpapers/"
 echo -e "\nSetting up wallpapers..."
