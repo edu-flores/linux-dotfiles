@@ -76,6 +76,10 @@ alias find="fd"
 alias editpick='file=$(fd --type f --hidden | fzf --preview="bat --color=always {}") && [ -n "$file" ] && nano "$file"'
 alias Windows="sudo grub-reboot 1 && sudo shutdown -r now"
 
+# Customize fzf
+export FZF_DEFAULT_OPTS="--height 70% --reverse"
+export FZF_CTRL_T_COMMAND="fd --type f"
+
 # Initialize zoxide
 eval "$(zoxide init --cmd cd zsh)"
 
