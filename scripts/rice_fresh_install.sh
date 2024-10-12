@@ -150,17 +150,10 @@ echo -e "\nSetting up wallpapers..."
 mkdir -p $wallpaper_dir
 cp $REPO_ROOT/wallpapers/* $wallpaper_dir
 
-# System cursor
-echo -e "\nSwitching cursor icons..."
-echo -e "Xcursor.theme: macOS-White\nXcursor.size: 22" > ~/.Xresources
-
-# Enable audio service
-echo -e "\nEnabling audio service..."
+# Enable services
+echo -e "\nEnabling system services..."
 systemctl --user enable pipewire pipewire-pulse
 systemctl --user start pipewire pipewire-pulse
-
-# Enable the display manager service
-echo -e "\nEnabling the display manager service..."
 sudo systemctl enable ly.service
 
 # Symlink config files
@@ -172,7 +165,7 @@ echo -e "\nCopying miscellaneous configuration files..."
 for file in "$REPO_ROOT/misc/"*; do
   location=$(head -n 1 "$file" | sed "s/^# *//")
   mkdir -p "$location"
-  cp "$file" "$location"
+  sed "1d" "$file" > "$location/$(basename "$file")"
 done
 
 # Notify user for remaining changes
