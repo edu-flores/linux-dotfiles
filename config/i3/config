@@ -162,11 +162,7 @@ workspace $ws8 output $monitor1
 workspace $ws9 output $monitor1
 workspace $ws10 output $monitor2
 for_window [workspace=$ws5] floating enable
-assign [class="^Code$"] $ws3
-
-# Keyboard
-exec --no-startup-id setxkbmap -layout us,latam -option grp:rctrl_toggle
-exec --no-startup-id setxkbmap -option compose:ralt
+for_window [workspace=$ws6] split toggle
 
 # Startup
 exec --no-startup-id ~/.config/i3/scripts/configure_display_settings.sh
