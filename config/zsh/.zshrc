@@ -11,13 +11,6 @@
 #
 # +============================+
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Bindings
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
@@ -28,12 +21,6 @@ bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
-
-# Theme
-source ~/.zsh/powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Plugins
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -73,12 +60,15 @@ alias find="fd"
 alias editpick='file=$(fd --type f --hidden | fzf --preview="bat --color=always {}") && [ -n "$file" ] && nano "$file"'
 alias Windows="sudo grub-reboot 1 && sudo shutdown -r now"
 
-# Customize fzf
+# Customize fzf style
 export FZF_DEFAULT_OPTS="--height 70% --reverse"
 export FZF_CTRL_T_COMMAND="fd --type f"
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
 
 # Initialize zoxide
 eval "$(zoxide init --cmd cd zsh)"
 
-# Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
+# Theme
+eval "$(oh-my-posh init zsh --config ~/.config/omp/theme.toml)"

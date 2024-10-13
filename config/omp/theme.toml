@@ -1,0 +1,96 @@
+final_space = true
+version = 2
+
+[palette]
+white = "#FFFFFF"
+tan = "#CC3802"
+teal = "#047E84"
+plum = "#9A348E"
+blush = "#DA627D"
+salmon = "#FCA17D"
+sky = "#86BBD8"
+teal_blue = "#33658A"
+
+[[blocks]]
+alignment = "left"
+type = "rprompt"
+
+    [[blocks.segments]]
+    type = "text"
+    style = "diamond"
+    leading_diamond = ""
+    foreground = "p:white"
+    background = "p:tan"
+    template = "{{ if .Env.PNPPSHOST }}  {{ .Env.PNPPSHOST }} {{ end }}"
+
+    [[blocks.segments]]
+    type = "text"
+    style = "powerline"
+    foreground = "p:white"
+    background = "p:teal"
+    powerline_symbol = ""
+    template = "{{ if .Env.PNPPSSITE }}  {{ .Env.PNPPSSITE }}{{ end }}"
+
+    [[blocks.segments]]
+    type = "text"
+    style = "diamond"
+    trailing_diamond = ""
+    foreground = "p:white"
+    background = "p:teal"
+    template = "{{ if .Env.PNPPSSITE }} {{ end }}"
+
+[[blocks]]
+alignment = "left"
+type = "prompt"
+
+    [[blocks.segments]]
+    background = "p:plum"
+    foreground = "p:white"
+    leading_diamond = ""
+    style = "diamond"
+    template = "{{ .UserName }} "
+    type = "session"
+
+    [[blocks.segments]]
+    background = "p:blush"
+    foreground = "p:white"
+    powerline_symbol = ""
+    style = "powerline"
+    template = " {{ .Path }} "
+    type = "path"
+
+        [blocks.segments.properties]
+        style = "folder"
+
+    [[blocks.segments]]
+    background = "p:salmon"
+    foreground = "p:white"
+    powerline_symbol = ""
+    style = "powerline"
+    template = " ➜ ({{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}) "
+    type = "git"
+
+        [blocks.segments.properties]
+        branch_icon = ""
+        fetch_stash_count = true
+        fetch_status = false
+        fetch_upstream_icon = true
+
+    [[blocks.segments]]
+    background = "p:sky"
+    foreground = "p:white"
+    powerline_symbol = ""
+    style = "powerline"
+    template = "  {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} "
+    type = "node"
+
+    [[blocks.segments]]
+    background = "p:teal_blue"
+    foreground = "p:white"
+    style = "diamond"
+    template = " ♥ {{ .CurrentDate | date .Format }} "
+    trailing_diamond = ""
+    type = "time"
+
+        [blocks.segments.properties]
+        time_format = "15:04"

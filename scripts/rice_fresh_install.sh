@@ -65,7 +65,7 @@ official_packages=(
     "eza" "bat" "ripgrep" "zoxide" "fzf" "duf" "fd" "less"
 )
 aur_packages=(
-    "apple_cursor"
+    "apple_cursor" "oh-my-posh"
     "google-chrome" "spotify" "visual-studio-code-bin"
 )
 
@@ -112,23 +112,6 @@ done
 echo "Cleaning up..."
 rm -rf ~/AUR
 
-# Shell - zsh
-cat << "EOF"
-   ______       ____
-  / __/ /  ___ / / /
- _\ \/ _ \/ -_) / /
-/___/_//_/\__/_/_/
-
-EOF
-
-echo -e "\nZ shell will be set up with powerlevel10k."
-read -p "Press Enter to continue..."
-
-rm -rf ~/.zsh
-mkdir -p ~/.zsh
-git clone --depth=1 https://github.com/romkatv/powerlevel10k ~/.zsh/powerlevel10k
-chsh -s $(which zsh)
-
 # Misc config
 cat << "EOF"
   _____          ____
@@ -138,6 +121,10 @@ cat << "EOF"
                    /___/
 
 EOF
+
+# Change user shell to zsh
+echo -e "\nSetting up shell..."
+chsh -s $(which zsh)
 
 # Environment variables file
 echo -e "\nCreating a .env file..."
