@@ -21,9 +21,9 @@
     offset = 106x49
     notification_limit = 1
     indicate_hidden = no
-    padding = 15
-    horizontal_padding = 20
-    text_icon_padding = 15
+    padding = 30
+    horizontal_padding = 30
+    text_icon_padding = 30
     frame_width = 0
 
     # Text
