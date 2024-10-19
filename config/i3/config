@@ -34,7 +34,6 @@ bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
-
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
@@ -45,7 +44,6 @@ bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
-
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
@@ -76,6 +74,12 @@ bindsym $mod+a focus parent
 
 # Focus the child container
 bindsym $mod+d focus child
+
+# Move the focused window to the scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show/hide the next scratchpad window
+bindsym $mod+minus scratchpad show
 
 # Define names for default workspaces
 set $ws1 "1"
@@ -184,11 +188,6 @@ bindsym $mod+bracketleft exec ~/.config/i3/scripts/set_desktop_theme.sh 2
 bindsym $mod+bracketright exec ~/.config/i3/scripts/set_desktop_theme.sh 3
 bindsym $mod+apostrophe exec ~/.config/i3/scripts/set_desktop_theme.sh 4
 
-# Scratchpad
-bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus scratchpad show
-for_window [title="^Scratchpad$"] move scratchpad, resize set width 990 px height 600 px
-
 # Media
 bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ --limit 1.0
 bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
@@ -198,13 +197,13 @@ bindsym XF86AudioPrev exec playerctl --player=spotify previous
 bindsym XF86AudioNext exec playerctl --player=spotify next
 
 # Styling
-for_window [all] title_window_icon on
-for_window [all] title_window_icon padding 5px
-title_align center
+for_window [all] title_window_icon on, title_window_icon padding 5px
+for_window [floating title="^(?!Scratchpad$)"] border pixel 0, resize set 990 600, move position center
 default_border none
-gaps top 40px
-gaps inner 20px
+title_align center
 workspace $ws10 gaps top 0
+gaps inner 20px
+gaps top 40px
 
 # Current desktop theme
 include ~/.config/i3/themes/gruvbox
