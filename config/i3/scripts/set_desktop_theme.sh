@@ -45,8 +45,8 @@ case $theme in
         ;;
 esac
 
-# Remove scratchpad title to avoid conflicts with i3
-xdotool search --name "Scratchpad" set_window --name ""
+# Change scratchpad title to avoid conflicts with i3
+xdotool search --name "Scratchpad" set_window --name "Multiplexer"
 
 # Polybar
 sed -i "s/themes\/.*\.ini/themes\/$theme\.ini/" ~/.config/polybar/config.ini
