@@ -198,6 +198,7 @@ bindsym XF86AudioNext exec playerctl --player=spotify next
 
 # Styling
 for_window [all] title_window_icon on, title_window_icon padding 5px
+for_window [title="^Scratchpad$"] move scratchpad, sticky enable, resize set 990 600
 for_window [floating title="^(?!Scratchpad$)"] border pixel 0, resize set 990 600, move position center
 default_border none
 title_align center
