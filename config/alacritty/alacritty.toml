@@ -12,10 +12,10 @@
 # +==========================================================================+
 
 # Current desktop theme
-import = [ "~/.config/alacritty/themes/gruvbox.toml" ]
+general.import = [ "~/.config/alacritty/themes/gruvbox.toml" ]
 
 # Settings
-live_config_reload = true
+general.live_config_reload = true
 
 # Font
 [font]
