@@ -9,7 +9,8 @@ for i in {1..4}; do
 done
 
 # Execute applications
-alacritty --title "Scratchpad" -e zsh -c "tmux new-session -A -s scratchpad 'neofetch; zsh'" &
+alacritty --class "Alacritty,Scratchpad" -e zsh -c "tmux new-session -A -s scratchpad 'neofetch; zsh'" &
+dbus-launch nemo --name "Scratchpad" &
 google-chrome-stable &
 spotify &
 code &

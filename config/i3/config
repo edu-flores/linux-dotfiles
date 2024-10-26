@@ -75,12 +75,6 @@ bindsym $mod+a focus parent
 # Focus the child container
 bindsym $mod+d focus child
 
-# Move the focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
-
-# Show/hide the next scratchpad window
-bindsym $mod+minus scratchpad show
-
 # Define names for default workspaces
 set $ws1 "1"
 set $ws2 "2"
@@ -176,6 +170,14 @@ exec --no-startup-id clipmenud
 exec --no-startup-id picom
 exec --no-startup-id dunst
 
+# Scratchpad
+bindsym $mod+BackSpace scratchpad show
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+Shift+equal move scratchpad
+for_window [instance="^Scratchpad$"] move scratchpad, sticky enable
+bindsym $mod+minus [instance="^Scratchpad$" class="^Alacritty$"] scratchpad show
+bindsym $mod+equal [instance="^Scratchpad$" class="^Nemo$"] scratchpad show
+
 # Bindings
 bindsym $mod+c --release exec xcolor -s -S 4
 bindsym $mod+v exec CM_LAUNCHER=rofi clipmenu -p "󰅇 Clipboard"
@@ -198,8 +200,7 @@ bindsym XF86AudioNext exec playerctl --player=spotify next
 
 # Styling
 for_window [all] title_window_icon on, title_window_icon padding 5px
-for_window [title="^Scratchpad$"] move scratchpad, sticky enable, resize set 990 600
-for_window [floating title="^(?!Scratchpad$)"] border pixel 0, resize set 990 600, move position center
+for_window [floating] border pixel 0, resize set 990 600
 default_border none
 title_align center
 workspace $ws10 gaps top 0

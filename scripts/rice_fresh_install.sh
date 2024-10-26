@@ -59,7 +59,8 @@ sudo sed -i "s/^#Color/Color/" /etc/pacman.conf
 official_packages=(
     "xorg-server" "xorg-xinit" "xorg-xrandr"
     "alacritty" "tmux" "zsh" "zsh-autosuggestions" "zsh-syntax-highlighting"
-    "i3-wm" "dunst" "picom" "polybar" "rofi" "feh" "xcolor" "clipmenu" "ly" "neofetch" "flameshot" "obsidian"
+    "i3-wm" "polybar" "dunst" "rofi" "picom"  "ly" "feh"
+    "neofetch" "flameshot" "xcolor" "clipmenu" "obsidian" "nemo"
     "ttf-jetbrains-mono-nerd" "noto-fonts" "noto-fonts-cjk" "noto-fonts-emoji" "noto-fonts-extras"
     "pipewire" "pipewire-alsa" "pipewire-pulse" "pipewire-jack" "playerctl"
     "eza" "bat" "ripgrep" "zoxide" "fzf" "duf" "fd" "less"
