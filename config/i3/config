@@ -169,7 +169,7 @@ for_window [workspace=$ws5] floating enable
 for_window [workspace=$ws6] split toggle
 
 # Startup
-exec --no-startup-id ~/.config/i3/scripts/configure_display_settings.sh
+exec --no-startup-id ~/.config/i3/scripts/configure_display_settings.sh $monitor1 $monitor2
 exec --no-startup-id ~/.config/i3/scripts/append_workspace_layouts.sh
 exec --no-startup-id ~/.config/i3/scripts/set_desktop_theme.sh
 exec --no-startup-id clipmenud
