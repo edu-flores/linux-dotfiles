@@ -30,7 +30,7 @@ EOF
 
 # Ask for confirmation
 read -p "Begin the installation? [Y/n]: " answer
-if [[ ! "$answer" =~ ^[Yy]$|^$ ]]; then
+if [ "${answer:0:1}" = "Y" ] || [ "${answer:0:1}" = "y" ] || [ -z "$answer" ]; then
     echo "Exiting..."
     exit 0
 fi
@@ -163,7 +163,7 @@ echo " - Install necessary GPU drivers (AMD or Nvidia)"
 
 # Prompt for reboot
 read -p "Do you want to reboot now? [Y/n]: " answer
-if [[ "$answer" =~ ^[Yy]$|^$ ]]; then
+if [ "${answer:0:1}" = "Y" ] || [ "${answer:0:1}" = "y" ] || [ -z "$answer" ]; then
     sudo reboot
 else
     echo "You can manually reboot later to apply the remaining changes."
