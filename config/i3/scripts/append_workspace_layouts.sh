@@ -8,9 +8,16 @@ for i in {1..4}; do
     i3-msg "workspace $i; append_layout ~/.config/i3/layouts/$i.json"
 done
 
-# Execute applications
-alacritty --class "Alacritty,Scratchpad" -e zsh -c "tmux new-session -A -s scratchpad 'neofetch; zsh'" &
-dbus-launch nemo --name "Scratchpad" &
+# Open scratchpad applications
+alacritty -e zsh -c "tmux new-session -A -s scratchpad 'neofetch; zsh'" &
+nemo &
+
+# Send them to the scratchpad
+sleep 1
+i3-msg "[class=Alacritty] floating enable, sticky enable, mark multiplexer, move scratchpad"
+i3-msg "[class=Nemo] floating enable, sticky enable, mark file_manager, move scratchpad"
+
+# Open the rest of the applications
 google-chrome-stable &
 spotify &
 code &

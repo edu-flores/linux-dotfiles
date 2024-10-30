@@ -174,14 +174,14 @@ exec --no-startup-id dunst
 bindsym $mod+BackSpace scratchpad show
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+Shift+equal move scratchpad
-for_window [instance="^Scratchpad$"] move scratchpad, sticky enable
-bindsym $mod+minus [instance="^Scratchpad$" class="^Alacritty$"] scratchpad show
-bindsym $mod+equal [instance="^Scratchpad$" class="^Nemo$"] scratchpad show
+bindsym $mod+minus [con_mark="multiplexer"] scratchpad show
+bindsym $mod+equal [con_mark="file_manager"] scratchpad show
 
 # Bindings
-bindsym $mod+c --release exec xcolor -s -S 4
+bindsym $mod+o --release exec xcolor -s -S 3
 bindsym $mod+v exec CM_LAUNCHER=rofi clipmenu -p "󰅇 Clipboard"
 bindsym $mod+Shift+v exec clipdel -d ".*"
+bindsym $mod+Ctrl+space exec rofi -show window
 bindsym $mod+space exec rofi -show drun
 bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+c move position center
