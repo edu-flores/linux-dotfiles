@@ -37,7 +37,6 @@ style = "SemiBold Italic"
 family = "JetBrainsMono Nerd Font"
 style = "SemiBold"
 
-# Styling
-[window.padding]
-x = 20
-y = 20
+# Window
+[window]
+padding = { x = 20, y = 20 }
