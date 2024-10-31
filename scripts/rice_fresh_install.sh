@@ -147,6 +147,9 @@ sudo systemctl enable ly.service
 echo -e "\nLinking config files..."
 "$REPO_ROOT/scripts/symlink_config_files.sh"
 
+# Create XDG user directories
+mkdir -p ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Templates ~/Videos
+
 # Send configuration files to their appropriate directory
 echo -e "\nCopying miscellaneous configuration files..."
 for file in "$REPO_ROOT/misc/"*; do
