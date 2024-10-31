@@ -66,7 +66,7 @@ official_packages=(
     "eza" "bat" "ripgrep" "zoxide" "fzf" "duf" "fd" "less"
 )
 aur_packages=(
-    "apple_cursor" "oh-my-posh"
+    "oh-my-posh" "quintom-cursor-theme-git" "adw-gtk-theme-git" "morewaita-icon-theme-git"
     "google-chrome" "spotify" "visual-studio-code-bin"
 )
 
