@@ -171,9 +171,10 @@ exec --no-startup-id picom
 exec --no-startup-id dunst
 
 # Scratchpad
+bindsym $mod+Shift+BackSpace move scratchpad
 bindsym $mod+BackSpace scratchpad show
-bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+Shift+equal move scratchpad
+bindsym $mod+Shift+minus floating enable, sticky enable, mark multiplexer, move scratchpad
+bindsym $mod+Shift+equal floating enable, sticky enable, mark file_manager, move scratchpad
 bindsym $mod+minus [con_mark="multiplexer"] scratchpad show
 bindsym $mod+equal [con_mark="file_manager"] scratchpad show
 
