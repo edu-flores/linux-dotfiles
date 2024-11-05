@@ -57,17 +57,18 @@ sudo sed -i "s/^#Color/Color/" /etc/pacman.conf
 
 # Set desired packages from the official and AUR repositories
 official_packages=(
-    "xorg-server" "xorg-xinit" "xorg-xrandr"
-    "alacritty" "tmux" "zsh" "zsh-autosuggestions" "zsh-syntax-highlighting"
-    "i3-wm" "polybar" "dunst" "rofi" "picom"  "ly" "feh"
-    "neofetch" "flameshot" "xcolor" "clipmenu" "obsidian" "nemo"
-    "ttf-jetbrains-mono-nerd" "noto-fonts" "noto-fonts-cjk" "noto-fonts-emoji" "noto-fonts-extras"
-    "pipewire" "pipewire-alsa" "pipewire-pulse" "pipewire-jack" "playerctl"
-    "eza" "bat" "ripgrep" "zoxide" "fzf" "duf" "fd" "less"
+    "xorg-server" "xorg-xinit" "xorg-xrandr"  # Xorg
+    "alacritty" "tmux" "zsh" "zsh-autosuggestions" "zsh-syntax-highlighting"  # Terminal & shell
+    "i3-wm" "polybar" "dunst" "rofi" "picom"  "ly" "feh"  # Window manager environment
+    "neofetch" "flameshot" "xsettingsd" "xcolor" "clipmenu" "obsidian" "nemo"  # Utils
+    "inter-font" "ttf-jetbrains-mono-nerd"  # Main UI and editor fonts
+    "noto-fonts" "noto-fonts-cjk" "noto-fonts-emoji" "noto-fonts-extras"  # No tofu fonts
+    "pipewire" "pipewire-alsa" "pipewire-pulse" "pipewire-jack" "playerctl"  # Audio
+    "eza" "bat" "ripgrep" "zoxide" "fzf" "duf" "fd" "less"  # Commands
 )
 aur_packages=(
-    "oh-my-posh" "quintom-cursor-theme-git" "adw-gtk-theme-git" "morewaita-icon-theme-git"
-    "google-chrome" "spotify" "visual-studio-code-bin"
+    "oh-my-posh" "quintom-cursor-theme-git" "adw-gtk-theme-git" "morewaita-icon-theme-git"  # Styling
+    "google-chrome" "spotify" "visual-studio-code-bin"  # Apps
 )
 
 # Install packages from the official repositories

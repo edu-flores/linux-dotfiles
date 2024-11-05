@@ -8,6 +8,7 @@ REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 remove() {
     rm -rf ~/.config/alacritty
     rm -rf ~/.config/dunst
+    rm -rf ~/.config/fontconfig
     rm -rf ~/.config/i3
     rm -rf ~/.config/omp
     rm -rf ~/.config/neofetch
@@ -15,6 +16,7 @@ remove() {
     rm -rf ~/.config/polybar
     rm -rf ~/.config/rofi
     rm -rf ~/.config/tmux
+    rm -rf ~/.config/xsettingsd
     rm -f ~/.zshrc
 }
 
@@ -22,6 +24,7 @@ remove() {
 symlink() {
     ln -s "$REPO_ROOT/config/alacritty" ~/.config/alacritty
     ln -s "$REPO_ROOT/config/dunst" ~/.config/dunst
+    ln -s "$REPO_ROOT/config/fontconfig" ~/.config/fontconfig
     ln -s "$REPO_ROOT/config/i3" ~/.config/i3
     ln -s "$REPO_ROOT/config/omp" ~/.config/omp
     ln -s "$REPO_ROOT/config/neofetch" ~/.config/neofetch
@@ -29,6 +32,7 @@ symlink() {
     ln -s "$REPO_ROOT/config/polybar" ~/.config/polybar
     ln -s "$REPO_ROOT/config/rofi" ~/.config/rofi
     ln -s "$REPO_ROOT/config/tmux" ~/.config/tmux
+    ln -s "$REPO_ROOT/config/xsettingsd" ~/.config/xsettingsd
     ln -s "$REPO_ROOT/config/zsh/.zshrc" ~/.zshrc
 }
 
