@@ -58,7 +58,7 @@ alias grep="rg"
 alias df="duf --only=local"
 alias find="fd"
 alias editpick='file=$(fd --type f --hidden | fzf --preview="bat --color=always {}") && [ -n "$file" ] && nano "$file"'
-alias Windows="sudo grub-reboot 1 && sudo shutdown -r now"
+alias Windows="sudo grub-reboot 2 && sudo shutdown -r now"
 alias xcopy="xsel -ib"
 alias xpaste="xsel -ob"
 
