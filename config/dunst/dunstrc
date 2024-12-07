@@ -16,7 +16,7 @@
 [global]
     # Geometry
     width = (200, 400)
-    height = 300
+    height = (100, 300)
     origin = top-right
     offset = 106x49
     notification_limit = 1
