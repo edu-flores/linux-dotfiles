@@ -153,16 +153,8 @@ echo -e "\nLinking config files..."
 # Create XDG user directories
 mkdir -p ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Templates ~/Videos
 
-# Send configuration files to their appropriate directory
-echo -e "\nCopying miscellaneous configuration files..."
-for file in "$REPO_ROOT/misc/"*; do
-  location=$(head -n 1 "$file" | sed "s/^# *//")
-  mkdir -p "$location"
-  sed "1d" "$file" > "$location/$(basename "$file")"
-done
-
 # Enable NTP to automatically sync time
-timedatectl set-ntp true
+sudo timedatectl set-ntp true
 
 # Notify user for remaining changes
 echo -e "\nInstallation completed. You'll need to manually: "
