@@ -15,7 +15,7 @@
 /* Settings */
 configuration {
 	modi:               "window,drun";
-	font:               "JetBrainsMono Nerd Font Semibold 11.5";
+	font:               "JetBrainsMono Nerd Font Semibold 10.5";
 	show-icons:         true;
     icon-theme:         "MoreWaita";
 	terminal:           "/usr/bin/alacritty";
