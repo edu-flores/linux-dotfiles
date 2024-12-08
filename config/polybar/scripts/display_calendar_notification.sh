@@ -22,7 +22,7 @@ echo "$month_diff" > $tmp_file
 # Get the calendar for the specified month
 if [ $month_diff -eq 0 ]; then
     today=$(date "+%e")
-    calendar=$(cal | sed "1n; 0,/$today/{s/$today/<u><b>&<\/b><\/u>/}")  # Highlight today
+    calendar=$(cal | sed "1n; 0,/$today/{s/$today/<span foreground='orange'>&<\/span>/}")  # Highlight today
 else
     calendar=$(cal $(date -d "$(date +%Y-%m-01) $month_diff months" "+%m %Y"))
 fi
