@@ -161,12 +161,15 @@ for file in "$REPO_ROOT/misc/"*; do
   sed "1d" "$file" > "$location/$(basename "$file")"
 done
 
+# Enable NTP to automatically sync time
+timedatectl set-ntp true
+
 # Notify user for remaining changes
 echo -e "\nInstallation completed. You'll need to manually: "
 echo " - Set up specific app configurations via their respective GUIs"
 echo " - Set up environment variables (for some status bar modules) in ~/.env"
-echo " - Set up the powerlevel10k theme via its wizard (p10k configure)"
 echo " - Install necessary GPU drivers (AMD or Nvidia)"
+echo -e "\nNote: Run xrandr to see your monitor identifiers, then adjust necessary configs."
 
 # Prompt for reboot
 read -p "Do you want to reboot now? [Y/n]: " answer
