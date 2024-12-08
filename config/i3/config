@@ -147,8 +147,8 @@ mode "resize" {
 }
 
 # Workspaces & Layouts
-set $monitor1 "HDMI-1"
-set $monitor2 "DP-1"
+set $monitor1 "HDMI-0"
+set $monitor2 "DP-0"
 workspace $ws1 output $monitor1
 workspace $ws2 output $monitor1
 workspace $ws3 output $monitor1
