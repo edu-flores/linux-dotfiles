@@ -12,14 +12,14 @@ create_symlink() {
     # Expand '~' if necessary
     target_path=$(eval echo "$target_path")
 
-    # Remove target if it alrady exists
-    rm -rf "$target_path"
+    # Remove target in case it alrady exists
+    sudo rm -rf "$target_path"
 
     # Ensure its parent directory exists
-    mkdir -p "$(dirname "$target_path")"
+    sudo mkdir -p "$(dirname "$target_path")"
 
     # Create the symlink
-    sudo ln -sf "$source_path" "$target_path"
+    sudo ln -s "$source_path" "$target_path"
     echo "Symlinked $source_path to $target_path"
 }
 
