@@ -52,8 +52,10 @@ EOF
 echo -e "\nUpdating the system..."
 sudo pacman -Syu --noconfirm
 
-# Enable packet manager colors
+# Customize package manager
 sudo sed -i "s/^#Color/Color/" /etc/pacman.conf
+sudo sed -i "s/^#ParallelDownloads = 5/ParallelDownloads = 5/" /etc/pacman.conf
+sudo sed -i "s/^#VerbosePkgLists/VerbosePkgLists/" /etc/pacman.conf
 
 # Set desired packages from the official and AUR repositories
 official_packages=(
