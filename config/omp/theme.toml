@@ -13,10 +13,6 @@
 
 version = 3
 
-[upgrade]
-notice = false
-auto = false
-
 [[blocks]]
   type = "prompt"
   alignment = "left"
