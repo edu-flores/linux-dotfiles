@@ -73,8 +73,5 @@ sed -i "s/\"workbench\.colorTheme\": \".*\"\s*/\"workbench.colorTheme\": \"$vsco
 # Flameshot
 printf "[General]\nuiColor=%s\ncontrastUiColor=%s\n" "$background_alt" "$background" > ~/.config/flameshot/flameshot.ini
 
-# Obsidian
-cat ~/Documents/Vault/.obsidian/snippets/$theme.css > ~/Documents/Vault/.obsidian/snippets/current.css
-
 # Wallpaper
 feh --bg-fill ~/Pictures/Wallpapers/$theme-wallpaper.png
