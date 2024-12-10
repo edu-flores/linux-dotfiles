@@ -1,6 +1,5 @@
 config/alacritty ~/.config/alacritty
 config/dunst ~/.config/dunst
-config/fontconfig ~/.config/fontconfig
 config/i3 ~/.config/i3
 config/neofetch ~/.config/neofetch
 config/omp ~/.config/omp
@@ -9,11 +8,12 @@ config/polybar ~/.config/polybar
 config/rofi ~/.config/rofi
 config/tmux ~/.config/tmux
 config/xsettingsd ~/.config/xsettingsd
+config/zsh/.zshrc ~/.zshrc
 other/.xinitrc ~/.xinitrc
 other/.xprofile ~/.xprofile
 other/.Xresources ~/.Xresources
 other/.zprofile ~/.zprofile
-other/.zshrc ~/.zshrc
 other/51-disable-suspension.conf /etc/wireplumber/wireplumber.conf.d/51-disable-suspension.conf
+other/fonts.conf ~/.config/fontconfig/fonts.conf
 other/nobeep.conf /etc/modprobe.d/nobeep.conf
 other/user-dirs.dirs ~/.config/user-dirs.dirs
