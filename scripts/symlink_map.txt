@@ -7,7 +7,6 @@ config/picom ~/.config/picom
 config/polybar ~/.config/polybar
 config/rofi ~/.config/rofi
 config/tmux ~/.config/tmux
-config/xsettingsd ~/.config/xsettingsd
 config/zsh/.zshrc ~/.zshrc
 other/.xinitrc ~/.xinitrc
 other/.xprofile ~/.xprofile
@@ -17,3 +16,4 @@ other/51-disable-suspension.conf /etc/wireplumber/wireplumber.conf.d/51-disable-
 other/fonts.conf ~/.config/fontconfig/fonts.conf
 other/nobeep.conf /etc/modprobe.d/nobeep.conf
 other/user-dirs.dirs ~/.config/user-dirs.dirs
+other/xsettingsd.conf ~/.config/xsettingsd/xsettingsd.conf
