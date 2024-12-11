@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Get displays
+# Get primary and secondary monitors
 PRIMARY_MONITOR=$1
 SECONDARY_MONITOR=$2
 
-# Dual monitor setup
-if [ -n "$SECONDARY_MONITOR" ] && [ -n "$PRIMARY_MONITOR" ]; then
-    xrandr --output "$SECONDARY_MONITOR" --rotate left
-    xrandr --output "$SECONDARY_MONITOR" --left-of "$PRIMARY_MONITOR"
+# Configure dual monitor setup
+if [ -n "$PRIMARY_MONITOR" ] && [ -n "$SECONDARY_MONITOR" ]; then
+    xrandr --output "$SECONDARY_MONITOR" --rotate left \
+           --left-of "$PRIMARY_MONITOR"
 fi
