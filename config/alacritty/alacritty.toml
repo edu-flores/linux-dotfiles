@@ -1,29 +1,23 @@
 # Current desktop theme
 general.import = [ "~/.config/alacritty/themes/gruvbox.toml" ]
 
-# Settings
-general.live_config_reload = true
+[general]
+live_config_reload = true
+import = [ "~/.config/alacritty/themes/gruvbox.toml" ]
 
-# Font
-[font]
-size = 10.5
-
-[font.bold]
-family = "JetBrainsMono Nerd Font"
-style = "ExtraBold"
-
-[font.bold_italic]
-family = "JetBrainsMono Nerd Font"
-style = "ExtraBold Italic"
-
-[font.italic]
-family = "JetBrainsMono Nerd Font"
-style = "SemiBold Italic"
-
-[font.normal]
-family = "JetBrainsMono Nerd Font"
-style = "SemiBold"
-
-# Window
 [window]
 padding = { x = 20, y = 20 }
+
+[font]
+size = 10.5
+normal = { family = "JetBrainsMono Nerd Font", style = "SemiBold" }
+bold = { family = "JetBrainsMono Nerd Font", style = "ExtraBold" }
+italic = { family = "JetBrainsMono Nerd Font", style = "SemiBold Italic" }
+bold_italic = { family = "JetBrainsMono Nerd Font", style = "ExtraBold Italic" }
+
+[cursor]
+style = { shape = "Block", blinking = "Always" }
+blink_timeout = 0
+
+[keyboard]
+bindings = [{ key = "Space", mods = "Control|Shift", action = "None" }]
