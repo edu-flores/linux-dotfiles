@@ -19,7 +19,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 # Keyboard settings
-setxkbmap -layout us,latam -option grp:rctrl_toggle caps:swapescape compose:ralt
+setxkbmap -layout us,latam -option grp:rctrl_toggle -option caps:swapescape -option compose:ralt
 
 # Launch i3
 exec i3
