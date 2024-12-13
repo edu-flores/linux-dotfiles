@@ -135,6 +135,9 @@ mkdir -p ~/Desktop ~/Documents ~/Downloads ~/Music ~/Pictures ~/Public ~/Templat
 # Enable NTP to automatically sync time
 sudo timedatectl set-ntp true
 
+# Configure keyboard options
+sudo localectl set-x11-keymap us,latam "" "" grp:rctrl_toggle,caps:swapescape,compose:ralt
+
 # Notify user for remaining changes
 echo -e "\nInstallation completed. You'll need to manually: "
 echo " - Set up specific app configurations via their respective GUIs"
