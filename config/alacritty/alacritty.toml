@@ -21,6 +21,3 @@ bold_italic = { family = "JetBrainsMono Nerd Font", style = "ExtraBold Italic" }
 [cursor]
 style = { shape = "Block", blinking = "Always" }
 blink_timeout = 0
-
-[keyboard]
-bindings = [{ key = "Space", mods = "Control|Shift", action = "None" }]
