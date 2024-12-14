@@ -6,15 +6,17 @@
 
 /* Settings */
 configuration {
-	modi:               "window,drun";
-	font:               "JetBrainsMono Nerd Font Semibold 10.5";
-	show-icons:         true;
-    icon-theme:         "MoreWaita";
-	terminal:           "/usr/bin/alacritty";
-	window-thumbnail:   true;
-	display-window:     "  Windows";
-	display-drun:       "󰕮  Apps";
-    sidebar-mode:       true;
+    modi: "drun,window,python:~/.config/rofi/scripts/use_python_interpreter.sh,filebrowser";
+    display-drun: "󰕮  Apps";
+    display-window: "  Windows";
+    display-python: "  Python";
+    display-filebrowser: "󰕮  Files";
+    font: "JetBrainsMono Nerd Font Semibold 10.5";
+    show-icons: true;
+    icon-theme: "MoreWaita";
+    window-thumbnail: true;
+    sidebar-mode: true;
+    terminal: "/usr/bin/alacritty";
 }
 
 
