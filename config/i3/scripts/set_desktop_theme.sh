@@ -58,8 +58,9 @@ i3 reload
 
 # Dunst
 pkill dunst
-sed -i "s/background = \".*\"/background = \"$background_alt\"/" ~/.config/dunst/dunstrc
+sed -i "s/background = \".*\"/background = \"$background\"/" ~/.config/dunst/dunstrc
 sed -i "s/foreground = \".*\"/foreground = \"$foreground\"/" ~/.config/dunst/dunstrc
+sed -i "s/frame_color = \".*\"/frame_color = \"$background_alt\"/" ~/.config/dunst/dunstrc
 
 # Alacritty
 sed -i "s/themes\/.*\.toml/themes\/$theme\.toml/" ~/.config/alacritty/alacritty.toml
