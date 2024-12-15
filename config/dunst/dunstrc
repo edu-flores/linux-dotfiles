@@ -16,6 +16,7 @@
     horizontal_padding = 25
     text_icon_padding = 20
     gap_size = 5
+    frame_width = 0
 
     # Text
     font = JetBrainsMono Nerd Font Semibold 10.5
