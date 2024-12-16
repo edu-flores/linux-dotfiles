@@ -6,7 +6,7 @@
 
 /* Settings */
 configuration {
-    modi: "drun,window,python:~/.config/rofi/scripts/use_python_interpreter.sh,filebrowser";
+    modi: "drun,window,python:~/.config/rofi/scripts/use_python_interpreter.sh";
     display-drun: "󰕮  Apps";
     display-window: "  Windows";
     display-python: "󰌠  Python";
