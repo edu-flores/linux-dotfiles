@@ -9,14 +9,17 @@ configuration {
     modi: "drun,window,python:~/.config/rofi/scripts/use_python_interpreter.sh,filebrowser";
     display-drun: "󰕮  Apps";
     display-window: "  Windows";
-    display-python: "  Python";
-    display-filebrowser: "󰕮  Files";
+    display-python: "󰌠  Python";
     font: "JetBrainsMono Nerd Font Semibold 10.5";
     show-icons: true;
     icon-theme: "MoreWaita";
     window-thumbnail: true;
     sidebar-mode: true;
     terminal: "/usr/bin/alacritty";
+    kb-element-prev: "";
+    kb-element-next: "";
+    kb-mode-previous: "ISO_Left_Tab";
+    kb-mode-next: "Tab";
 }
 
 
