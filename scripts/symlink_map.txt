@@ -13,6 +13,7 @@ other/.Xresources ~/.Xresources
 other/.zprofile ~/.zprofile
 other/51-disable-suspension.conf /etc/wireplumber/wireplumber.conf.d/51-disable-suspension.conf
 other/fonts.conf ~/.config/fontconfig/fonts.conf
+other/gtk.css ~/.config/gtk-3.0/gtk.css
 other/nobeep.conf /etc/modprobe.d/nobeep.conf
 other/user-dirs.dirs ~/.config/user-dirs.dirs
 other/xsettingsd.conf ~/.config/xsettingsd/xsettingsd.conf
