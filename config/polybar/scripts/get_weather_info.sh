@@ -39,8 +39,8 @@ if ping -q -c 1 -W 1 cloudflare.com &> /dev/null; then
     esac
 
     # Display the result
-    echo "$temp_rounded°C $weather_icon"
+    echo "$temp_rounded°C"
 else
     # No internet connection
-    echo " "
+    echo "Unknown"
 fi
