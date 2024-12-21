@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# Terminate already running bar instances
-# pkill -f "polybar top"
+# Terminate instance
 killall polybar
 
-# Launch
-# polybar top &
+# Launch instance
 polybar -c ~/.config/polybar/polybar.ini main &
