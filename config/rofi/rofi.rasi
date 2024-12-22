@@ -11,7 +11,7 @@ configuration {
     icon-theme: "MoreWaita";
     modi: "drun,window,filebrowser,python:~/.config/rofi/scripts/use_python_interpreter.sh";
     display-drun: "󰕰  Apps";
-    display-window: "  Windows";
+    display-window: "󰣆   Windows";
     display-filebrowser: "  Explorer";
     display-python: "  Python";
     window-format: "{t}";
