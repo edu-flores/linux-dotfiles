@@ -1,0 +1,175 @@
+// ┌──────────────────┐
+// │ ░█▀▄░█▀█░█▀▀░▀█▀ │
+// │ ░█▀▄░█░█░█▀▀░░█░ │
+// │ ░▀░▀░▀▀▀░▀░░░▀▀▀ │
+// └──────────────────┘
+
+/* Settings */
+configuration {
+    font: "Inter SemiBold 10.5";
+    show-icons: true;
+    icon-theme: "MoreWaita";
+    modi: "drun,window,filebrowser,python:~/.config/rofi/scripts/use_python_interpreter.sh";
+    display-drun: "󰕰  Apps";
+    display-window: "  Windows";
+    display-filebrowser: "  Explorer";
+    display-python: "  Python";
+    window-format: "{t}";
+    window-thumbnail: true;
+    terminal: "/usr/bin/alacritty";
+    kb-element-prev: "";
+    kb-element-next: "";
+    kb-mode-previous: "ISO_Left_Tab";
+    kb-mode-next: "Tab";
+}
+
+/* Styling */
+@theme "dark"
+
+* {
+    spacing: 0;
+    highlight: none;
+}
+
+window {
+    width: 750;
+}
+
+mainbox {
+    children: [ inputbar, textbox-results, listview, footer ];
+}
+
+spacer {
+	content: "";
+	expand: true;
+	background-color: transparent;
+}
+
+inputbar {
+    children: [ entry, textbox-return-icon ];
+    padding: 15 20;
+    border: 0 0 1 0;
+    border-color: @border;
+    background-color: @background;
+}
+
+entry {
+    background-color: inherit;
+    color: @foreground;
+    placeholder: "Start typing...";
+    placeholder-color: @foreground-alt;
+    vertical-align: 0.5;
+    cursor: text;
+}
+
+textbox-return-icon {
+    font: "JetBrainsMono NFP Regular 12";
+    content: "󰌑";
+    background-color: @raised;
+    color: @foreground-alt;
+    expand: false;
+    padding: 0 6;
+    border-radius: 3;
+}
+
+textbox-results {
+    str: "Results";
+    expand: false;
+    background-color: @background-alt;
+    color: @foreground-alt;
+    padding: 15 20 0 20;
+}
+
+listview {
+    padding: 10 20;
+    background-color: @background-alt;
+    lines: 6;
+    scrollbar: true;
+}
+
+element {
+    background-color: inherit;
+    border-radius: 10;
+    padding: 10;
+    spacing: 15;
+    cursor: pointer;
+}
+
+element.selected {
+    background-color: @selected;
+}
+
+element-icon {
+    size: 25;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+element-text {
+    background-color: inherit;
+    color: @foreground-alt;
+    vertical-align: 0.5;
+    cursor: pointer;
+}
+
+element-text.selected {
+    color: @foreground;
+}
+
+scrollbar {
+    handle-color: @scroll;
+    margin: 0 0 0 10;
+    background-color: inherit;
+    handle-width: 4;
+}
+
+footer {
+    children: [ mode-switcher, spacer, textbox-switch-icon, textbox-switch-text ];
+    orientation: horizontal;
+    background-color: @background;
+    color: @foreground-alt;
+    padding: 8 20;
+    height: 200;
+    border: 1 0 0 0;
+    border-color: @border;
+    expand: false;
+    spacing: 5;
+}
+
+mode-switcher {
+    background-color: inherit;
+    color: inherit;
+    spacing: 5;
+    width: 450;
+}
+
+button {
+    background-color: @raised;
+    color: inherit;
+    border-radius: 30;
+    padding: 0 6;
+    cursor: pointer;
+}
+
+button.selected {
+    background-color: @accent;
+    color: @background;
+}
+
+textbox-switch-icon {
+    font: "JetBrainsMono NFP Regular 12";
+    content: "󰌒";
+    background-color: @raised;
+    color: inherit;
+    expand: false;
+    padding: 0 6;
+    border-radius: 3;
+}
+
+textbox-switch-text {
+    content: "Switch mode";
+    background-color: inherit;
+    color: inherit;
+    vertical-align: 0.5;
+    expand: false;
+}
