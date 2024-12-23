@@ -1,29 +1,7 @@
-// ┌──────────────────┐
-// │ ░█▀▄░█▀█░█▀▀░▀█▀ │
-// │ ░█▀▄░█░█░█▀▀░░█░ │
-// │ ░▀░▀░▀▀▀░▀░░░▀▀▀ │
-// └──────────────────┘
-
-/* Settings */
 configuration {
     font: "Inter SemiBold 10.5";
-    show-icons: true;
-    icon-theme: "MoreWaita";
-    modi: "drun,window,filebrowser,python:~/.config/rofi/scripts/use_python_interpreter.sh";
-    display-drun: "󰕰  Apps";
-    display-window: "󰣆   Windows";
-    display-filebrowser: "  Files";
-    display-python: "  Python";
-    window-format: "{t}";
-    window-thumbnail: true;
-    terminal: "/usr/bin/alacritty";
-    kb-element-prev: "";
-    kb-element-next: "";
-    kb-mode-previous: "ISO_Left_Tab";
-    kb-mode-next: "Tab";
 }
 
-/* Styling */
 @theme "dark"
 
 * {
@@ -32,11 +10,14 @@ configuration {
 }
 
 window {
-    width: 750;
+    width: 350;
+    location: northeast;
+    x-offset: -290;
+    y-offset: 50;
 }
 
 mainbox {
-    children: [ inputbar, textbox-results, listview, footer ];
+    children: [ header, textbox-copied, listview, inputbar ];
 }
 
 spacer {
@@ -46,7 +27,7 @@ spacer {
 }
 
 inputbar {
-    children: [ entry, textbox-return-icon ];
+    children: [ entry, case-indicator, textbox-return-icon ];
     padding: 15 20;
     background-color: @background;
 }
@@ -54,10 +35,18 @@ inputbar {
 entry {
     background-color: inherit;
     color: @foreground;
-    placeholder: "Start typing...";
+    placeholder: "Search to copy...";
     placeholder-color: @foreground-alt;
     vertical-align: 0.5;
     cursor: text;
+}
+
+case-indicator {
+    background-color: @background;
+    color: @foreground-alt;
+    padding: 0 6;
+    border-radius: 3;
+    vertical-align: 0.5;
 }
 
 textbox-return-icon {
@@ -71,8 +60,8 @@ textbox-return-icon {
     margin: 0 0 0 8;
 }
 
-textbox-results {
-    content: "Results";
+textbox-copied {
+    content: "Copied";
     expand: false;
     background-color: @background-alt;
     color: @foreground-alt;
@@ -84,6 +73,9 @@ listview {
     background-color: @background-alt;
     lines: 6;
     scrollbar: true;
+    fixed-height: false;
+    dynamic: true;
+    reverse: true;
 }
 
 element {
@@ -96,12 +88,6 @@ element {
 
 element.selected {
     background-color: @selected;
-}
-
-element-icon {
-    size: 25;
-    background-color: inherit;
-    cursor: pointer;
 }
 
 element-text {
@@ -122,8 +108,8 @@ scrollbar {
     handle-width: 4;
 }
 
-footer {
-    children: [ mode-switcher, spacer, textbox-switch-icon, textbox-switch-text ];
+header {
+    children: [ textbox-clipboard, spacer, textbox-case-icon, textbox-case-text, textbox-clear-icon, textbox-clear-text ];
     orientation: horizontal;
     background-color: @background;
     color: @foreground-alt;
@@ -133,29 +119,20 @@ footer {
     spacing: 5;
 }
 
-mode-switcher {
-    background-color: inherit;
-    color: inherit;
-    spacing: 5;
-    width: 450;
-}
-
-button {
-    background-color: @raised;
-    color: inherit;
-    border-radius: 30;
-    padding: 0 6;
-    cursor: pointer;
-}
-
-button.selected {
+textbox-clipboard {
+    content: "󰅇  Clipboard";
     background-color: @accent;
     color: @background;
+    padding: 0 12;
+    border-radius: 30;
+    cursor: pointer;
+    horizontal-align: 0.5;
+    expand: false;
 }
 
-textbox-switch-icon {
+textbox-case-icon {
     font: "JetBrainsMono NFP Regular 12";
-    content: "󰌒";
+    content: "`";
     background-color: @raised;
     color: inherit;
     expand: false;
@@ -163,8 +140,27 @@ textbox-switch-icon {
     border-radius: 3;
 }
 
-textbox-switch-text {
-    content: "Switch mode";
+textbox-case-text {
+    content: "Case";
+    background-color: inherit;
+    color: inherit;
+    vertical-align: 0.5;
+    expand: false;
+    margin: 0 5 0 0;
+}
+
+textbox-clear-icon {
+    font: "JetBrainsMono NFP Regular 12";
+    content: "󰖳 󰘶 V";
+    background-color: @raised;
+    color: inherit;
+    expand: false;
+    padding: 0 6;
+    border-radius: 3;
+}
+
+textbox-clear-text {
+    content: "Clear";
     background-color: inherit;
     color: inherit;
     vertical-align: 0.5;
