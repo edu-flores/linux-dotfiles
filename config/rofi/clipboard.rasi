@@ -21,9 +21,9 @@ mainbox {
 }
 
 spacer {
-	content: "";
-	expand: true;
-	background-color: transparent;
+    content: "";
+    expand: true;
+    background-color: transparent;
 }
 
 inputbar {
