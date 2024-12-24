@@ -179,11 +179,11 @@ bindsym $mod+o --release exec xcolor -s -S 3
 bindsym $mod+Shift+v exec clipdel -d ".*"
 bindsym $mod+v exec CM_LAUNCHER=rofi clipmenu -config ~/.config/rofi/clipboard.rasi
 bindsym $mod+space exec rofi -config ~/.config/rofi/rofi.rasi -show drun
-bindsym Print exec ~/.config/i3/scripts/take_flameshot_screenshot.sh
 bindsym $mod+semicolon exec ~/.config/i3/scripts/set_desktop_theme.sh 1
 bindsym $mod+bracketleft exec ~/.config/i3/scripts/set_desktop_theme.sh 2
 bindsym $mod+bracketright exec ~/.config/i3/scripts/set_desktop_theme.sh 3
 bindsym $mod+apostrophe exec ~/.config/i3/scripts/set_desktop_theme.sh 4
+bindsym Print exec ~/.config/i3/scripts/take_flameshot_screenshot.sh
 
 # Media
 bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ --limit 1.0
@@ -203,4 +203,4 @@ gaps inner 20
 gaps top 40
 
 # Current desktop theme
-include ~/.config/i3/themes/gruvbox
+include ~/.config/i3/themes/dark

@@ -1,0 +1,17 @@
+# Dark theme
+set $background     "#1e1e1e"
+set $background_alt "#242424"
+set $foreground     "#ffffff"
+set $foreground_alt "#8f8f8f"
+set $urgent         "#ff7043"
+set $empty          "#454545"
+set $raised         "#393939"
+set $full           "#ffffff"
+
+# Window                Border          Background      Text            Indicator       Child border
+client.focused          $raised         $raised         $foreground     $raised         $raised
+client.focused_inactive $background_alt $background_alt $foreground_alt $background_alt $background_alt
+client.unfocused        $background     $background     $empty          $background     $background
+client.urgent           $urgent         $urgent         $foreground     $urgent         $urgent
+client.placeholder      $background     $background     $foreground_alt $background     $background
+client.background       $full
