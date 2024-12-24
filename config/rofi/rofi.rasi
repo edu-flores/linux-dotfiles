@@ -48,7 +48,7 @@ spacer {
 inputbar {
     children: [ entry, textbox-return-icon ];
     padding: 15 20;
-    background-color: @background;
+    background-color: @background-alt;
 }
 
 entry {
@@ -74,14 +74,14 @@ textbox-return-icon {
 textbox-results {
     content: "Results";
     expand: false;
-    background-color: @background-alt;
+    background-color: @background;
     color: @foreground-alt;
     padding: 15 20;
 }
 
 listview {
     padding: 0 20 10 20;
-    background-color: @background-alt;
+    background-color: @background;
     lines: 6;
     scrollbar: true;
 }
@@ -125,7 +125,7 @@ scrollbar {
 footer {
     children: [ mode-switcher, spacer, textbox-switch-icon, textbox-switch-text ];
     orientation: horizontal;
-    background-color: @background;
+    background-color: @background-alt;
     color: @foreground-alt;
     padding: 8 20;
     height: 200;

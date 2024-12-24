@@ -28,8 +28,9 @@ max_icon_size = 64
 icon_theme = MoreWaita
 enable_recursive_icon_lookup = true
 
+# Styling
 [colors]
-background = "#393939"
+background = "#1e1e1e"
 foreground = "#ffffff"
 
 [urgency_low]

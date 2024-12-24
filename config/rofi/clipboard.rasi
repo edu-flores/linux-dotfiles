@@ -29,7 +29,7 @@ spacer {
 inputbar {
     children: [ entry, case-indicator, textbox-return-icon ];
     padding: 15 20;
-    background-color: @background;
+    background-color: @background-alt;
 }
 
 entry {
@@ -42,7 +42,7 @@ entry {
 }
 
 case-indicator {
-    background-color: @background;
+    background-color: inherit;
     color: @foreground-alt;
     padding: 0 6;
     border-radius: 3;
@@ -63,14 +63,14 @@ textbox-return-icon {
 textbox-copied {
     content: "Copied";
     expand: false;
-    background-color: @background-alt;
+    background-color: @background;
     color: @foreground-alt;
     padding: 15 20;
 }
 
 listview {
     padding: 0 20 10 20;
-    background-color: @background-alt;
+    background-color: @background;
     lines: 6;
     scrollbar: true;
     fixed-height: false;
@@ -111,7 +111,7 @@ scrollbar {
 header {
     children: [ textbox-clipboard, spacer, textbox-case-icon, textbox-case-text, textbox-clear-icon, textbox-clear-text ];
     orientation: horizontal;
-    background-color: @background;
+    background-color: @background-alt;
     color: @foreground-alt;
     padding: 8 20;
     height: 200;

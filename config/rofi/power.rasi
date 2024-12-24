@@ -27,7 +27,7 @@ spacer {
 }
 
 textbox {
-    background-color: @background-alt;
+    background-color: @background;
     color: @foreground-alt;
     horizontal-align: 0.5;
     padding: 20 0 10 0;
@@ -36,7 +36,7 @@ textbox {
 box-buttons {
     children: [ spacer, listview, spacer ];
     orientation: horizontal;
-    background-color: @background-alt;
+    background-color: @background;
 }
 
 listview {
