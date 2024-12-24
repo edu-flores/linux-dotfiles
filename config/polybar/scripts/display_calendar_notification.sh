@@ -31,4 +31,4 @@ fi
 HEAD=$(echo "$calendar" | head -n +1)
 BODY=$(echo "$calendar" | tail -n +2)
 FOOT="\n  Calendar"
-dunstify "$HEAD" "\n$BODY$FOOT" -u critical -r -1 -i /dev/null
+dunstify "$HEAD" "\n<span font='JetBrainsMono NFP SemiBold 10.5'>$BODY</span>$FOOT" -u critical -r -1 -i /dev/null

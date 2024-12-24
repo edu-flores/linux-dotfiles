@@ -19,7 +19,7 @@ gap_size = 5
 frame_width = 0
 
 # Text
-font = JetBrainsMono Nerd Font SemiBold 10.5
+font = Inter SemiBold 11
 alignment = center
 show_age_threshold = -1
 

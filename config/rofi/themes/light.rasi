@@ -4,7 +4,6 @@
     foreground: #333333;
     foreground-alt: #999999;
     accent: #fda234;
-    border: #dddddd;
     selected: #e4e4e4;
     scroll: #adadad;
     raised: #e6e6e6;

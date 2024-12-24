@@ -8,7 +8,7 @@
 set $mod Mod4
 
 # Font for window titles
-font pango: JetBrainsMono Nerd Font Semibold 10.5
+font pango: Inter SemiBold 11
 
 # Drag floating windows
 floating_modifier $mod
@@ -194,7 +194,7 @@ bindsym XF86AudioPrev exec playerctl --player=spotify previous
 bindsym XF86AudioNext exec playerctl --player=spotify next
 
 # Styling
-for_window [all] title_window_icon on, title_window_icon padding 5px
+for_window [all] title_window_icon on, title_window_icon padding 5
 for_window [floating] border pixel 0, resize set 990 600
 default_border none
 title_align center
