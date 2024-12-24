@@ -3,7 +3,7 @@
     background-alt: #fafafa;
     foreground: #333333;
     foreground-alt: #999999;
-    accent: #fda234;
+    accent: #ff9f00;
     selected: #e4e4e4;
     scroll: #adadad;
     raised: #e6e6e6;
