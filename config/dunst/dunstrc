@@ -22,6 +22,7 @@ frame_width = 0
 font = Inter SemiBold 11
 alignment = center
 show_age_threshold = -1
+format = <b><i>%s</i></b>\n%b
 
 # Icons
 max_icon_size = 64
