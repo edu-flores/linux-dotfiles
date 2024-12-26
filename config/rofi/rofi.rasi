@@ -149,7 +149,6 @@ button {
 }
 
 button.selected {
-    background-color: @accent;
     color: @foreground;
 }
 
