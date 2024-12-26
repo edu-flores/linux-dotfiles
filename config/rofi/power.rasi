@@ -10,7 +10,7 @@ configuration {
 
 window {
     width: 100%;
-    height: 165;
+    height: 190;
     location: south;
     y-offset: -100;
     border-radius: 0;
@@ -18,6 +18,8 @@ window {
 
 mainbox {
     children: [ message, box-buttons ];
+    background-color: @background;
+    padding: 25 0;
 }
 
 spacer {
@@ -30,13 +32,13 @@ textbox {
     background-color: @background;
     color: @foreground-alt;
     horizontal-align: 0.5;
-    padding: 20 0 10 0;
+    padding: 0 0 20 0;
 }
 
 box-buttons {
     children: [ spacer, listview, spacer ];
     orientation: horizontal;
-    background-color: @background;
+    background-color: inherit;
 }
 
 listview {
@@ -61,6 +63,6 @@ element-text {
 }
 
 element-text.selected {
-    background-color: @accent;
-    color: @background;
+    background-color: @urgent;
+    color: @foreground;
 }

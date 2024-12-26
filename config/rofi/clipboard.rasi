@@ -61,7 +61,7 @@ textbox-return-icon {
 }
 
 textbox-copied {
-    content: "Copied";
+    content: "Copied texts: ";
     expand: false;
     background-color: @background;
     color: @foreground-alt;
@@ -120,14 +120,14 @@ header {
 }
 
 textbox-clipboard {
-    content: "󰅇  Clipboard";
-    background-color: @accent;
-    color: @background;
+    content: "Clipboard";
+    background-color: @raised;
+    color: @foreground;
     padding: 0 12;
-    border-radius: 30;
-    cursor: pointer;
-    horizontal-align: 0.5;
+    border-radius: 3;
+    vertical-align: 0.5;
     expand: false;
+    cursor: pointer;
 }
 
 textbox-case-icon {

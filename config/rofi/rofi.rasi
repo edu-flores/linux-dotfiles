@@ -10,10 +10,10 @@ configuration {
     show-icons: true;
     icon-theme: "MoreWaita";
     modi: "drun,window,filebrowser,python:~/.config/rofi/scripts/use_python_interpreter.sh";
-    display-drun: "󰕰  Apps";
-    display-window: "󰣆   Windows";
-    display-filebrowser: "  Files";
-    display-python: "  Python";
+    display-drun: "⎇ 1  Apps";
+    display-window: "⎇ 2  Tabs";
+    display-filebrowser: "⎇ 3  Files";
+    display-python: "⎇ 4  Math";
     window-format: "{t}";
     window-thumbnail: true;
     terminal: "/usr/bin/alacritty";
@@ -54,7 +54,7 @@ inputbar {
 entry {
     background-color: inherit;
     color: @foreground;
-    placeholder: "Start typing...";
+    placeholder: "Start typing here...";
     placeholder-color: @foreground-alt;
     vertical-align: 0.5;
     cursor: text;
@@ -137,20 +137,20 @@ mode-switcher {
     background-color: inherit;
     color: inherit;
     spacing: 5;
-    width: 450;
+    width: 400;
 }
 
 button {
     background-color: @raised;
     color: inherit;
-    border-radius: 30;
+    border-radius: 3;
     padding: 0 6;
     cursor: pointer;
 }
 
 button.selected {
     background-color: @accent;
-    color: @background;
+    color: @foreground;
 }
 
 textbox-switch-icon {
