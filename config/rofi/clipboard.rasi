@@ -166,3 +166,12 @@ textbox-clear-text {
     vertical-align: 0.5;
     expand: false;
 }
+
+@media ( max-width: 1920 ) {
+    window {
+        width: 750;
+        location: center;
+        x-offset: 0;
+        y-offset: 0;
+    }
+}
