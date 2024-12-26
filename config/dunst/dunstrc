@@ -30,21 +30,5 @@ icon_theme = MoreWaita
 enable_recursive_icon_lookup = true
 
 # Styling
-[colors]
 background = "#1e1e1e"
 foreground = "#ffffff"
-
-[urgency_low]
-background = ${colors.background}
-foreground = ${colors.foreground}
-timeout = 3
-
-[urgency_normal]
-background = ${colors.background}
-foreground = ${colors.foreground}
-timeout = 5
-
-[urgency_critical]
-background = ${colors.background}
-foreground = ${colors.foreground}
-timeout = 0
