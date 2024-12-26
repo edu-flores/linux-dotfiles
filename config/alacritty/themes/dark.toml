@@ -1,5 +1,10 @@
 # Dark monokai terminal
 
+[colors]
+vi_mode_cursor = { text = "#f9f8f5", cursor = "#75715e" }
+footer_bar = { foreground = "#f9f8f5", background = "#75715e" }
+line_indicator = { foreground = "#f9f8f5", background = "#75715e" }
+
 [colors.primary]
 background = "#1e1e1e"
 foreground = "#ffffff"
@@ -23,3 +28,11 @@ blue = "#66d9ef"
 magenta = "#ae81ff"
 cyan = "#a1efe4"
 white = "#f9f8f5"
+
+[colors.selection]
+text = "#f9f8f5"
+background = "#75715e"
+
+[colors.search]
+matches = { foreground = "#1e1e1e", background = "#f92672" }
+focused_match = { foreground = "#1e1e1e", background = "#f4bf75" }
