@@ -52,6 +52,8 @@ sed -i "s/themes\/.*\.toml/themes\/$theme\.toml/" ~/.config/alacritty/alacritty.
 
 # Rofi
 sed -i "s/@theme \".*\"/@theme \"$theme\"/" ~/.config/rofi/rofi.rasi
+sed -i "s/@theme \".*\"/@theme \"$theme\"/" ~/.config/rofi/clipboard.rasi
+sed -i "s/@theme \".*\"/@theme \"$theme\"/" ~/.config/rofi/power.rasi
 
 # Flameshot
 printf "[General]\nuiColor=%s\ncontrastUiColor=%s\n" "$background" "$foreground" > ~/.config/flameshot/flameshot.ini
