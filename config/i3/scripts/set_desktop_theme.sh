@@ -27,9 +27,6 @@ case $theme in
         ;;
 esac
 
-# Change scratchpad title to avoid conflicts with i3
-xdotool search --name "Scratchpad" set_window --name "Multiplexer"
-
 # Polybar
 sed -i "s/themes\/.*\.ini/themes\/$theme\.ini/" ~/.config/polybar/polybar.ini
 source ~/.config/polybar/scripts/launch_polybar_program.sh
@@ -44,7 +41,7 @@ sed -i "s/background = \".*\"/background = \"$background\"/" ~/.config/dunst/dun
 sed -i "s/foreground = \".*\"/foreground = \"$foreground\"/" ~/.config/dunst/dunstrc
 
 # Gtk
-sed -i "s/Net\/ThemeName \".*\"/Net\/ThemeName \"$gtk_theme\"/" ~/.xsettingsd
+sed -i --follow-symlinks "s/Net\/ThemeName \".*\"/Net\/ThemeName \"$gtk_theme\"/" ~/.xsettingsd
 pkill -HUP xsettingsd
 
 # Alacritty
