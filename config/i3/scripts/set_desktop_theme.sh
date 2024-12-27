@@ -19,11 +19,15 @@ case $theme in
         gtk_theme="adw-gtk"
         background="#ffffff"
         foreground="#333333"
+        notification_icon="weather-clear"
+        notification_title="Light theme"
         ;;
     dark)
         gtk_theme="adw-gtk3-dark"
         background="#1e1e1e"
         foreground="#ffffff"
+        notification_icon="weather-clear-night"
+        notification_title="Dark theme"
         ;;
 esac
 
@@ -54,3 +58,6 @@ sed -i "s/@theme \".*\"/@theme \"$theme\"/" ~/.config/rofi/power.rasi
 
 # Flameshot
 printf "[General]\nuiColor=%s\ncontrastUiColor=%s\n" "$background" "$foreground" > ~/.config/flameshot/flameshot.ini
+
+# Send notification
+dunstify -i "$notification_icon" "$notification_title"
