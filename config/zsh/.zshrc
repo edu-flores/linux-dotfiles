@@ -56,7 +56,7 @@ alias xcopy="xsel -ib"
 alias xpaste="xsel -ob"
 
 # Customize fzf style
-export FZF_DEFAULT_OPTS="--height 70% --reverse"
+export FZF_DEFAULT_OPTS="--color=gutter:-1,bg+:-1,fg+:-1 --height 70% --reverse"
 export FZF_CTRL_T_COMMAND="fd --type f"
 
 # Set up fzf key bindings and fuzzy completion
