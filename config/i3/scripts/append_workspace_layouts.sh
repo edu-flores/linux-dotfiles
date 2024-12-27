@@ -11,8 +11,8 @@ nemo &
 
 # Send them to the scratchpad
 sleep 3
-i3-msg "[class=Alacritty] floating enable, sticky enable, mark multiplexer, move scratchpad"
-i3-msg "[class=Nemo] floating enable, sticky enable, mark file_manager, move scratchpad"
+i3-msg "[class=Alacritty] floating enable, sticky enable, mark terminal, move scratchpad"
+i3-msg "[class=Nemo] floating enable, sticky enable, mark explorer, move scratchpad"
 
 # Open the rest of the applications
 google-chrome-stable &

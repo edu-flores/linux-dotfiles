@@ -168,10 +168,10 @@ exec --no-startup-id dunst
 # Scratchpad
 bindsym $mod+Shift+BackSpace move scratchpad
 bindsym $mod+BackSpace scratchpad show
-bindsym $mod+Shift+minus floating enable, sticky enable, mark multiplexer, move scratchpad
-bindsym $mod+Shift+equal floating enable, sticky enable, mark file_manager, move scratchpad
-bindsym $mod+minus [con_mark="multiplexer"] scratchpad show
-bindsym $mod+equal [con_mark="file_manager"] scratchpad show
+bindsym $mod+Shift+minus floating enable, sticky enable, mark terminal, move scratchpad
+bindsym $mod+Shift+equal floating enable, sticky enable, mark explorer, move scratchpad
+bindsym $mod+minus [con_mark="terminal"] scratchpad show
+bindsym $mod+equal [con_mark="explorer"] scratchpad show
 
 # Bindings
 bindsym $mod+Tab workspace back_and_forth
