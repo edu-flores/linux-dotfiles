@@ -169,6 +169,7 @@ textbox-clear-text {
 
 @media ( max-width: 1920 ) {
     window {
+        height: 1000;
         width: 750;
         location: center;
         x-offset: 0;

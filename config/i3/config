@@ -158,7 +158,7 @@ for_window [workspace=$ws6] split toggle
 # Startup
 exec --no-startup-id ~/.config/i3/scripts/configure_display_settings.sh $monitor1 $monitor2
 exec --no-startup-id ~/.config/i3/scripts/append_workspace_layouts.sh
-exec --no-startup-id ~/.config/i3/scripts/set_desktop_theme.sh
+exec --no-startup-id feh --bg-fill --randomize ~/Pictures/Wallpapers
 exec --no-startup-id xsettingsd
 exec --no-startup-id clipmenud
 exec --no-startup-id picom
@@ -179,10 +179,8 @@ bindsym $mod+o --release exec xcolor -s -S 3
 bindsym $mod+Shift+v exec clipdel -d ".*"
 bindsym $mod+v exec CM_LAUNCHER=rofi clipmenu -config ~/.config/rofi/clipboard.rasi
 bindsym $mod+space exec rofi -config ~/.config/rofi/rofi.rasi -show drun
-bindsym $mod+semicolon exec ~/.config/i3/scripts/set_desktop_theme.sh 1
-bindsym $mod+bracketleft exec ~/.config/i3/scripts/set_desktop_theme.sh 2
-bindsym $mod+bracketright exec ~/.config/i3/scripts/set_desktop_theme.sh 3
-bindsym $mod+apostrophe exec ~/.config/i3/scripts/set_desktop_theme.sh 4
+bindsym $mod+bracketleft exec ~/.config/i3/scripts/set_desktop_theme.sh light
+bindsym $mod+bracketright exec ~/.config/i3/scripts/set_desktop_theme.sh dark
 bindsym Print exec ~/.config/i3/scripts/take_flameshot_screenshot.sh
 
 # Media
