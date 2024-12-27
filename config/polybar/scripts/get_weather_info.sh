@@ -1,7 +1,12 @@
 #!/bin/bash
 
 # Load environment variables
-source ~/.env
+if [ -e ~/.env ]; then
+    source ~/.env
+else
+    echo "Unknown"
+    exit 1
+fi
 
 # OpenWeatherMap API URL
 url="https://api.openweathermap.org/data/2.5/weather?id=${WEATHER_LOCATION_ID}&appid=${WEATHER_API_KEY}&units=metric"

@@ -1,7 +1,12 @@
 #!/bin/bash
 
 # Load environment variables
-source ~/.env
+if [ -e ~/.env ]; then
+    source ~/.env
+else
+    echo 
+    exit 1
+fi
 
 # Get current default audio sink
 current_sink_name=$(pactl info | grep "Default Sink" | cut -d" " -f3)
