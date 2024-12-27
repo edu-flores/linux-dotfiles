@@ -45,12 +45,12 @@ alias ll="eza --long --all --icons --hyperlink --group-directories-first --bytes
 alias ld="ls --only-dirs"
 alias lf="ls --only-files"
 alias lt="ls --tree --git-ignore"
-alias cat="bat --paging=never --style=plain"
-alias more="bat --paging=always"
+alias editpick='file=$(fd --type f --hidden | fzf --preview="bat --color=always --theme=ansi {}") && [ -n "$file" ] && nano "$file"'
+alias cat="bat --paging=never --style=plain --theme=ansi"
+alias more="bat --paging=always --theme=ansi"
 alias grep="rg"
 alias df="duf --only=local"
 alias find="fd"
-alias editpick='file=$(fd --type f --hidden | fzf --preview="bat --color=always {}") && [ -n "$file" ] && nano "$file"'
 alias Windows="sudo grub-reboot 2 && sudo shutdown -r now"
 alias xcopy="xsel -ib"
 alias xpaste="xsel -ob"
