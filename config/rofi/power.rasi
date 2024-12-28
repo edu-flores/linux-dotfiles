@@ -30,7 +30,7 @@ spacer {
 
 textbox {
     background-color: @background;
-    color: @foreground-alt;
+    color: @foreground;
     horizontal-align: 0.5;
     padding: 0 0 20 0;
 }
