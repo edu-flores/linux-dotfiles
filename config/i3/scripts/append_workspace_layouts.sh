@@ -24,4 +24,4 @@ obsidian &
 i3-msg workspace 5
 
 # Send notification
-dunstify -i process-working-symbolic "Please wait" "Opening applications & setting up workspaces..."
+dunstify --icon="preferences-other" "Please wait" "Opening applications & setting up workspaces..."

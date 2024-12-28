@@ -60,4 +60,4 @@ sed -i "s/@theme \".*\"/@theme \"$theme\"/" ~/.config/rofi/power.rasi
 printf "[General]\nuiColor=%s\ncontrastUiColor=%s\n" "$background" "$foreground" > ~/.config/flameshot/flameshot.ini
 
 # Send notification
-dunstify -i "$notification_icon" "$notification_title"
+dunstify --urgency="low" --icon="$notification_icon" "$notification_title"

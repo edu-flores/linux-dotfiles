@@ -26,3 +26,6 @@ fi
 next_index=$(( (current_index + 1) % ${#sinks[@]} ))
 pactl set-default-sink "${sinks[$next_index]}"
 echo "Switched default sink to ${sinks[$next_index]}"
+
+# Send notification
+dunstify --urgency="low" --icon="soundcard" "Switched Audio Device"

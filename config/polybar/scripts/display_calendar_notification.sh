@@ -31,4 +31,4 @@ fi
 HEAD=$(echo "$calendar" | head -n +1)
 BODY=$(echo "$calendar" | tail -n +2)
 FOOT="\n  Calendar"
-dunstify "$HEAD" "\n<tt>$BODY</tt>$FOOT" -u critical -r -1 -i /dev/null
+dunstify --urgency="critical" --replace="-1" "$HEAD" "\n<tt>$BODY</tt>$FOOT"

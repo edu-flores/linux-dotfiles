@@ -32,3 +32,12 @@ enable_recursive_icon_lookup = true
 # Styling
 background = "#1e1e1e"
 foreground = "#ffffff"
+
+[urgency_low]
+timeout = 3
+
+[urgency_normal]
+timeout = 5
+
+[urgency_critical]
+timeout = 0
