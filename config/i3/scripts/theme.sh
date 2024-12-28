@@ -33,7 +33,7 @@ esac
 
 # Polybar
 sed -i "s/themes\/.*\.ini/themes\/$theme\.ini/" ~/.config/polybar/polybar.ini
-source ~/.config/polybar/scripts/launch_polybar_program.sh
+source ~/.config/i3/scripts/polybar.sh
 
 # i3
 sed -i "s/themes\/.*/themes\/$theme/" ~/.config/i3/config

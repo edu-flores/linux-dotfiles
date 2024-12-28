@@ -9,7 +9,7 @@ configuration {
     font: "Inter SemiBold 10.5";
     show-icons: true;
     icon-theme: "MoreWaita";
-    modi: "drun,window,filebrowser,python:~/.config/rofi/scripts/use_python_interpreter.sh";
+    modi: "drun,window,filebrowser,python:~/.config/rofi/scripts/python.sh";
     display-drun: "⎇ 1  Apps";
     display-window: "⎇ 2  Tabs";
     display-filebrowser: "⎇ 3  Files";
