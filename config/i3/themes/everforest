@@ -1,7 +1,0 @@
-# Everforest            Border  Backgr  Text    Indictr Child
-client.focused          #414b50 #414b50 #d3c6aa #414b50 #414b50
-client.unfocused        #272e33 #272e33 #d3c6aa #272e33 #272e33
-client.focused_inactive #343D42 #343D42 #d3c6aa #343D42 #343D42
-client.placeholder      #414b50 #414b50 #d3c6aa #414b50 #414b50
-client.urgent           #e67e80 #e67e80 #d3c6aa #e67e80 #e67e80
-client.background       #ffffff

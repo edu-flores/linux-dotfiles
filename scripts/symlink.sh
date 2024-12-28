@@ -24,7 +24,7 @@ create_symlink() {
 }
 
 # Iterate through directories and files
-SYMLINK_MAP="$SCRIPT_DIR/symlink_map.txt"
+SYMLINK_MAP="$SCRIPT_DIR/map.txt"
 while read -r source_path target_path; do
     create_symlink "$REPO_ROOT/$source_path" "$target_path"
 done < "$SYMLINK_MAP"

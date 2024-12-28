@@ -4,6 +4,9 @@
 </div>
 <br>
 
+> [!IMPORTANT]  
+> Outdated information.
+
 <img src="./screenshots/showcase.gif" alt="Showcase">
 
 ## 🎨 Theme Configuration
