@@ -40,9 +40,10 @@ sed -i "s/themes\/.*/themes\/$theme/" ~/.config/i3/config
 i3 reload
 
 # Dunst
-pkill dunst
+prev_pause_level=$(dunstctl get-pause-level) && pkill dunst
 sed -i "s/background = \".*\"/background = \"$background\"/" ~/.config/dunst/dunstrc
 sed -i "s/foreground = \".*\"/foreground = \"$foreground\"/" ~/.config/dunst/dunstrc
+dunstctl set-pause-level $prev_pause_level
 
 # Gtk
 sed -i --follow-symlinks "s/Net\/ThemeName \".*\"/Net\/ThemeName \"$gtk_theme\"/" ~/.xsettingsd
