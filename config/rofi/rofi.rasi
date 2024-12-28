@@ -29,10 +29,12 @@ configuration {
 * {
     spacing: 0;
     highlight: none;
+    background-color: @background-alt;
 }
 
 window {
     width: 750;
+    border-radius: 6;
 }
 
 mainbox {
