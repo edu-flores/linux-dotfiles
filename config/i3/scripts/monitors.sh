@@ -9,3 +9,6 @@ if [ -n "$PRIMARY_MONITOR" ] && [ -n "$SECONDARY_MONITOR" ]; then
     xrandr --output "$SECONDARY_MONITOR" --rotate left \
            --left-of "$PRIMARY_MONITOR"
 fi
+
+# Set their wallpapers
+feh --bg-fill "$(find ~/Pictures/Wallpapers/* -type f | shuf -n 1)"

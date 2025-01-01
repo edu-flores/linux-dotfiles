@@ -159,7 +159,6 @@ for_window [workspace=$ws6] split toggle
 exec --no-startup-id ~/.config/i3/scripts/monitors.sh $monitor1 $monitor2
 exec --no-startup-id ~/.config/i3/scripts/layouts.sh
 exec --no-startup-id ~/.config/i3/scripts/polybar.sh
-exec --no-startup-id feh --bg-fill --randomize ~/Pictures/Wallpapers
 exec --no-startup-id xsettingsd
 exec --no-startup-id clipmenud
 exec --no-startup-id picom
