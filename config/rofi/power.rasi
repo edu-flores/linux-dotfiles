@@ -51,5 +51,6 @@ element-text {
 }
 
 element-text.selected {
+    background-color: @urgent;
     color: @foreground;
 }

@@ -1,18 +1,17 @@
 #!/bin/bash
 
 # Define power menu options
-options="⏼\n\n\n\n\n󰗽"
+options="\n\n\n\n\n󰩈"
 
 # Display Rofi menu and store the selected option
-uptime=$(uptime -p | sed 's/up //')
 selected_option=$(echo -e "$options" | rofi -dmenu -config ~/.config/rofi/power.rasi)
 
 # Perform actions based on the selected option
 case "$selected_option" in
-    "⏼")
+    "")
         systemctl poweroff
         ;;
-    "")
+    "")
         systemctl reboot
         ;;
     "")
@@ -22,9 +21,9 @@ case "$selected_option" in
         systemctl hibernate
         ;;
     "")
-        echo "Locked"
+        ~/.config/i3/scripts/lockscreen.sh
         ;;
-    "󰗽")
+    "󰩈")
         i3-msg exit
         ;;
     *)

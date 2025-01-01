@@ -48,7 +48,7 @@ official_packages=(
     "eza" "bat" "ripgrep" "zoxide" "fzf" "duf" "fd" "less"  # Commands
 )
 aur_packages=(
-    "oh-my-posh" "quintom-cursor-theme-git" "adw-gtk-theme-git" "morewaita-icon-theme-git"  # Styling
+    "i3lock-color" "oh-my-posh" "quintom-cursor-theme-git" "adw-gtk-theme-git" "morewaita-icon-theme-git"  # Styling
     "google-chrome" "spotify" "visual-studio-code-bin"  # Apps
 )
 
