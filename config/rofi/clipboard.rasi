@@ -19,7 +19,7 @@ window {
 }
 
 mainbox {
-    children: [ header, textbox-copied, listview, inputbar ];
+    children: [ header, listview, inputbar ];
 }
 
 spacer {
@@ -71,9 +71,8 @@ textbox-copied {
 }
 
 listview {
-    padding: 0 20 10 20;
+    padding: 10 20;
     background-color: @background;
-    lines: 6;
     scrollbar: true;
     fixed-height: false;
     dynamic: true;
