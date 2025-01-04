@@ -111,7 +111,7 @@ scrollbar {
 }
 
 header {
-    children: [ textbox-clipboard, spacer, textbox-case-icon, textbox-case-text, textbox-clear-icon, textbox-clear-text ];
+    children: [ textbox-clipboard, spacer, textbox-clear-icon, textbox-clear-text ];
     orientation: horizontal;
     background-color: @background-alt;
     color: @foreground-alt;
