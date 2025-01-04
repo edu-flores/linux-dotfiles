@@ -9,11 +9,11 @@ configuration {
     font: "Inter SemiBold 10.5";
     show-icons: true;
     icon-theme: "MoreWaita";
-    modi: "drun,window,filebrowser,python:~/.config/rofi/scripts/python.sh";
-    display-drun: "⎇ 1  Apps";
-    display-window: "⎇ 2  Tabs";
-    display-filebrowser: "⎇ 3  Files";
-    display-python: "⎇ 4  Math";
+    modi: "drun,window,recursivebrowser,calculator:~/.config/rofi/scripts/calculator.sh";
+    display-drun: "⎇ 1  󰕰";
+    display-window: "⎇ 2  ";
+    display-recursivebrowser: "⎇ 3  ";
+    display-calculator: "⎇ 4  󰃬";
     window-format: "{t}";
     window-thumbnail: true;
     terminal: "/usr/bin/alacritty";
@@ -34,6 +34,7 @@ configuration {
 
 window {
     width: 750;
+    height: 515;
     border-radius: 6;
 }
 
@@ -139,7 +140,7 @@ mode-switcher {
     background-color: inherit;
     color: inherit;
     spacing: 5;
-    width: 400;
+    width: 300;
 }
 
 button {

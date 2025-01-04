@@ -38,14 +38,15 @@ sudo sed -i "s/^#VerbosePkgLists/VerbosePkgLists/" /etc/pacman.conf
 
 # Set desired packages from the official and AUR repositories
 official_packages=(
-    "xorg-server" "xorg-xinit" "xorg-xrandr"  # Xorg
-    "alacritty" "tmux" "zsh" "zsh-autosuggestions" "zsh-syntax-highlighting"  # Terminal & shell
-    "i3-wm" "polybar" "dunst" "rofi" "picom"  "ly" "feh"  # Window manager environment
-    "neofetch" "flameshot" "xsettingsd" "xcolor" "clipmenu" "obsidian" "nemo"  # Utils
-    "inter-font" "ttf-jetbrains-mono-nerd"  # Main UI and editor fonts
-    "noto-fonts" "noto-fonts-cjk" "noto-fonts-emoji" "noto-fonts-extras"  # No tofu fonts
-    "pipewire" "pipewire-alsa" "pipewire-pulse" "pipewire-jack" "playerctl"  # Audio
-    "eza" "bat" "ripgrep" "zoxide" "fzf" "duf" "fd" "less"  # Commands
+    "xorg-server" "xorg-xinit" "xorg-xrandr"                                   # X.Org
+    "alacritty" "tmux" "zsh" "zsh-autosuggestions" "zsh-syntax-highlighting"   # Terminal and shell
+    "i3-wm" "polybar" "dunst" "rofi" "picom"  "ly" "feh"                       # WM environment
+    "neofetch" "xsettingsd" "xcolor" "clipmenu" "flameshot" "libqalculate"     # Utilities
+    "inter-font" "ttf-jetbrains-mono-nerd"                                     # UI and monospaced fonts
+    "noto-fonts" "noto-fonts-cjk" "noto-fonts-emoji" "noto-fonts-extras"       # No-tofu fonts
+    "pipewire" "pipewire-alsa" "pipewire-pulse" "pipewire-jack" "playerctl"    # Audio
+    "eza" "bat" "ripgrep" "zoxide" "fzf" "duf" "fd" "less"                     # Commands
+    "obsidian" "nemo"                                                          # Apps
 )
 aur_packages=(
     "i3lock-color" "oh-my-posh" "quintom-cursor-theme-git" "adw-gtk-theme-git" "morewaita-icon-theme-git"  # Styling
@@ -137,6 +138,10 @@ sudo timedatectl set-ntp true
 
 # Configure keyboard options
 sudo localectl set-x11-keymap us,latam "" "" grp:rctrl_toggle,caps:swapescape,compose:ralt
+
+# Set libqalculate commands
+echo "set autocalc on" | qalc > /dev/null
+echo "set upxrates 7" | qalc > /dev/null
 
 # Notify user for remaining changes
 echo -e "\nInstallation completed. You'll need to manually: "
