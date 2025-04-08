@@ -34,7 +34,7 @@ configuration {
 
 window {
     width: 750;
-    height: 515;
+    height: 425;
     border-radius: 6;
 }
 
