@@ -11,8 +11,8 @@ version = 3
   alignment = "left"
 
   [[blocks.segments]]
-    template = " {{ .UserName }} on"
-    foreground = "#45F1C2"
+    template = " {{ .UserName }} on"
+    foreground = "lightGreen"
     type = "session"
     style = "plain"
 
@@ -21,7 +21,7 @@ version = 3
 
   [[blocks.segments]]
     template = "  {{ .Path }} "
-    foreground = "#0CA0D8"
+    foreground = "lightBlue"
     type = "path"
     style = "plain"
 
@@ -58,7 +58,7 @@ version = 3
 
   [[blocks.segments]]
     template = "# "
-    foreground = "#CD4277"
+    foreground = "lightRed"
     type = "text"
     style = "plain"
 
