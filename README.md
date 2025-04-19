@@ -1,73 +1,65 @@
 <div align="center">
-    <h1>Linux Dotfiles</h1>
-    <h3>My Desktop Configuration</h3>
+  <h1>Linux Dotfiles</h1>
+  <h3>My Desktop Configuration</h3>
 </div>
 <br>
 
-<img src="./screenshots/showcase.gif" alt="Showcase">
-
-## 🎨 Theme Configuration
-
-### Manual Theme Selection
-
-You can manually set a theme by executing the following script:
-
-```bash
-$ ./path/to/script/set_theme.sh [num]
-```
-
-Where `[num]` corresponds to the theme options:
-
-- `1` 🏙️ Everforest
-- `2` 🌇 Gruvbox
-- `3` 🌆 Tokyo Night
-- `4` 🌃 Nord
-
-### Automated Theme Switching
-
-Alternatively, you can automate theme changes based on the time of day using a cronjob with environment variables. Here's an example:
-
-```bash
-# Set up a cronjob to change the theme every day at 8:00, 12:00, 16:00 and 20:00.
-
-DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
-DISPLAY=:0
-XDG_RUNTIME_DIR=/run/user/1000
-
-0 8,12,16,20 * * * ~/path/to/script/set_theme.sh
-```
-
-**Note:** Adjust the paths and environment variables according to your specific setup.
+<img src="./screenshots/showcase.png" alt="Showcase">
 
 ## 🖇️ Dependencies
 
-You can read about the packages I use on the [wiki](https://github.com/edu-flores/linux-dotfiles/wiki). To easily set up the dotfiles you can run `symling_config_files.sh` from the repo root to make the necessary symlinks. Similarly on a fresh Arch install, you can run `rice_fresh_install.sh` from the repo root to set your desktop just like mine.
+You can read about the packages I use on the [wiki](https://github.com/edu-flores/linux-dotfiles/wiki). To replicate my setup, run `scripts/install.sh` on a fresh Arch Linux install. Here's a quick summary about the main packages used:
 
-For the Polybar weather module to work, you should create a `~/.env` file, containing your location id and api key. For more information, consult [here](https://openweathermap.org/).
+| Usage                | Package   |
+|----------------------|-----------|
+| Window Manager       | i3        |
+| Status Bar           | Polybar   |
+| Terminal Emulator    | Alacritty |
+| Notification Daemon  | Dunst     |
+| Compositor           | Picom     |
+| Launcher & Applets   | Rofi      |
 
-## ⌨️ Bindings
+Some of the status bar modules need manual configuration. Check `.env.example` for guidance.
 
-Show application launcher
+### Weather Setup
+
+To enable the weather module, create a `~/.env` file with your location ID and [OpenWeatherMap](https://openweathermap.org/) API key.
+
+### Audio Setup
+
+Use `pactl list short sinks` to find your audio device IDs and configure them in the `.env` file.
+
+## ⌨️ Keybindings
+
 ```bash
-bindsym $mod+space exec rofi -show drun
-```
-
-Show clipboard history
-```bash
-bindsym $mod+v exec CM_LAUNCHER=rofi clipmenu -p "󰅇 Clipboard"
-```
-
-Delete clipboard history
-```bash
-bindsym $mod+Shift+v exec clipdel -d ".*"
-```
-
-Switch back and forth workspaces
-```bash
+# Switch between workspaces
 bindsym $mod+Tab workspace back_and_forth
+
+# Center focused window
+bindsym $mod+Shift+c move position center
+
+# Open color picker
+bindsym $mod+o --release exec xcolor -s -S 3
+
+# Show clipboard history
+bindsym $mod+v exec CM_LAUNCHER=rofi clipmenu -config ~/.config/rofi/clipboard.rasi -i
+
+# Clear clipboard history
+bindsym $mod+Shift+v exec clipdel -d ".*"
+
+# Launch applications
+bindsym $mod+space exec rofi -config ~/.config/rofi/rofi.rasi -show drun
+
+# Switch to light mode
+bindsym $mod+bracketleft exec ~/.config/i3/scripts/theme.sh light
+
+# Switch to dark mode
+bindsym $mod+bracketright exec ~/.config/i3/scripts/theme.sh dark
+
+# Take a screenshot
+bindsym Print exec XDG_CURRENT_DESKTOP=X-Cinnamon flameshot gui
 ```
 
-Launch snipping tool
-```bash
-bindsym Print exec flameshot gui
-```
+## ⚠️ Disclaimer
+
+These dotfiles are under active development. I recently moved from a retro to a modern design. For the older setup, check the `prev` branch.

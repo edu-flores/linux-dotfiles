@@ -8,7 +8,7 @@
 set $mod Mod4
 
 # Font for window titles
-font pango: JetBrainsMono Nerd Font Semibold 10.5
+font pango: Inter SemiBold 11
 
 # Drag floating windows
 floating_modifier $mod
@@ -152,13 +152,13 @@ workspace $ws7 output $monitor1
 workspace $ws8 output $monitor1
 workspace $ws9 output $monitor1
 workspace $ws10 output $monitor2
-for_window [workspace=$ws5] floating enable
 for_window [workspace=$ws6] split toggle
+for_window [workspace=$ws9] floating enable
 
 # Startup
-exec --no-startup-id ~/.config/i3/scripts/configure_display_settings.sh $monitor1 $monitor2
-exec --no-startup-id ~/.config/i3/scripts/append_workspace_layouts.sh
-exec --no-startup-id ~/.config/i3/scripts/set_desktop_theme.sh
+exec --no-startup-id ~/.config/i3/scripts/monitors.sh $monitor1 $monitor2
+exec --no-startup-id ~/.config/i3/scripts/layouts.sh
+exec --no-startup-id ~/.config/i3/scripts/polybar.sh
 exec --no-startup-id xsettingsd
 exec --no-startup-id clipmenud
 exec --no-startup-id picom
@@ -167,23 +167,21 @@ exec --no-startup-id dunst
 # Scratchpad
 bindsym $mod+Shift+BackSpace move scratchpad
 bindsym $mod+BackSpace scratchpad show
-bindsym $mod+Shift+minus floating enable, sticky enable, mark multiplexer, move scratchpad
-bindsym $mod+Shift+equal floating enable, sticky enable, mark file_manager, move scratchpad
-bindsym $mod+minus [con_mark="multiplexer"] scratchpad show
-bindsym $mod+equal [con_mark="file_manager"] scratchpad show
+bindsym $mod+Shift+minus floating enable, sticky enable, mark terminal, move scratchpad
+bindsym $mod+Shift+equal floating enable, sticky enable, mark explorer, move scratchpad
+bindsym $mod+minus [con_mark="terminal"] scratchpad show
+bindsym $mod+equal [con_mark="explorer"] scratchpad show
 
 # Bindings
-bindsym $mod+o --release exec xcolor -s -S 3
-bindsym $mod+v exec CM_LAUNCHER=rofi clipmenu -p "󰅇 Clipboard"
-bindsym $mod+Shift+v exec clipdel -d ".*"
-bindsym $mod+space exec rofi -show drun
 bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+c move position center
-bindsym Print exec ~/.config/i3/scripts/take_flameshot_screenshot.sh
-bindsym $mod+semicolon exec ~/.config/i3/scripts/set_desktop_theme.sh 1
-bindsym $mod+bracketleft exec ~/.config/i3/scripts/set_desktop_theme.sh 2
-bindsym $mod+bracketright exec ~/.config/i3/scripts/set_desktop_theme.sh 3
-bindsym $mod+apostrophe exec ~/.config/i3/scripts/set_desktop_theme.sh 4
+bindsym $mod+o --release exec xcolor -s -S 3
+bindsym $mod+Shift+v exec clipdel -d ".*"
+bindsym $mod+v exec CM_LAUNCHER=rofi clipmenu -config ~/.config/rofi/clipboard.rasi -i
+bindsym $mod+space exec rofi -config ~/.config/rofi/rofi.rasi -show drun
+bindsym $mod+bracketleft exec ~/.config/i3/scripts/theme.sh light
+bindsym $mod+bracketright exec ~/.config/i3/scripts/theme.sh dark
+bindsym Print exec XDG_CURRENT_DESKTOP=X-Cinnamon flameshot gui
 
 # Media
 bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ --limit 1.0
@@ -194,13 +192,11 @@ bindsym XF86AudioPrev exec playerctl --player=spotify previous
 bindsym XF86AudioNext exec playerctl --player=spotify next
 
 # Styling
-for_window [all] title_window_icon on, title_window_icon padding 5px
+include ~/.config/i3/themes/dark
+for_window [all] title_window_icon on, title_window_icon padding 5
 for_window [floating] border pixel 0, resize set 990 600
 default_border none
 title_align center
 workspace $ws10 gaps top 0
-gaps inner 20px
-gaps top 40px
-
-# Current desktop theme
-include ~/.config/i3/themes/gruvbox
+gaps inner 20
+gaps top 40

@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Get a list of available sink indices
+sinks=($(pactl list short sinks | awk '{print $1}'))
+
+# Get the name of the current default sink
+current_sink_name=$(pactl info | grep "Default Sink:" | cut -d: -f2 | xargs)
+
+# Find the current sink index in the list of available sinks
+current_index=-1
+for i in "${!sinks[@]}"; do
+    sink_name=$(pactl list sinks | grep -e "Sink #"${sinks[$i]} -e "Name:" | grep -A1 "Sink #${sinks[$i]}" | grep "Name:" | cut -d: -f2 | xargs)
+    if [ "$sink_name" = "$current_sink_name" ]; then
+        current_index=$i
+        break
+    fi
+done
+
+# Did not find the index of the current sink
+if [ $current_index -eq -1 ]; then
+    echo "Current default sink not found." >&2
+    exit 1
+fi
+
+# Calculate the next sink index and set it as default
+next_index=$(( (current_index + 1) % ${#sinks[@]} ))
+pactl set-default-sink "${sinks[$next_index]}"
+echo "Switched default sink to ${sinks[$next_index]}"
+
+# Send notification
+dunstify --urgency="low" --icon="soundcard" "Switched Audio Device"

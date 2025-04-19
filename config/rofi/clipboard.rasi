@@ -1,0 +1,179 @@
+configuration {
+    font: "Inter SemiBold 10.5";
+}
+
+@theme "dark"
+
+* {
+    spacing: 0;
+    highlight: none;
+    background-color: @background-alt;
+}
+
+window {
+    width: 350;
+    location: northeast;
+    x-offset: -290;
+    y-offset: 50;
+    border-radius: 6;
+}
+
+mainbox {
+    children: [ header, listview, inputbar ];
+}
+
+spacer {
+    content: "";
+    expand: true;
+    background-color: transparent;
+}
+
+inputbar {
+    children: [ entry, case-indicator, textbox-return-icon ];
+    padding: 15 20;
+    background-color: @background-alt;
+}
+
+entry {
+    background-color: inherit;
+    color: @foreground;
+    placeholder: "Search to copy...";
+    placeholder-color: @foreground-alt;
+    vertical-align: 0.5;
+    cursor: text;
+}
+
+case-indicator {
+    background-color: inherit;
+    color: @foreground-alt;
+    padding: 0 6;
+    border-radius: 3;
+    vertical-align: 0.5;
+}
+
+textbox-return-icon {
+    font: "JetBrainsMono NFP Regular 12";
+    content: "󰌑";
+    background-color: @raised;
+    color: @foreground-alt;
+    expand: false;
+    padding: 0 6;
+    border-radius: 3;
+    margin: 0 0 0 8;
+}
+
+textbox-copied {
+    content: "Copied texts: ";
+    expand: false;
+    background-color: @background;
+    color: @foreground-alt;
+    padding: 15 20;
+}
+
+listview {
+    padding: 10 20;
+    background-color: @background;
+    scrollbar: true;
+    fixed-height: false;
+    dynamic: true;
+    reverse: true;
+}
+
+element {
+    background-color: inherit;
+    border-radius: 10;
+    padding: 10;
+    spacing: 15;
+    cursor: pointer;
+}
+
+element.selected {
+    background-color: @selected;
+}
+
+element-text {
+    background-color: inherit;
+    color: @foreground-alt;
+    vertical-align: 0.5;
+    cursor: pointer;
+}
+
+element-text.selected {
+    color: @foreground;
+}
+
+scrollbar {
+    handle-color: @scroll;
+    margin: 0 0 0 10;
+    background-color: inherit;
+    handle-width: 4;
+}
+
+header {
+    children: [ textbox-clipboard, spacer, textbox-clear-icon, textbox-clear-text ];
+    orientation: horizontal;
+    background-color: @background-alt;
+    color: @foreground-alt;
+    padding: 8 20;
+    height: 200;
+    expand: false;
+    spacing: 5;
+}
+
+textbox-clipboard {
+    content: "Clipboard";
+    background-color: @raised;
+    color: @foreground;
+    padding: 0 12;
+    border-radius: 3;
+    vertical-align: 0.5;
+    expand: false;
+    cursor: pointer;
+}
+
+textbox-case-icon {
+    font: "JetBrainsMono NFP Regular 12";
+    content: "`";
+    background-color: @raised;
+    color: inherit;
+    expand: false;
+    padding: 0 6;
+    border-radius: 3;
+}
+
+textbox-case-text {
+    content: "Case";
+    background-color: inherit;
+    color: inherit;
+    vertical-align: 0.5;
+    expand: false;
+    margin: 0 5 0 0;
+}
+
+textbox-clear-icon {
+    font: "JetBrainsMono NFP Regular 12";
+    content: "󰖳 󰘶 V";
+    background-color: @raised;
+    color: inherit;
+    expand: false;
+    padding: 0 6;
+    border-radius: 3;
+}
+
+textbox-clear-text {
+    content: "Clear";
+    background-color: inherit;
+    color: inherit;
+    vertical-align: 0.5;
+    expand: false;
+}
+
+@media ( max-width: 1920 ) {
+    window {
+        height: 1000;
+        width: 750;
+        location: center;
+        x-offset: 0;
+        y-offset: 0;
+    }
+}

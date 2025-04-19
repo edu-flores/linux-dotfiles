@@ -1,33 +1,56 @@
 configuration {
-	font: "JetBrainsMono Nerd Font Semibold 20";
-	show-icons: false;
+    font: "Inter SemiBold 12";
+}
+
+@theme "dark"
+
+* {
+    spacing: 0;
 }
 
 window {
-    width: 120;
-    padding: 5;
-    location: east;
-    x-offset: -25;
+    width: 600;
+    height: 110;
+    location: south;
+    background-color: @background;
+    border-radius: 18 18 0 0;
 }
 
 mainbox {
-    children: [listview];
+    children: [ box-buttons ];
+    background-color: inherit;
+    padding: 15 20;
 }
 
-element {
-    padding: 30 5 30 0;
-    background-color: @bg-alt;
-    margin: 5;
-}
-
-element-text {
-    vertical-align: 0.5;
-    horizontal-align: 0.5;
-    background-color: transparent;
+box-buttons {
+    children: [ listview ];
+    orientation: horizontal;
+    background-color: inherit;
 }
 
 listview {
-    margin: 0;
-    lines: 4;
-    scrollbar: false;
+    lines: 1;
+    columns: 6;
+    cycle: true;
+    background-color: inherit;
+    spacing: 15;
+}
+
+element {
+    background-color: inherit;
+}
+
+element-text {
+	font: "JetBrainsMono NFM 30";
+    background-color: @raised;
+    color: @foreground-alt;
+    horizontal-align: 0.5;
+    border-radius: 100%;
+    padding: 13 0;
+    cursor: pointer;
+}
+
+element-text.selected {
+    background-color: @urgent;
+    color: @foreground;
 }
